@@ -1,0 +1,53 @@
+---
+layout: default
+tags: html origin
+title : test
+---
+
+
+<hr />
+<ul>
+    {% for post in site.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span>{{ post.category }}</span>
+        </li>
+    {% endfor %}
+</ul>
+
+<hr />
+
+<div>{{ page.title }}</div>
+<div id="id">{{ page.id }}</div>
+<div>{{ page.categories }}</div>
+<!-- div>{{ page.excerpt }}</div -->
+<div>{{ page.tags }}</div>
+
+<a href="{% post_url 2013-11-12-today %}"> today </a>
+
+<h2>code test</h2>
+
+{% highlight javascript linenos%}
+function test() {
+    var aa = 3;
+    console.log(aa);
+}
+{% endhighlight %}
+
+{% highlight ruby %}
+def show
+@widget = Widget(params[:id])
+respond_to do |format|
+format.html # show.html.erb
+format.json { render json: @widget }
+end
+end
+{% endhighlight %}
+
+<ul> 
+    {% for post2 in site.tags.js %}
+        <li id="li">
+        <span> {{ post2.title  }}</span>
+        </li>
+    {% endfor %}
+</ul>

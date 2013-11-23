@@ -1,0 +1,67 @@
+---
+title : index
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test page</title>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/reset.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+  	<div id="wrap">
+  		<header>
+    		<nav id="top">
+          <ul class="marginLeft">
+            <li><a href="#">home</a></li>
+            <li><a href="#">posts</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">facebook</a></li>
+          </ul>
+    		</nav>
+  		<div id="title">
+        <div>
+    			 <h1><span>NIGAYO</span> BLOG</h1>
+           <h2>Web UI Programming</h2>
+        </div>
+  		</div>
+  		</header>
+
+  		<section id="mainBody">
+        <div id="listWrap">
+          <ul id="postList">
+              <!-- li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li>
+              <li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li>
+              <li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li>
+              <li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li>
+              <li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li -->
+
+               {% for post in site.posts %}
+                 <li>
+                  <div><a href="{{ post.url }}">{{ post.title }}</a></div>
+                  <div>{{ post.id}}</div>
+                 </li>
+              {% endfor %} 
+
+            </ul>
+        </div>
+ 			</section>
+
+  		<footer>
+          <ul>
+            <li>Younjisu at NEXT</li>
+            <li>http://nigayo.com</li>
+            <li>aniga75@gmail.com</li>
+          </ul>
+  		</footer>
+      <div id="mamul">
+      </div>
+  	</div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </body>
+</html>

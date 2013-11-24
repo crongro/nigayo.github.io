@@ -7,7 +7,7 @@ exclude:     []
 keep_files:  ['.git','.svn']
 gems:        []
 timezone:    Asia/Seoul
-encoding:    ASCII-8BIT
+encoding:    utf-8
 
 future:      true
 limit_posts: 0

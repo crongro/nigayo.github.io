@@ -1,7 +1,6 @@
 ---
 title : index
 ---
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -40,10 +39,10 @@ title : index
               <li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li>
               <li><div><a href="#">Python Flask로 서버구성하기 </a></div><div>2012-12-12</div></li -->
 
-               {% for post in site.posts %}
+               {% for post in site.posts limit:3 %}
                  <li>
                   <div><a href="{{ post.url }}">{{ post.title }}</a></div>
-                  <div>{{ post.id}}</div>
+                  <div>{{ post.date | date: "%Y년 %m월 %d일" }}</div>
                  </li>
               {% endfor %} 
 

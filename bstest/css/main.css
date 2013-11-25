@@ -32,6 +32,14 @@ body {
     color : #000;
 }
 
+div#headerDecoration {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    left: 0px;
+    background-color: lightcoral;
+}
+
 div#wrap {
     width : 80%;
     height:auto;
@@ -100,7 +108,7 @@ header > div#title{
 header > div#title > div {
     position : absolute;
     line-height: 2em;
-    top : 30%;
+    top : 35%;
     margin-left :5.0%;
     font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
@@ -135,13 +143,13 @@ section#mainBody {
 }
 
 #listWrap ul#postList {
-    margin-top: 5%;
+    margin-top: 3%;
     font-size : 1.5em;
     line-height: 1em; /* because of change of font-size */
 }
 
 ul#postList li  {
-    padding :3% 3% 3% 5%;
+    padding :2% 3% 2% 5%;
     color :#1a1a1a;
     border-bottom : 1px solid lightgray;
 }

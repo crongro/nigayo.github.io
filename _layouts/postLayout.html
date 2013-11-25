@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> {% if page.title %} {{ page.title }} | {% endif %} HI! I'M NIGAYO ;-) </title>
+        <link rel="stylesheet" href="/css/reset.css" media="screen">
+        <link rel="stylesheet" href="/css/postLayout.css" />
+    </head>
+    <body>
+    <div id="wrap">
+      <div id="headerDecoration"></div>
+      <header>
+        <nav id="top">
+          <ul class="marginLeft">
+            <li><a href="#">home</a></li>
+            <li><a href="#">posts</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">facebook</a></li>
+        </ul>
+        </nav>
+        <section id="title">
+            <section>
+                <h1>
+                 {{ page.title }} 
+                </h1>
+                <section>
+                 {{ page.date | date : "%B %d, %Y" }}
+                </section>
+            </section>
+        </section>
+      </header>
+
+        <article>
+            <div id="articleBody">
+                {{ content }}
+            </div>
+        </article>
+
+        <footer>
+          <ul>
+            <li>Younjisu at NEXT</li>
+            <li>http://nigayo.com</li>
+            <li>aniga75@gmail.com</li>
+          </ul>
+        </footer>
+      <!-- div id="mamul"> </div -->
+    </div>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </body>
+</html>

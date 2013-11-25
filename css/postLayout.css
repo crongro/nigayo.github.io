@@ -1,0 +1,191 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+body, input, textarea, select, button, table{ 
+    line-height: 1.25em;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    outline : none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* reuse Start */
+.marginLeft {
+    margin-left : 10%;
+}
+
+.fontColor {
+    color : gray;
+}
+/* reuse End */
+
+
+
+body {
+    font-size : 0.9em;
+    font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+    color : #000;
+}
+
+div#headerDecoration {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    left: 0px;
+    background-color: lightcoral;
+}
+
+div#wrap {
+    width : 65%;
+    height:auto;
+    margin :0 auto;
+}
+
+header {
+    height : auto;
+}
+
+nav#top {
+    position: relative;
+    height : 120px;
+}
+
+nav#top > ul {
+    position: absolute;
+    height: 20px;
+    width :80%;
+    top:42%;
+}
+
+nav#top > ul > li {
+    display : inline-block;
+    margin-left : 7%;
+}
+
+nav#top > ul > li:nth-child(1) {
+    margin-left : 0;
+}
+
+
+nav#top a {
+    color: rgb(163, 163, 163);
+    font-size : 1.5em;
+    letter-spacing: 0.11em;
+}
+
+nav#top a {
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    -ms-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+nav#top a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+header > section#title{
+    width : 90%;
+    margin-left: 5%;
+    margin-right:5%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    height : 200px;
+    1border: 1px solid rgb(214, 214, 214);
+    color : #1a1a1a;
+}
+
+header > section#title > section{
+    line-height: normal;
+    position : absolute;
+    top : 40%;
+    margin-left :5.0%;
+}
+
+header > section#title h1{
+    font-size : 2em;
+    letter-spacing: 0.05em;
+}
+
+header > section#title h1 + section{
+    font-size : 1em;
+    letter-spacing: 0.05em;
+    margin-top :3em;
+}
+
+/*   contents  */
+
+article {
+    position: relative;
+}
+
+div#articleBody {
+    width : 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size : 1.1em;
+    line-height: 2.0em;
+    padding-left: 5%;
+}
+
+footer {
+    height : 250px;
+    position: relative;
+}
+
+footer > ul{
+    position: absolute;
+    top : 39%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    color : #1a1a1a;
+    font-size : 1em;
+    letter-spacing: 0.07em;
+    font-weight: 100;
+    font-family: Helvetica, sans-serif;
+}
+
+footer > ul li{
+    padding-left : 5%;
+    margin-top : 0.2%;
+}
+
+
+
+
+@media screen and (max-width:720px) {
+    div#wrap {
+        width : 90%;
+    }
+
+    header {
+        margin : 20px 0;
+    }
+
+    h1.title {
+        font-size : 2em;
+    }
+
+    .main_table thead th{
+        font-size: 1em;
+    }
+
+    .main_table tbody td span {
+        font-size: 0.75em;
+        text-shadow: 0 1px 1px #fff;
+    }
+
+    .main_table tbody td:nth-of-type(3) span{
+        font-size : 0.75em;
+    }
+
+}

@@ -9,29 +9,28 @@
     </head>
     <body>
     <div id="wrap">
-      <div id="headerDecoration"></div>
-      <header>
-        <nav id="top">
-          <ul class="marginLeft">
-            <li><a href="#">home</a></li>
-            <li><a href="#">posts</a></li>
-            <li><a href="#">github</a></li>
-            <li><a href="#">facebook</a></li>
-        </ul>
-        </nav>
-        <section id="title">
-            <section>
+        <div id="headerDecoration"></div>
+        <header>
+            <nav id="top">
+              <ul class="marginLeft">
+                <li><a href="#">home</a></li>
+                <li><a href="#">posts</a></li>
+                <li><a href="#">github</a></li>
+                <li><a href="#">facebook</a></li>
+            </ul>
+            </nav>
+         </header>
+
+        <article>
+            <header>
                 <h1>
                  {{ page.title }} 
                 </h1>
                 <section>
                  {{ page.date | date : "%B %d, %Y" }}
                 </section>
-            </section>
-        </section>
-      </header>
+            </header>
 
-        <article>
             <div id="articleBody">
                 {{ content }}
             </div>

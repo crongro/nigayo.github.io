@@ -41,12 +41,12 @@ div#headerDecoration {
 }
 
 div#wrap {
-    width : 65%;
+    width : 80%;
     height:auto;
     margin :0 auto;
 }
 
-header {
+section#topMenu {
     height : auto;
 }
 
@@ -91,34 +91,37 @@ nav#top a:hover {
     text-decoration: none;
 }
 
-header > section#title{
+
+article {
+    margin-top : 50px;
+    border-radius : 8px;
+}
+
+article > header {
     width : 90%;
     margin-left: 5%;
     margin-right:5%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 7%;
     position: relative;
-    height : 200px;
-    1border: 1px solid rgb(214, 214, 214);
     color : #1a1a1a;
 }
 
-header > section#title > section{
+article > header {
     line-height: normal;
-    position : absolute;
-    top : 40%;
-    margin-left :5.0%;
+    margin-left :10%;
 }
 
-header > section#title h1{
+article > header > h1{
+    margin-top :7%;
+    margin-bottom:7%;
     font-size : 2em;
     letter-spacing: 0.05em;
 }
 
-header > section#title h1 + section{
+article > header > section{
     font-size : 1em;
     letter-spacing: 0.05em;
-    margin-top :3em;
+    color : rgb(163, 163, 163);
 }
 
 /*   contents  */
@@ -128,17 +131,17 @@ article {
 }
 
 div#articleBody {
-    width : 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size : 1.1em;
     line-height: 2.0em;
-    padding-left: 5%;
 }
 
 footer {
+    margin-top: 7%;
     height : 250px;
     position: relative;
+    border-top: 1px solid lightgray;
 }
 
 footer > ul{

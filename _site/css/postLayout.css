@@ -44,6 +44,7 @@ div#wrap {
     width : 80%;
     height:auto;
     margin :0 auto;
+    min-width: 640px;
 }
 
 section#topMenu {
@@ -124,11 +125,11 @@ article > header > section{
     color : rgb(163, 163, 163);
 }
 
-/*   contents  */
-
-article {
-    position: relative;
+.gubunBar {
+    color :lightcoral;
 }
+
+/*   contents  */
 
 div#articleBody {
     margin-left: 10%;
@@ -144,22 +145,28 @@ footer {
     border-top: 1px solid lightgray;
 }
 
-footer > ul{
+footer > section {
     position: absolute;
     top : 39%;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
     color : #1a1a1a;
-    font-size : 1em;
+    font-size : 0.8em;
     letter-spacing: 0.07em;
     font-weight: 100;
     font-family: Helvetica, sans-serif;
 }
 
-footer > ul li{
-    padding-left : 5%;
-    margin-top : 0.2%;
+footer > section > img {
+    width :50px;
+    border-radius: 50%;
+    float:left;
+    margin-right: 20px;
+    margin-top : 10px;
+}
+
+footer ul li{
+    margin-top : 0.5%;
 }
 
 

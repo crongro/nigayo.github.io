@@ -1,0 +1,64 @@
+---
+title : index
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test page</title>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/reset.css" rel="stylesheet" media="screen">
+    <link href="css/list.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+  	<div id="wrap">
+      <div id="headerDecoration"></div>
+  		<header>
+    		<nav id="top">
+          <ul class="marginLeft">
+            <li><a href="#">home</a></li>
+            <li><a href="#">posts</a></li>
+            <li><a href="#">github</a></li>
+            <li><a href="#">facebook</a></li>
+          </ul>
+    		</nav>
+  		</header>
+
+  		<section id="mainBody">
+        <ul id="categoryList">
+         {% for post in site.categories%}
+           <li>
+              <a href="#">{{ post[0] }}</a>
+           </li>
+          {% endfor %} 
+        </ul>
+        <!-- div id="listWrap">
+          <ul id="postList">
+               {% for post in site.posts limit:5 %}
+                 <li>
+                  <div><a href="{{ post.url }}">{{ post.title }}</a></div>
+                  <div>{{ post.date | date: "%Y년 %m월 %d일" }}</div>
+                 </li>
+              {% endfor %} 
+
+            </ul>
+        </div -->
+ 			</section>
+
+  		 <footer>
+            <section>
+              <img src="/images/crong.jpg">
+              <ul>
+                <li>Younjisu at NEXT</li>
+                <li>http://nigayo.com</li>
+                <li>aniga75@gmail.com</li>
+              </ul>
+          </section>
+        </footer>
+      <!-- div id="mamul"> </div -->
+  	</div>
+    <script src="/js/jindo_2.8.1.js"></script>
+    <script src="/js/list.js"></script>
+  </body>
+</html>

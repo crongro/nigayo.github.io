@@ -190,35 +190,35 @@ ul#postList li div:nth-child(2) {
 
 
 footer {
+    margin-top: 7%;
     height : 250px;
     position: relative;
+    1border-top: 1px solid lightgray;
 }
 
-footer > ul{
+footer > section {
     position: absolute;
     top : 39%;
     width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 10%;
     color : #1a1a1a;
-    font-size : 1em;
+    font-size : 0.8em;
     letter-spacing: 0.07em;
     font-weight: 100;
     font-family: Helvetica, sans-serif;
 }
 
-footer > ul li{
-    padding-left : 5%;
-    margin-top : 0.2%;
+footer > section > img {
+    width :50px;
+    border-radius: 50%;
+    float:left;
+    margin-right: 20px;
+    margin-top : 10px;
 }
 
-div#mamul {
-    width : 100%;
-    height : 20px; 
-    background-color: lightcoral;
+footer ul li{
+    margin-top : 0.5%;
 }
-
-
 
 
 @media screen and (max-width:720px) {

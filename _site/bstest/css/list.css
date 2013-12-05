@@ -99,18 +99,21 @@ section#mainBody {
 }
 
 ul#categoryList{
-    width : 200px;
-    margin-left: 10%;
-    font-size : 3.5em;
+    width : 20%;
+    font-size : 2.5em;
     line-height: normal; /* because of change of font-size */
     position: absolute;
+    left : -3%;
 }
 
 ul#categoryList li  {
     padding :2% 0%;
-    color :#1a1a1a;
-    1border-bottom : 1px solid lightgray;
     text-align: right;
+    font-family: 'Source Sans Pro', Verdana, sans-serif-webkit-body;
+}
+
+ul#categoryList a {
+    color : lightcoral;
 }
 
 ul#categorylist li * {
@@ -140,6 +143,47 @@ ul#categoryList li div:nth-child(2) {
     margin-top: 0.5%;
     font-size : 0.5em;
 }
+
+
+/* section list */
+section#list {
+    position: absolute;
+    width : 75%;
+    margin-left: 8%;
+    left :15%;
+    height : 500px;
+    border-radius: 20px;
+    1background-color: rgb(223, 235, 245);
+}
+
+section#list > div {
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    left : -10px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    z-index: 999;
+    background-color: rgb(223,235,245);
+}
+
+section#list section {
+    position: absolute;
+    width : 100%;
+    height: auto;
+    z-index: 1000;
+    border-radius: 20px;
+    -moz-box-shadow: 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px #888;
+    display : none;
+    background-color: rgb(223, 235, 245);
+}
+
+#list section:nth-of-type(1){
+    display : block;
+} 
 
 
 footer {

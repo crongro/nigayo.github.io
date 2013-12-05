@@ -27,18 +27,40 @@ title : index
 
   		<section id="mainBody">
         <ul id="categoryList">
-         {% for post in site.categories%}
-           <li>
-              <a href="#">{{ post[0] }}</a>
-           </li>
-          {% endfor %} 
+          {% for catName in site.category-list %}
+         <li>
+          {{ catName }}
+         </li>
+          {% endfor %}
         </ul>
+        <section id="list">
+          <div></div>
+
+          {% for catName in site.category-list %} 
+          <section class={{catName | prepend :'CAT_'}}>
+            <h1> {{catName}} </h1>
+          <ul>
+            {% for page in site.posts %}         
+              {% for pc in page.categories %}
+                   {% if pc == catName %}
+                    <li>{{ page.title }}</li>
+                  {% endif %} 
+              {% endfor %} 
+           {% endfor %}
+          </ul>
+          </section>
+          {% endfor %} 
+
+        </section>
         <!-- div id="listWrap">
           <ul id="postList">
                {% for post in site.posts limit:5 %}
                  <li>
                   <div><a href="{{ post.url }}">{{ post.title }}</a></div>
                   <div>{{ post.date | date: "%Y년 %m월 %d일" }}</div>
+                   {% if pc == catName %}
+                <span>list</span>
+              {% endif %} 
                  </li>
               {% endfor %} 
 

@@ -169,16 +169,19 @@ section#list > div {
 }
 
 section#list section {
+    display : none;
     position: absolute;
     width : 100%;
     height: auto;
     z-index: 1000;
     border-radius: 20px;
+    background-color: rgb(223, 235, 245);
+    padding : 30px;
+    font-size : 1.6em;
+    line-height: 1.8em;
     -moz-box-shadow: 1px 1px 1px #888;
     -webkit-box-shadow: 1px 1px 1px #888;
     box-shadow: 1px 1px 1px #888;
-    display : none;
-    background-color: rgb(223, 235, 245);
 }
 
 #list section:nth-of-type(1){

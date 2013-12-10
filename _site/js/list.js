@@ -22,31 +22,52 @@ function attachEvents() {
         //모든 section 태그를 숨긴다.
         var elSections = $ElementList('section#list section');
         elSections.css('display', 'none'); 
-        
+
+        //좌측 선택영역
+        var weSelectedMenu = $Element(eEvent.element);
+
         //선택한 카테고리의 정보만 보여준다. 
-        var sCat = eEvent.element.innerText;
-        var weMatchEle = $Element($$.getSingle('.CAT_'+sCat));
-        weMatchEle.css({
-          'display' : 'block',
-          'padding' : '30px 0px'
+        var sCat = weSelectedMenu.text().trim();
+        var weMatchedList = $Element($$.getSingle('.CAT_'+sCat));
+        var elefoot = $Element($$.getSingle('footer'));
+
+        //매치된 리스트 영역 보여주기 
+        weMatchedList.css({
+          'display' : 'block'
         });
 
-        //메인 영역의 크기 설정
-        var eleHeight = weMatchEle.css('height').replace(/px/i,"");
+        //좌측 선택된 메뉴 영역 하이라이트
+        weSelectedMenu.css({
+            'backgroundColor' : 'rgb(163, 163, 163)',
+            'color' : 'white'
+        })
+
+        //매치된 리스트 영역의 크기 설정
+        var eleHeight = parseInt(weMatchedList.css('height'));
         var offsetYSectionEle = $Element('mainBody').offset().top;
-        var offsetYClickEle = $Element(eEvent.element).offset().top;
-        weMatchEle.css({
+        var offsetYClickEle = weSelectedMenu.offset().top;
+        weMatchedList.css({
           'top' : offsetYClickEle- offsetYSectionEle - (eleHeight/2) + "px"
         })
 
+        //화살표 마름모의 위치값 조정.
         //TODO. getCalculateStaticValue 이미 계산된 값을 가져오게 preprocess개발 
-        var nHeight = utils.getCalculateStaticValue().nHeightLeftMenuLi.replace(/px/i,"");
-
-        var listEle = $Element('list');
-        
-        listEle.query('div').css({
+        var nHeight = parseInt(utils.getCalculateStaticValue().nHeightLeftMenuLi);
+        var weListWrap = $Element('list');
+        weListWrap.query('div').css({
           'top' : offsetYClickEle - offsetYSectionEle + (nHeight / 4)+ "px"  //4는 마름모 놈의 대충 모양의 위치를 잡으려고 박아둔 값이다 (쉣~)
         });
+
+        //footer 조정이 필요하면 아래로 밀어버리기
+        var weMatchedListTop = weMatchedList.offset().top;
+        var weMatchedListHeight = weMatchedList.height();
+        var nMatchEleBottomOffsetTop = weMatchedListTop + weMatchedListHeight;
+        var nFooterTop = elefoot.offset().top;
+        var nGap = nMatchEleBottomOffsetTop - nFooterTop;
+        var nFootMarginTop = parseInt(elefoot.css("marginTop"));
+        if( nGap > 0) {
+            elefoot.css({'top' : nGap + nFootMarginTop + "px"})
+        }
       }
   );
 
@@ -63,7 +84,7 @@ var utils = (function() {
 
   function getCalculateStaticValue() {
     var oPageData = {};
-    //oPageData['nHeightLeftMenuLi'] = $Element('categoryList').query('li:first-child').height();
+    //oPageData['nHeightLeftMenuLi'] = $Element('categoryList').query('li:first-child').height();  // margin등이 포함되어 있다.
     oPageData['nHeightLeftMenuLi'] = $Element('categoryList').query('li:first-child').css('height');
     return oPageData;
   }

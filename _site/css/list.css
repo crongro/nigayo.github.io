@@ -42,6 +42,7 @@ div#headerDecoration {
 
 div#wrap {
     width : 80%;
+    min-width: 600px;
     height:auto;
     margin :0 auto;
 }
@@ -148,12 +149,11 @@ ul#categoryList li div:nth-child(2) {
 /* section list */
 section#list {
     position: absolute;
-    width : 75%;
+    width : 65%;
     margin-left: 8%;
     left :15%;
     height : 500px;
     border-radius: 20px;
-    1background-color: rgb(223, 235, 245);
 }
 
 section#list > div {
@@ -165,7 +165,7 @@ section#list > div {
     -ms-transform:rotate(45deg);
     -webkit-transform:rotate(45deg);
     z-index: 999;
-    background-color: rgb(223,235,245);
+    background-color: rgb(253, 215, 215);
 }
 
 section#list section {
@@ -175,7 +175,7 @@ section#list section {
     height: auto;
     z-index: 1000;
     border-radius: 20px;
-    background-color: rgb(223, 235, 245);
+    background-color: rgb(253, 215, 215);
     padding : 30px;
     font-size : 1.6em;
     line-height: 1.8em;
@@ -221,7 +221,23 @@ footer ul li{
 }
 
 
-@media screen and (max-width:720px) {
+@media screen and (max-width:1024px) {
+
+    ul#categoryList{
+        font-size : 1.6em;
+    }
+
+    section#list section {
+        padding : 30px;
+        font-size : 1.2em;
+    }
+
+    nav#top>ul {
+        font-size : 0.8em;
+    }
+
+
+    /*
     div#wrap {
         width : 90%;
     }
@@ -246,5 +262,6 @@ footer ul li{
     .main_table tbody td:nth-of-type(3) span{
         font-size : 0.75em;
     }
+    */
 
 }

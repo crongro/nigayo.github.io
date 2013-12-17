@@ -78,7 +78,7 @@ function attachEvents() {
 
             for(var i = 0 , len = weChilds.length ; i <len ; i++) {
                 if(weChilds[i].$value() === selectedEle.$value()) {
-                    weChilds[i].css({ 'backgroundColor' : 'rgb(163, 163, 163)', 'color' : 'white' });
+                    weChilds[i].css({ 'backgroundColor' : 'rgb(187, 187, 187)', 'color' : 'white' });
                 }else {
                     weChilds[i].css({ 'backgroundColor' : 'white', 'color' : 'black' });
                 }

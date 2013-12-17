@@ -42,6 +42,7 @@ div#headerDecoration {
 
 div#wrap {
     width : 80%;
+    min-width: 600px;
     height:auto;
     margin :0 auto;
 }
@@ -220,7 +221,42 @@ footer ul li{
     margin-top : 0.5%;
 }
 
+@media screen and (max-width:1024px) {
+    nav#top {
+        height: 80px;
+    }
 
+    nav#top a {
+        font-size: 1.2em;
+    }
+
+    #title h1 {
+        height : 0.8em;
+        font-size : 3.0em;
+    }
+
+    #title h2 {
+        font-size: 1.5em;
+    }
+
+    header > div#title{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height : 150px;
+    }
+
+    #listWrap ul#postList {
+        font-size : 1.25em;
+    }
+
+    footer {
+        height : 120px;
+    }
+        
+
+}
+
+/*
 @media screen and (max-width:720px) {
     div#wrap {
         width : 90%;
@@ -248,3 +284,4 @@ footer ul li{
     }
 
 }
+*/

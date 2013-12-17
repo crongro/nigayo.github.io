@@ -56,7 +56,9 @@ function attachEvents() {
           'top' : offsetYClickEle - offsetYSectionEle + (nHeight / 4)+ "px"  //4는 마름모 놈의 대충 모양의 위치를 잡으려고 박아둔 값이다 (쉣~)
         });
 
-        //footer 조정이 필요하면 아래로 밀어버리기
+        /**
+         *   메인 영역의 높이에 따라 footer영역의 위치를 변경해준다. 
+         */
         var weMatchedListTop = weMatchedList.offset().top;
         var weMatchedListHeight = weMatchedList.height();
         var nMatchEleBottomOffsetTop = weMatchedListTop + weMatchedListHeight;
@@ -67,7 +69,10 @@ function attachEvents() {
             elefoot.css({'top' : nGap + nFootMarginTop + "px"})
         }
 
-        //internal function
+        /**
+         * 좌측 메뉴가 선택될때 마다 배경/색깔을 설정 함 (css toggle)
+         * @param {[Jindo Element]} selectedEle
+         */
         function _setStyleMenu(selectedEle) {
             var weChilds = $Element(eEvent.element.parentElement).child();
 
@@ -85,6 +90,10 @@ function attachEvents() {
 
 }
 
+/**
+* [utiliy 모음]
+ * @return {[JAVASCRIPT Object ]}
+ */
 var utils = (function() {
   function setLayout() {
     var elCategory = $Element('categoryList')

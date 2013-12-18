@@ -197,7 +197,6 @@ footer {
     margin-top: 7%;
     height : 250px;
     position: relative;
-    1border-top: 1px solid lightgray;
 }
 
 footer > section {
@@ -229,8 +228,7 @@ footer ul li{
 
     /* because of Decoration Div Width */
     div#wrap {
-        1position: relative;
-        width:80%;
+        width:100%;
     }
 
     nav#top {
@@ -238,30 +236,32 @@ footer ul li{
     }
 
     nav#top a {
-        font-size: 1.2em;
-    }
-
-    #title h1 {
-        height : 0.8em;
-        font-size : 3.0em;
-    }
-
-    #title h2 {
-        font-size: 1.5em;
+        font-size: 0.9em;
     }
 
     header > div#title{
         margin-top: 10px;
         margin-bottom: 10px;
-        height : 140px;
+        height : 100px;
     }
 
+    #title h1 {
+        height : 0.6em;
+        font-size : 2.0em;
+    }
+
+    #title h2 {
+        font-size: 1.0em;
+    }
+
+
     #listWrap ul#postList {
-        font-size : 1.25em;
+        font-size : 0.8em;
     }
 
     footer {
-        height : 120px;
+        height : 100px;
+        font-size : 0.6em;
     }
 }
 

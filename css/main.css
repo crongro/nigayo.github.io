@@ -267,6 +267,7 @@ footer ul li{
 @media screen and (max-width:720px) {
     div#wrap {
         width : 90%;
+        color:red;
     }
 
     header {

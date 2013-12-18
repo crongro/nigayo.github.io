@@ -34,6 +34,7 @@ body {
 }
 
 div#wrap {
+    border: 1px solid red;
     width : 80%;
     min-width: 600px;
     height:auto;

@@ -30,13 +30,14 @@ body {
     font-size : 0.9em;
     font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
     color : #000;
+    position:relative;
 }
 
 
 
 div#wrap {
     width : 80%;
-    min-width: 600px;
+    1min-width: 600px;
     height:auto;
     margin :0 auto;
 }
@@ -225,52 +226,37 @@ footer ul li{
 }
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1100px) {
 
-    /* because of Decoration Div Width */
     div#wrap {
-        position: relative;
+        width:100%;
+    }
+
+    nav#top {
+        height: 40px;
+    }
+
+    nav#top a {
+        font-size: 13px;
     }
 
     ul#categoryList{
-        font-size : 1.6em;
+        font-size : 0.6em;
+    }
+
+    /* section list */
+    section#list {
+        position: absolute;
+        width : 55%;
     }
 
     section#list section {
-        padding : 30px;
-        font-size : 1.2em;
-    }
-
-    nav#top>ul {
+        padding : 15px;
         font-size : 0.8em;
     }
 
-
-    /*
-    div#wrap {
-        width : 90%;
+    nav#top>ul {
+        font-size : 0.6em;
     }
-
-    header {
-        margin : 20px 0;
-    }
-
-    h1.title {
-        font-size : 2em;
-    }
-
-    .main_table thead th{
-        font-size: 1em;
-    }
-
-    .main_table tbody td span {
-        font-size: 0.75em;
-        text-shadow: 0 1px 1px #fff;
-    }
-
-    .main_table tbody td:nth-of-type(3) span{
-        font-size : 0.75em;
-    }
-    */
 
 }

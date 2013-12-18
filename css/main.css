@@ -226,10 +226,8 @@ footer ul li{
 
 @media screen and (max-width:1100px) {
 
-    /* because of Decoration Div Width */
     div#wrap {
         width:100%;
-        border : 3px solid red;
     }
 
     nav#top {
@@ -237,7 +235,7 @@ footer ul li{
     }
 
     nav#top a {
-        font-size: 0.9em;
+        font-size: 13px;
     }
 
     header > div#title{

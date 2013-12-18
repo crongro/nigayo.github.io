@@ -35,7 +35,7 @@ body {
 
 div#wrap {
     width : 80%;
-    min-width: 600px;
+    1min-width: 600px;
     height:auto;
     margin :0 auto;
 }
@@ -229,8 +229,9 @@ footer ul li{
 
     /* because of Decoration Div Width */
     div#wrap {
-        position: relative;
-        border : 1px solid red;
+        1position: relative;
+        border : 3px solid red;
+        width:80%;
     }
 
     nav#top {
@@ -238,16 +239,19 @@ footer ul li{
     }
 
     nav#top a {
-        font-size: 1.2em;
+        1font-size: 1.2em;
+        font-size: 0.5em;
     }
 
     #title h1 {
         height : 0.8em;
-        font-size : 3.0em;
+        1font-size : 3.0em;
+        font-size : 1.0em;
     }
 
     #title h2 {
-        font-size: 1.5em;
+        1font-size: 1.5em;
+        font-size: 0.5em;
     }
 
     header > div#title{
@@ -257,7 +261,8 @@ footer ul li{
     }
 
     #listWrap ul#postList {
-        font-size : 1.25em;
+        1font-size : 1.25em;
+        font-size : 0.45em;
     }
 
     footer {

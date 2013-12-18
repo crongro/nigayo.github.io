@@ -225,11 +225,12 @@ footer ul li{
 }
 
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1100px) {
 
     /* because of Decoration Div Width */
     div#wrap {
         position: relative;
+        border : 1px solid red;
     }
 
     nav#top {
@@ -264,6 +265,10 @@ footer ul li{
     }
 }
 
+
+
+
+/*
 @media screen and (max-width:720px) {
     div#wrap {
         width : 90%;
@@ -291,3 +296,4 @@ footer ul li{
     }
 
 }
+*/

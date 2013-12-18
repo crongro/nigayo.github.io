@@ -30,14 +30,7 @@ body {
     font-size : 0.9em;
     font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
     color : #000;
-}
-
-div#headerDecoration {
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    left: 0px;
-    background-color: lightcoral;
+    position : relative;
 }
 
 div#wrap {
@@ -45,6 +38,16 @@ div#wrap {
     min-width: 600px;
     height:auto;
     margin :0 auto;
+}
+
+
+div#headerDecoration {
+    position: absolute;
+    height: 5px;
+    top : 0;
+    left: 0;
+    right:0;
+    background-color: lightcoral;
 }
 
 header {
@@ -221,7 +224,14 @@ footer ul li{
     margin-top : 0.5%;
 }
 
+
 @media screen and (max-width:1024px) {
+
+    /* because of Decoration Div Width */
+    div#wrap {
+        position: relative;
+    }
+
     nav#top {
         height: 80px;
     }
@@ -252,8 +262,6 @@ footer ul li{
     footer {
         height : 120px;
     }
-        
-
 }
 
 /*

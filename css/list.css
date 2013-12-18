@@ -32,19 +32,23 @@ body {
     color : #000;
 }
 
-div#headerDecoration {
-    position: absolute;
-    height: 5px;
-    width: 100%;
-    left: 0px;
-    background-color: lightcoral;
-}
+
 
 div#wrap {
     width : 80%;
     min-width: 600px;
     height:auto;
     margin :0 auto;
+}
+
+
+div#headerDecoration {
+    position: absolute;
+    height: 5px;
+    top : 0;
+    left: 0;
+    right:0;
+    background-color: lightcoral;
 }
 
 header {
@@ -222,6 +226,11 @@ footer ul li{
 
 
 @media screen and (max-width:1024px) {
+
+    /* because of Decoration Div Width */
+    div#wrap {
+        position: relative;
+    }
 
     ul#categoryList{
         font-size : 1.6em;

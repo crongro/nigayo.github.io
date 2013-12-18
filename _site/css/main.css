@@ -229,6 +229,7 @@ footer ul li{
     /* because of Decoration Div Width */
     div#wrap {
         width:100%;
+        border : 3px solid red;
     }
 
     nav#top {

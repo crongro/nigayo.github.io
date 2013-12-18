@@ -230,39 +230,34 @@ footer ul li{
     /* because of Decoration Div Width */
     div#wrap {
         1position: relative;
-        border : 3px solid red;
         width:80%;
     }
 
     nav#top {
-        height: 80px;
+        height: 40px;
     }
 
     nav#top a {
-        1font-size: 1.2em;
-        font-size: 0.5em;
+        font-size: 1.2em;
     }
 
     #title h1 {
         height : 0.8em;
-        1font-size : 3.0em;
-        font-size : 1.0em;
+        font-size : 3.0em;
     }
 
     #title h2 {
-        1font-size: 1.5em;
-        font-size: 0.5em;
+        font-size: 1.5em;
     }
 
     header > div#title{
         margin-top: 10px;
         margin-bottom: 10px;
-        height : 150px;
+        height : 140px;
     }
 
     #listWrap ul#postList {
-        1font-size : 1.25em;
-        font-size : 0.45em;
+        font-size : 1.25em;
     }
 
     footer {

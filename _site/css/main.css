@@ -34,7 +34,6 @@ body {
 }
 
 div#wrap {
-    border: 1px solid red;
     width : 80%;
     min-width: 600px;
     height:auto;
@@ -265,11 +264,9 @@ footer ul li{
     }
 }
 
-/*
 @media screen and (max-width:720px) {
     div#wrap {
         width : 90%;
-        border : 1px solid red;
     }
 
     header {
@@ -294,4 +291,3 @@ footer ul li{
     }
 
 }
-*/

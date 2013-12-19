@@ -227,6 +227,7 @@ footer ul li{
 
     div#wrap {
         width:100%;
+        border : 1px solid red;
     }
 
     nav#top {

@@ -223,10 +223,11 @@ footer ul li{
     margin-top : 0.5%;
 }
 
-@media screen and (max-width:401px) {
+@media screen and (max-device-width:401px) {
 
     div#wrap {
         width:100%;
+        border :1px solid blue;
     }
 
     nav#top {
@@ -263,6 +264,17 @@ footer ul li{
     }
 }
 
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+@media screen and (max-width:990px) {
+    #title 
+    
+
+}
+ */
 
 /*
 @media screen and (max-width:720px) {

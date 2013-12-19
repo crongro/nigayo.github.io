@@ -219,6 +219,9 @@ footer > section > img {
     margin-top : 10px;
 }
 
+footer ul {
+    margin-top : 15px;
+}
 footer ul li{
     margin-top : 0.5%;
 }
@@ -227,7 +230,7 @@ footer ul li{
 
     div#wrap {
         width:100%;
-        border :2px solid blue;
+        1border :2px solid blue;
     }
 
     nav#top {

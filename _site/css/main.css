@@ -231,7 +231,7 @@ footer ul li{
     div#wrap {
         width:100%;
         1border :2px solid blue;
-        min-width : 10px;
+        min-width : 200px;
     }
 
     nav#top {

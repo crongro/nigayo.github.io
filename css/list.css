@@ -231,7 +231,7 @@ footer ul li{
 
     div#wrap {
         width:100%;
-        min-width : 100px;
+        min-width : 200px;
     }
 
     nav#top {
@@ -259,16 +259,16 @@ footer ul li{
 
     /* 마름모 UI */
     section#list > div {
-/*        width : 30px;
-        height: 30px;
-        position: absolute;
-        left : -10px;
-        transform:rotate(45deg);
-        -ms-transform:rotate(45deg);
-        -webkit-transform:rotate(45deg);
-        z-index: 999;
-        background-color: rgb(253, 215, 215);
-*/    }
+        width : 20px;
+        height: 20px;
+        1position: absolute;
+        left : -7px;
+        1transform:rotate(45deg);
+        1-ms-transform:rotate(45deg);
+        1-webkit-transform:rotate(45deg);
+        1z-index: 999;
+        1background-color: rgb(253, 215, 215);
+    }
 
     nav#top>ul {
         font-size : 0.6em;
@@ -284,7 +284,7 @@ footer ul li{
 @media screen and (min-width:402px) and (max-width:990px) {
 
     div#wrap {
-        border :2px solid red;
+        1border :2px solid red;
         min-width : 402px;
     }
 

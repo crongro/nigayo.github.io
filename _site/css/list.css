@@ -161,6 +161,7 @@ section#list {
     border-radius: 20px;
 }
 
+/* 마름모 UI */
 section#list > div {
     width : 30px;
     height: 30px;
@@ -226,10 +227,11 @@ footer ul li{
 }
 
 
-@media screen and (max-width:1100px) {
+@media screen and (max-width:401px) {
 
     div#wrap {
         width:100%;
+        min-width : 100px;
     }
 
     nav#top {
@@ -255,8 +257,56 @@ footer ul li{
         font-size : 0.8em;
     }
 
+    /* 마름모 UI */
+    section#list > div {
+/*        width : 30px;
+        height: 30px;
+        position: absolute;
+        left : -10px;
+        transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -webkit-transform:rotate(45deg);
+        z-index: 999;
+        background-color: rgb(253, 215, 215);
+*/    }
+
     nav#top>ul {
         font-size : 0.6em;
     }
+}
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+
+@media screen and (min-width:402px) and (max-width:990px) {
+
+    div#wrap {
+        border :2px solid red;
+        min-width : 402px;
+    }
+
+    nav#top a {
+        font-size : 1.2em;
+        letter-spacing: 0.02em;
+    }
+
+    ul#categoryList {
+        font-size: 1.5em;
+    }
+
+    section#list {
+        position: absolute;
+        width : 75%;
+    }
+
+    section#list section {
+        padding : 20px;
+        font-size : 1.1em;
+    }
+
+      
 
 }

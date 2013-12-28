@@ -35,7 +35,7 @@ body {
 
 div#wrap {
     width : 80%;
-    1min-width: 600px;
+    min-width: 410px;
     height:auto;
     margin :0 auto;
 }
@@ -231,6 +231,7 @@ footer ul li{
     div#wrap {
         width:100%;
         1border :2px solid blue;
+        min-width : 10px;
     }
 
     nav#top {
@@ -278,6 +279,12 @@ footer ul li{
 
     div#wrap {
         1border :2px solid red;
+        min-width : 402px;
+    }
+
+    nav#top a {
+        font-size : 1.2em;
+        letter-spacing: 0.02em;
     }
 
     #title h1 {
@@ -287,6 +294,7 @@ footer ul li{
     header > div#title {
         height : 150px;
     }
+      
 
 }
 

@@ -15,7 +15,7 @@ function attachEvents() {
   //TODO. 기능 분리.
   $Element('categoryList').delegate('click', 
       function (oEle, oClickEle) {
-        return oClickEle.nodeName == "LI";
+        return ((oClickEle.nodeName == "LI") && !utils.isMobile());
       },
       function(eEvent) {
 
@@ -40,7 +40,7 @@ function attachEvents() {
           'display' : 'block'
         });
 
-        //매치된 리스트 영역의 크기 설정
+        //매치된 리스트 영역의 top 위치 설정
         var eleHeight = parseInt(weMatchedList.css('height'));
         var offsetYSectionEle = $Element('mainBody').offset().top;
         var offsetYClickEle = weSelectedMenu.offset().top;
@@ -110,8 +110,19 @@ var utils = (function() {
     return oPageData;
   }
 
+  function isMobile() {
+    function isMobileAgent() {
+      return !! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+    }
+    function isMobileWidth() {
+      return !! ($Document(document).clientSize().width < 401);
+    }
+    return !! (isMobileAgent() && isMobileWidth());
+  }
+
   return  { 
             setLayout : setLayout,
-            getCalculateStaticValue : getCalculateStaticValue
+            getCalculateStaticValue : getCalculateStaticValue,
+            isMobile : isMobile
           };
 })();

@@ -18,7 +18,7 @@ function attachEvents() {
         return ((oClickEle.nodeName == "LI") && !utils.isMobile());
       },
       function(eEvent) {
-        alert('not mobilella');
+        //alert('not mobilella');
 
         //모든 section 태그를 숨긴다.
         var elSections = $ElementList('section#list section');
@@ -85,10 +85,8 @@ function attachEvents() {
                 }
             }
         }
-
       }
   );
-
 }
 
 /**

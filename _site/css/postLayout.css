@@ -138,7 +138,16 @@ article > header > section{
     line-height: 2.0em;
 }
 
-blockquote > p {
+.pwithimg {
+    text-align : center;
+}
+
+.pwithimg img {
+    width : 80%;
+    max-width: 800px;
+}
+
+/*blockquote > p {
     text-align : center;
 }
 
@@ -146,7 +155,7 @@ blockquote > p img {
     width : 80%;
     max-width: 800px;
 }
-
+*/
 footer {
     margin-top: 7%;
     height : 250px;

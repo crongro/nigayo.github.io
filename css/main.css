@@ -33,7 +33,7 @@ body {
     position : relative;
 }
 
-div#wrap {
+#wrap {
     width : 80%;
     min-width: 410px;
     height:auto;
@@ -41,7 +41,7 @@ div#wrap {
 }
 
 
-div#headerDecoration {
+#headerDecoration {
     position: absolute;
     height: 5px;
     top : 0;
@@ -54,7 +54,7 @@ header {
     height : auto;
 }
 
-header > div#title{
+header > #title{
     width : 90%;
     margin-left: 5%;
     margin-right:5%;
@@ -68,7 +68,7 @@ header > div#title{
     color : #1a1a1a;
 }
 
-header > div#title > div {
+header > #title > div {
     position : absolute;
     line-height: 2em;
     top : 35%;
@@ -94,7 +94,7 @@ header > div#title > div {
 
 /*   contents  */
 
-section#mainBody {
+#mainBody {
     position: relative;
 }
 
@@ -105,19 +105,23 @@ section#mainBody {
     top : 10%;
 }
 
-#listWrap ul#postList {
+#listWrap #postList {
     margin-top: 3%;
     font-size : 1.5em;
     line-height: 1em; /* because of change of font-size */
 }
 
-ul#postList li  {
+#postList li  {
     padding :2% 3% 2% 5%;
     color :#1a1a1a;
     border-bottom : 1px solid lightgray;
 }
 
-ul#postList li * {
+#postList li:last-child {
+    border-bottom : 0px;
+}
+
+#postList li * {
     1-webkit-transition: color 0.3s ease-out;
     1-moz-transition: all 0.3s ease-out;
     1-o-transition: all 0.3s ease-out;
@@ -125,14 +129,14 @@ ul#postList li * {
     1transition: color 0.3s ease-out;
 }
 
-ul#postList li:hover {
+#postList li:hover {
     1background-color: #1a1a1a;
     background-color: rgb(163, 163, 163);
     1background-color:rgba(240, 128, 128,0.38);
     color: white;
 }
 
-ul#postList li:hover a{
+#postList li:hover a{
     1background-color: #1a1a1a;
     background-color: rgb(163, 163, 163);
     1background-color:rgba(240, 128, 128,0.38);
@@ -140,12 +144,12 @@ ul#postList li:hover a{
 }
 
 
-ul#postList li div:nth-child(2) {
+#postList li div:nth-child(2) {
     margin-top: 0.5%;
     font-size : 0.5em;
 }
 
-#listWrap nav#top a {
+#listWrap #top a {
     color: rgb(163, 163, 163);
     font-size : 1.5em;
     letter-spacing: 0.11em;
@@ -153,21 +157,21 @@ ul#postList li div:nth-child(2) {
 
 @media screen and (max-width:401px) {
 
-    div#wrap {
+    #wrap {
         width:100%;
         1border :2px solid blue;
         min-width : 200px;
     }
 
-    nav#top {
+    #top {
         height: 40px;
     }
 
-    nav#top a {
+    #top a {
         font-size: 13px;
     }
 
-    header > div#title{
+    header > #title{
         margin-top: 10px;
         margin-bottom: 10px;
         height : 100px;
@@ -183,7 +187,7 @@ ul#postList li div:nth-child(2) {
     }
 
 
-    #listWrap ul#postList {
+    #listWrap #postList {
         font-size : 0.8em;
     }
 
@@ -202,12 +206,12 @@ ul#postList li div:nth-child(2) {
 
 @media screen and (min-width:402px) and (max-width:990px) {
 
-    div#wrap {
+    #wrap {
         1border :2px solid red;
         min-width : 402px;
     }
 
-    nav#top a {
+    #top a {
         font-size : 1.2em;
         letter-spacing: 0.02em;
     }
@@ -216,7 +220,7 @@ ul#postList li div:nth-child(2) {
         font-size: 2.6em; 
     }
 
-    header > div#title {
+    header > #title {
         height : 150px;
     }
       

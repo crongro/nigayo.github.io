@@ -35,7 +35,7 @@ body {
 
 
 
-div#wrap {
+#wrap {
     width : 80%;
     1min-width: 600px;
     height:auto;
@@ -43,7 +43,7 @@ div#wrap {
 }
 
 
-div#headerDecoration {
+#headerDecoration {
     position: absolute;
     height: 5px;
     top : 0;
@@ -56,55 +56,14 @@ header {
     height : auto;
 }
 
-/*nav#top {
-    position: relative;
-    height : 120px;
-}
-
-nav#top > ul {
-    position: absolute;
-    height: 20px;
-    width :80%;
-    top:42%;
-}
-
-nav#top > ul > li {
-    display : inline-block;
-    margin-left : 7%;
-}
-
-nav#top > ul > li:nth-child(1) {
-    margin-left : 0;
-}
-
-
-nav#top a {
-    color: rgb(163, 163, 163);
-    font-size : 1.5em;
-    letter-spacing: 0.11em;
-}
-
-nav#top a {
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
-    -ms-transition: color 0.3s ease-out;
-    transition: color 0.3s ease-out;
-}
-
-nav#top a:hover {
-    color: #000;
-    text-decoration: none;
-}
-*/
 /*   contents  */
 
-section#mainBody {
+#mainBody {
     position: relative;
     min-height: 600px;
 }
 
-ul#categoryList{
+#categoryList{
     width : 20%;
     font-size : 2.5em;
     line-height: normal; /* because of change of font-size */
@@ -112,17 +71,17 @@ ul#categoryList{
     left : -3%;
 }
 
-ul#categoryList li  {
+#categoryList li  {
     padding :2% 0%;
     text-align: right;
     font-family: 'Source Sans Pro', Verdana, sans-serif-webkit-body;
 }
 
-ul#categoryList a {
+#categoryList a {
     color : lightcoral;
 }
 
-ul#categorylist li * {
+#categorylist li * {
     1-webkit-transition: color 0.3s ease-out;
     1-moz-transition: all 0.3s ease-out;
     1-o-transition: all 0.3s ease-out;
@@ -130,14 +89,14 @@ ul#categorylist li * {
     1transition: color 0.3s ease-out;
 }
 
-ul#categoryList li:hover {
+#categoryList li:hover {
     1background-color: #1a1a1a;
     background-color: rgb(163, 163, 163);
     1background-color:rgba(240, 128, 128,0.38);
     color: white;
 }
 
-ul#categoryList li:hover a{
+#categoryList li:hover a{
     1background-color: #1a1a1a;
     background-color: rgb(163, 163, 163);
     1background-color:rgba(240, 128, 128,0.38);
@@ -145,14 +104,14 @@ ul#categoryList li:hover a{
 }
 
 
-ul#categoryList li div:nth-child(2) {
+#categoryList li div:nth-child(2) {
     margin-top: 0.5%;
     font-size : 0.5em;
 }
 
 
 /* section list */
-section#list {
+#list {
     position: absolute;
     width : 65%;
     margin-left: 8%;
@@ -162,7 +121,7 @@ section#list {
 }
 
 /* 마름모 UI */
-section#list > div {
+#list > div {
     width : 30px;
     height: 30px;
     position: absolute;
@@ -174,7 +133,7 @@ section#list > div {
     background-color: rgb(253, 215, 215);
 }
 
-section#list section {
+#list section {
     display : none;
     position: absolute;
     width : 100%;
@@ -195,73 +154,39 @@ section#list section {
 } 
 
 
-/*footer {
-    margin-top: 7%;
-    height : 250px;
-    position: relative;
-    border-top: 1px solid lightgray;
-}
-
-footer > section {
-    position: absolute;
-    top : 39%;
-    width: 90%;
-    margin-left: 10%;
-    color : #1a1a1a;
-    font-size : 0.8em;
-    letter-spacing: 0.07em;
-    font-weight: 100;
-    font-family: Helvetica, sans-serif;
-}
-
-footer > section > img {
-    width :50px;
-    border-radius: 50%;
-    float:left;
-    margin-right: 20px;
-    margin-top : 10px;
-}
-
-footer ul {
-    margin-top : 15px;
-}
-footer ul li{
-    margin-top : 0.5%;
-}*/
-
 
 @media screen and (max-width:401px) {
 
-    div#wrap {
+    #wrap {
         width:100%;
         min-width : 200px;
     }
 
-    nav#top {
+    #top {
         height: 40px;
     }
 
-    nav#top a {
+    #top a {
         font-size: 13px;
     }
 
-    ul#categoryList{
+    #categoryList{
         font-size : 0.6em;
     }
 
     /* section list */
-    section#list {
+    #list {
         position: absolute;
         width : 55%;
     }
 
-    section#list section {
+    #list section {
         padding : 15px;
         font-size : 0.8em;
     }
 
     /* 마름모 UI */
-    section#list > div {
+    #list > div {
         width : 20px;
         height: 20px;
         1position: absolute;
@@ -273,7 +198,7 @@ footer ul li{
         1background-color: rgb(253, 215, 215);
     }
 
-    nav#top>ul {
+    #top>ul {
         font-size : 0.6em;
     }
 }
@@ -286,26 +211,26 @@ footer ul li{
 
 @media screen and (min-width:402px) and (max-width:990px) {
 
-    div#wrap {
+    #wrap {
         1border :2px solid red;
         min-width : 402px;
     }
 
-    nav#top a {
+    #top a {
         font-size : 1.2em;
         letter-spacing: 0.02em;
     }
 
-    ul#categoryList {
+    #categoryList {
         font-size: 1.5em;
     }
 
-    section#list {
+    #list {
         position: absolute;
         width : 75%;
     }
 
-    section#list section {
+    #list section {
         padding : 20px;
         font-size : 1.1em;
     }

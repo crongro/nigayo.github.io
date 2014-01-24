@@ -32,7 +32,7 @@ body {
     color : #000;
 }
 
-div#headerDecoration {
+#headerDecoration {
     position: absolute;
     height: 5px;
     width: 100%;
@@ -40,46 +40,46 @@ div#headerDecoration {
     background-color: lightcoral;
 }
 
-div#wrap {
+#wrap {
     width : 80%;
     height:auto;
     margin :0 auto;
     min-width: 640px;
 }
 
-section#topMenu {
+#topMenu {
     height : auto;
 }
 
-nav#top {
+#top {
     position: relative;
     height : 120px;
 }
 
-nav#top > ul {
+#top > ul {
     position: absolute;
     height: 20px;
     width :80%;
     top:42%;
 }
 
-nav#top > ul > li {
+#top > ul > li {
     display : inline-block;
     margin-left : 7%;
 }
 
-nav#top > ul > li:nth-child(1) {
+#top > ul > li:nth-child(1) {
     margin-left : 0;
 }
 
 
-nav#top a {
+#top a {
     color: rgb(163, 163, 163);
     font-size : 1.5em;
     letter-spacing: 0.11em;
 }
 
-nav#top a {
+#top a {
     -webkit-transition: color 0.3s ease-out;
     -moz-transition: color 0.3s ease-out;
     -o-transition: color 0.3s ease-out;
@@ -87,7 +87,7 @@ nav#top a {
     transition: color 0.3s ease-out;
 }
 
-nav#top a:hover {
+#top a:hover {
     color: #000;
     text-decoration: none;
 }
@@ -115,7 +115,7 @@ article > header {
 article > header > h1{
     margin-top :7%;
     margin-bottom:7%;
-    font-size : 2em;
+    font-size : 4em;
     letter-spacing: 0.05em;
 }
 
@@ -131,11 +131,20 @@ article > header > section{
 
 /*   contents  */
 
-div#articleBody {
+#articleBody {
     margin-left: 10%;
     margin-right: 10%;
     font-size : 1.1em;
     line-height: 2.0em;
+}
+
+.pwithimg {
+    text-align : center;
+}
+
+.pwithimg > img {
+    width : 80%;
+    max-width: 800px;
 }
 
 footer {
@@ -165,6 +174,9 @@ footer > section > img {
     margin-top : 10px;
 }
 
+footer ul {
+    margin-top : 15px;
+}
 footer ul li{
     margin-top : 0.5%;
 }
@@ -173,7 +185,7 @@ footer ul li{
 
 
 @media screen and (max-width:720px) {
-    div#wrap {
+    #wrap {
         width : 90%;
     }
 

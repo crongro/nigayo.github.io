@@ -142,7 +142,7 @@ blockquote > p {
     text-align : center;
 }
 
-blockquote > p > img {
+blockquote > p img {
     width : 80%;
     max-width: 800px;
 }

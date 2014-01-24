@@ -81,28 +81,9 @@ header {
     color : lightcoral;
 }
 
-#categorylist li * {
-    1-webkit-transition: color 0.3s ease-out;
-    1-moz-transition: all 0.3s ease-out;
-    1-o-transition: all 0.3s ease-out;
-    1-ms-transition: all 0.3s ease-out;
-    1transition: color 0.3s ease-out;
-}
-
 #categoryList li:hover {
-    1background-color: #1a1a1a;
-    background-color: rgb(163, 163, 163);
-    1background-color:rgba(240, 128, 128,0.38);
-    color: white;
+    cursor: pointer;
 }
-
-#categoryList li:hover a{
-    1background-color: #1a1a1a;
-    background-color: rgb(163, 163, 163);
-    1background-color:rgba(240, 128, 128,0.38);
-    color: white;
-}
-
 
 #categoryList li div:nth-child(2) {
     margin-top: 0.5%;

@@ -56,7 +56,7 @@ header {
     height : auto;
 }
 
-nav#top {
+/*nav#top {
     position: relative;
     height : 120px;
 }
@@ -96,7 +96,7 @@ nav#top a:hover {
     color: #000;
     text-decoration: none;
 }
-
+*/
 /*   contents  */
 
 section#mainBody {
@@ -195,7 +195,7 @@ section#list section {
 } 
 
 
-footer {
+/*footer {
     margin-top: 7%;
     height : 250px;
     position: relative;
@@ -222,9 +222,12 @@ footer > section > img {
     margin-top : 10px;
 }
 
+footer ul {
+    margin-top : 15px;
+}
 footer ul li{
     margin-top : 0.5%;
-}
+}*/
 
 
 @media screen and (max-width:401px) {

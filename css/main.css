@@ -54,47 +54,6 @@ header {
     height : auto;
 }
 
-nav#top {
-    position: relative;
-    height : 120px;
-}
-
-nav#top > ul {
-    position: absolute;
-    height: 20px;
-    width :80%;
-    top:42%;
-}
-
-nav#top > ul > li {
-    display : inline-block;
-    margin-left : 7%;
-}
-
-nav#top > ul > li:nth-child(1) {
-    margin-left : 0;
-}
-
-
-nav#top a {
-    color: rgb(163, 163, 163);
-    font-size : 1.5em;
-    letter-spacing: 0.11em;
-}
-
-nav#top a {
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
-    -ms-transition: color 0.3s ease-out;
-    transition: color 0.3s ease-out;
-}
-
-nav#top a:hover {
-    color: #000;
-    text-decoration: none;
-}
-
 header > div#title{
     width : 90%;
     margin-left: 5%;
@@ -190,40 +149,6 @@ ul#postList li div:nth-child(2) {
     color: rgb(163, 163, 163);
     font-size : 1.5em;
     letter-spacing: 0.11em;
-}
-
-
-footer {
-    margin-top: 7%;
-    height : 250px;
-    position: relative;
-}
-
-footer > section {
-    position: absolute;
-    top : 39%;
-    width: 90%;
-    margin-left: 10%;
-    color : #1a1a1a;
-    font-size : 0.8em;
-    letter-spacing: 0.07em;
-    font-weight: 100;
-    font-family: Helvetica, sans-serif;
-}
-
-footer > section > img {
-    width :50px;
-    border-radius: 50%;
-    float:left;
-    margin-right: 20px;
-    margin-top : 10px;
-}
-
-footer ul {
-    margin-top : 15px;
-}
-footer ul li{
-    margin-top : 0.5%;
 }
 
 @media screen and (max-width:401px) {

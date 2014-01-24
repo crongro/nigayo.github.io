@@ -112,7 +112,6 @@ header > #title > div {
 }
 
 #postList li  {
-    padding :2% 3% 2% 5%;
     color :#1a1a1a;
     border-bottom : 1px solid lightgray;
 }
@@ -141,6 +140,11 @@ header > #title > div {
     background-color: rgb(163, 163, 163);
     1background-color:rgba(240, 128, 128,0.38);
     color: white;
+}
+
+#postList li a {
+    display: block;
+    padding: 2% 3% 2% 5%;
 }
 
 

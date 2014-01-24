@@ -138,11 +138,11 @@ article > header > section{
     line-height: 2.0em;
 }
 
-.pwithimg {
+blockquote > p {
     text-align : center;
 }
 
-.pwithimg > img {
+blockquote > p > img {
     width : 80%;
     max-width: 800px;
 }

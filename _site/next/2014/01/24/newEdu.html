@@ -9,6 +9,18 @@
     </head>
     <body>
     <div id="wrap">
+    <!-- facebook START -->
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/ko_KR/all.js#xfbml=1&appId=486583584796486";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+    <!-- facebook END -->
+
         <div id="headerDecoration"></div>
         <header>
             <nav id="top">
@@ -60,7 +72,11 @@
             </div>
         </article>
 
-        <!-- DISQUS Area -->
+        <!-- facebook START -->
+        <div class="fb-like" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+        <!-- facebook END  -->
+
+        <!-- DISQUS Area START  -->
         <div id="disqus_thread"></div>
         <script type="text/javascript">
             /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -75,6 +91,7 @@
         </script>
         <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        <!-- DISQUS Area END -->
     
 
         <footer>

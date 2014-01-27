@@ -156,6 +156,14 @@ blockquote > p img {
     max-width: 800px;
 }
 
+
+#disqus_thread {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 10%;
+}
+
+/* footer */
 footer {
     margin-top: 7%;
     height : 250px;

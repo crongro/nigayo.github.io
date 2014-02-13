@@ -50,10 +50,10 @@ body {
     background-color: lightcoral;
 }
 
-header {
+/*header {
     height : auto;
 }
-
+*/
 header > #title{
     width : 90%;
     margin-left: 5%;
@@ -163,7 +163,6 @@ header > #title > div {
 
     #wrap {
         width:100%;
-        1border :2px solid blue;
         min-width : 200px;
     }
 
@@ -172,7 +171,8 @@ header > #title > div {
     }
 
     #top a {
-        font-size: 13px;
+        font-size: 0.9em;
+
     }
 
     header > #title{
@@ -211,7 +211,6 @@ header > #title > div {
 @media screen and (min-width:402px) and (max-width:990px) {
 
     #wrap {
-        1border :2px solid red;
         min-width : 402px;
     }
 

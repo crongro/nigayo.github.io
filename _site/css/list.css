@@ -1,61 +1,4 @@
-@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
-body, input, textarea, select, button, table { 
-    line-height: 1.25em;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    outline : none;
-    color:black;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/* reuse Start */
-.marginLeft {
-    margin-left : 10%;
-}
-
-.fontColor {
-    color : gray;
-}
-/* reuse End */
-
-
-
-body {
-    font-size : 0.9em;
-    font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
-    color : #000;
-    position:relative;
-}
-
-
-
-#wrap {
-    width : 80%;
-    1min-width: 600px;
-    height:auto;
-    margin :0 auto;
-}
-
-
-#headerDecoration {
-    position: absolute;
-    height: 5px;
-    top : 0;
-    left: 0;
-    right:0;
-    background-color: lightcoral;
-}
-
-/*header {
-    height : auto;
-}
-*/
 /*   contents  */
 
 #mainBody {
@@ -148,7 +91,7 @@ body {
     }
 
     #top a {
-        font-size: 13px;
+        font-size: 0.9em;
     }
 
     #categoryList{
@@ -170,7 +113,6 @@ body {
     #list > div {
         width : 20px;
         height: 20px;
-        1position: absolute;
         left : -7px;
         1transform:rotate(45deg);
         1-ms-transform:rotate(45deg);
@@ -193,7 +135,6 @@ body {
 @media screen and (min-width:402px) and (max-width:990px) {
 
     #wrap {
-        1border :2px solid red;
         min-width : 402px;
     }
 

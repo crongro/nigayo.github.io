@@ -1,3 +1,55 @@
+@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+body, input, textarea, select, button, table{ 
+    line-height: 1.25em;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    outline : none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* reuse Start */
+.marginLeft {
+    margin-left : 10%;
+}
+
+.fontColor {
+    color : gray;
+}
+/* reuse End */
+
+
+
+body {
+    font-size : 0.9em;
+    font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+    color : #000;
+    position : relative;
+}
+
+
+#wrap {
+    width : 80%;
+    min-width: 410px;
+    height:auto;
+    margin :0 auto;
+}
+
+#headerDecoration {
+    position: absolute;
+    height: 5px;
+    top : 0;
+    left: 0;
+    right:0;
+    background-color: lightcoral;
+}
+
 header {
     height : auto;
 }

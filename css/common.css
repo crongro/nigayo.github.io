@@ -129,3 +129,33 @@ footer ul {
 footer ul li{
     margin-top : 0.5%;
 }
+
+
+@media screen and (max-width:401px) {
+
+    #wrap {
+        width:100%;
+        min-width : 200px;
+    }
+
+    #top {
+        height: 40px;
+    }
+
+    #top a {
+        font-size: 0.9em;
+    }
+}
+
+
+@media screen and (min-width:402px) and (max-width:990px) {
+
+    #wrap {
+        min-width : 402px;
+    }
+
+    #top a {
+        font-size : 1.2em;
+        letter-spacing: 0.02em;
+    }
+}

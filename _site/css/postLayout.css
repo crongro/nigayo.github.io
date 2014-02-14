@@ -1,36 +1,4 @@
-@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
 
-body, input, textarea, select, button, table{ 
-    line-height: 1.25em;
-    -webkit-font-smoothing: antialiased;
-}
-
-a {
-    outline : none;
-    color:black;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-/* reuse Start */
-.marginLeft {
-    margin-left : 10%;
-}
-
-.fontColor {
-    color : gray;
-}
-/* reuse End */
-
-
-
-body {
-    font-size : 0.9em;
-    font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
-    color : #000;
-}
 
 #headerDecoration {
     position: absolute;
@@ -41,56 +9,13 @@ body {
 }
 
 #wrap {
-    width : 80%;
-    height:auto;
-    margin :0 auto;
-    min-width: 640px;
+    1min-width: 640px;
 }
 
 #topMenu {
     height : auto;
 }
 
-#top {
-    position: relative;
-    height : 120px;
-}
-
-#top > ul {
-    position: absolute;
-    height: 20px;
-    width :80%;
-    top:42%;
-}
-
-#top > ul > li {
-    display : inline-block;
-    margin-left : 7%;
-}
-
-#top > ul > li:nth-child(1) {
-    margin-left : 0;
-}
-
-
-#top a {
-    color: rgb(163, 163, 163);
-    font-size : 1.5em;
-    letter-spacing: 0.11em;
-}
-
-#top a {
-    -webkit-transition: color 0.3s ease-out;
-    -moz-transition: color 0.3s ease-out;
-    -o-transition: color 0.3s ease-out;
-    -ms-transition: color 0.3s ease-out;
-    transition: color 0.3s ease-out;
-}
-
-#top a:hover {
-    color: #000;
-    text-decoration: none;
-}
 
 
 article {
@@ -164,39 +89,6 @@ blockquote > p img {
 }
 
 /* footer */
-footer {
-    margin-top: 7%;
-    height : 250px;
-    position: relative;
-    border-top: 1px solid lightgray;
-}
-
-footer > section {
-    position: absolute;
-    top : 39%;
-    width: 90%;
-    margin-left: 10%;
-    color : #1a1a1a;
-    font-size : 0.8em;
-    letter-spacing: 0.07em;
-    font-weight: 100;
-    font-family: Helvetica, sans-serif;
-}
-
-footer > section > img {
-    width :50px;
-    border-radius: 50%;
-    float:left;
-    margin-right: 20px;
-    margin-top : 10px;
-}
-
-footer ul {
-    margin-top : 15px;
-}
-footer ul li{
-    margin-top : 0.5%;
-}
 
 
 pre {
@@ -244,31 +136,42 @@ pre {
 .html .attribute { color: #BB7; }
 
 
+@media screen and (max-width:401px) {
 
-@media screen and (max-width:720px) {
-    #wrap {
-        width : 90%;
-    }
-
-    header {
-        margin : 20px 0;
-    }
-
-    h1.title {
+    article > header > h1{
         font-size : 2em;
     }
 
-    .main_table thead th{
-        font-size: 1em;
+    article > header > section{
+        font-size : 0.9em;
     }
 
-    .main_table tbody td span {
-        font-size: 0.75em;
-        text-shadow: 0 1px 1px #fff;
+    #articleBody {
+        font-size : 0.9em;
+        line-height: 1.5em;
     }
-
-    .main_table tbody td:nth-of-type(3) span{
-        font-size : 0.75em;
-    }
-
 }
+
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+
+@media screen and (min-width:402px) and (max-width:990px) {
+
+    article > header > h1{
+        font-size : 2.6em;
+    }
+
+    article > header > section{
+        1font-size : 1.1em;
+    }
+
+    #articleBody {
+        1font-size : 0.9em;
+    }
+}
+
+

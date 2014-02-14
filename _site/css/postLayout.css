@@ -137,7 +137,6 @@ pre {
     }
 
     article > header {
-        1width : 90%;
         margin-left: 3%;
         margin-right:3%;
     }
@@ -149,7 +148,7 @@ pre {
     #articleBody {
         margin-left: 3%;
         margin-right: 3%;
-        font-size : 0.9em;
+        font-size : 1.0em;
         line-height: 1.5em;
     }
 }

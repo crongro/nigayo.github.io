@@ -1,7 +1,5 @@
 
-#wrap {
-    width : 90%;
-}
+
 
 #headerDecoration {
     position: absolute;
@@ -191,4 +189,8 @@ pre {
     }
 }
 
-
+@media screen and (min-width: 990px) {
+    #wrap {
+        width : 90%;
+    }
+}

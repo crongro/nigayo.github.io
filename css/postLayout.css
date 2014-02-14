@@ -162,16 +162,29 @@ pre {
 
 @media screen and (min-width:402px) and (max-width:990px) {
 
+    /* common 에 있는 속성이지만 post를 볼때는 좌/우 여백이 더 줄여야 보기좋다. */
+    #wrap {
+        width : 95%;
+    }
+
     article > header > h1{
         font-size : 2.6em;
     }
 
+    article > header {
+        margin-left: 5%;
+        margin-right:5%;
+    }
+
     article > header > section{
-        1font-size : 1.1em;
+        font-size : 1.1em;
     }
 
     #articleBody {
-        1font-size : 0.9em;
+        margin-left: 3%;
+        margin-right: 3%;
+        font-size : 1.2em;
+        line-height: 1.5em;
     }
 }
 

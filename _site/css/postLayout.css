@@ -8,15 +8,9 @@
     background-color: lightcoral;
 }
 
-#wrap {
-    1min-width: 640px;
-}
-
 #topMenu {
     height : auto;
 }
-
-
 
 article {
     margin-top : 50px;
@@ -147,6 +141,8 @@ pre {
     }
 
     #articleBody {
+        margin-left: 3%;
+        margin-right: 3%;
         font-size : 0.9em;
         line-height: 1.5em;
     }

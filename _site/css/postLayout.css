@@ -136,6 +136,12 @@ pre {
         font-size : 2em;
     }
 
+    article > header {
+        1width : 90%;
+        margin-left: 3%;
+        margin-right:3%;
+    }
+
     article > header > section{
         font-size : 0.9em;
     }

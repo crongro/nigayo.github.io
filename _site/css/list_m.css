@@ -19,9 +19,8 @@
     background-color: lightcoral;
     font-size : 0.8em;
     padding : 0.7%;
-    padding-right : 1.5%;
+    padding-left: 2%;
     color : rgb(255,255,255);
-    text-align: right;
 }
 
 .catName + ul {

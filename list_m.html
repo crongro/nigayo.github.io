@@ -33,7 +33,11 @@ title : index
               {% for page in site.posts %}         
                 {% for pc in page.categories %}
                      {% if pc == catName %}
-                      <li>{{ page.title }}</li>
+                      <li>
+                      <a href="{{ page.url }}">
+                      {{ page.title }}
+                      </a>
+                      </li>
                     {% endif %} 
                 {% endfor %} 
              {% endfor %}

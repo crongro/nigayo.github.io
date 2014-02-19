@@ -1,0 +1,59 @@
+---
+title : index
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>test page</title>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width" initial-scale=1>
+    <link href="/css/reset.css" rel="stylesheet" media="screen">
+    <link href="/css/common.css" rel="stylesheet" media="screen">
+    <link href="/css/list_m.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+  	<div id="wrap">
+      <div id="headerDecoration"></div>
+  		<header>
+    		<nav id="top">
+          <ul class="marginLeft">
+            <li><a href="/">home</a></li>
+            <li><a href="list.html">posts</a></li>
+            <li><a href="http://github.com/nigayo">github</a></li>
+            <li><a href="http://www.facebook.com/niganiga">facebook</a></li>
+          </ul>
+    		</nav>
+  		</header>
+
+      <section id="all_lists">
+        {% for catName in site.category-list %}
+        <section class="category_lists">
+          <div class="catName">{{ catName }}</div>
+          <ul>
+              {% for page in site.posts %}         
+                {% for pc in page.categories %}
+                     {% if pc == catName %}
+                      <li>{{ page.title }}</li>
+                    {% endif %} 
+                {% endfor %} 
+             {% endfor %}
+          </ul>
+        </section>
+        {% endfor %}
+      </section>
+
+  		 <footer>
+            <section>
+              <img src="/images/crong.jpg">
+              <ul>
+                <li>Younjisu at NEXT</li>
+                <li>aniga75@gmail.com</li>
+              </ul>
+          </section>
+        </footer>
+      <!-- div id="mamul"> </div -->
+  	</div>
+    <script src="/js/jindo_2.8.1.js"></script>
+    <script src="/js/list_m.js"></script>
+  </body>
+</html>

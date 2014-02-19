@@ -1,0 +1,18 @@
+
+#all_lists {
+    margin-top: 7%;
+    margin-left: 3%;
+    margin-right: 3%;
+    font-size : 1.2em;
+    line-height: 1.5em;
+}
+
+.category_lists {
+    margin : 2%;
+    border : 1px solid red;
+}
+
+.catName {
+    background-color: gray;
+    font-size : 1.1em;
+}

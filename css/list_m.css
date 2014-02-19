@@ -8,11 +8,20 @@
 }
 
 .category_lists {
-    margin : 2%;
-    border : 1px solid red;
+    margin : 5%;
 }
 
 .catName {
-    background-color: gray;
+    background-color: lightcoral;
     font-size : 1.1em;
+    padding : 2%;
+    color : rgb(255,255,255);
+}
+
+.catName + ul {
+    background-color: rgb(247, 247, 247);
+}
+
+.category_lists ul > li {
+    font-size : 0.8em;
 }

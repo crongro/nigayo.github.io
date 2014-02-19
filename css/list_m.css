@@ -19,6 +19,7 @@
 }
 
 .catName + ul {
+    padding : 2%;
     background-color: rgb(247, 247, 247);
 }
 

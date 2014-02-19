@@ -145,6 +145,14 @@ footer ul li{
     #top a {
         font-size: 0.9em;
     }
+
+    footer {
+        height: 100px;
+        font-size : 0.6em;
+    }
+    footer > section {
+    top : 10%;
+    }
 }
 
 

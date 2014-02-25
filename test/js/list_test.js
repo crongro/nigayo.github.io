@@ -33,6 +33,7 @@ test(" 선택된 카테고리대로 리스트 영역이 노출되는지 테스�
 	}
 });
 
+//todo. change variable 'i'
 test("카테고리와 일치하는 영역이 보이는지 확인", function() {
 	//Given
 	for(var i = 1 ; i < 7; i++) {

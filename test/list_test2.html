@@ -10,6 +10,10 @@ title : index
     <link href="/lib/css/reset.css" rel="stylesheet" media="screen">
     <link href="/css/common.css" rel="stylesheet" media="screen">
     <link href="/css/list.css" rel="stylesheet" media="screen">
+
+	<!-- For test code -->
+    <link rel="stylesheet" href="resources/qunit.css">
+
     <script>
     if (screen.width <=699) {
       document.location = "list_m.html";
@@ -17,6 +21,10 @@ title : index
     </script>
   </head>
   <body>
+  <!-- For Test code : Element -->
+  	<div id="qunit"></div>
+ 	<div id="qunit-fixture"></div>
+ 	
   	<div id="wrap">
       <div id="headerDecoration"></div>
   		<header>
@@ -90,6 +98,9 @@ title : index
         </footer>
       <!-- div id="mamul"> </div -->
   	</div>
+
+	
+
     <script src="/lib/js/jindo_2.8.1.js"></script>
     <script src="/js/list_rf.js"></script>
     <script>
@@ -107,5 +118,11 @@ title : index
           o.fireLayer(); 
         });
     </script>
-  </body>
+
+    <!-- For test code -->
+    <script src="resources/qunit.js"></script>
+    <script type="text/javascript" src="/lib/js/jsstub.js"></script>
+    <script type="text/javascript" src="/lib/js/jsmock.js"></script> 
+    <script src="js/list_test.js"></script> 
+</body>
 </html>

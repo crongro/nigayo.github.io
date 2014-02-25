@@ -64,7 +64,6 @@ Nigayo.List = (function() {
   }; //end of menuHandler Function
 
 
-  /******************************** Handler Action Functions **************************************************/
   /**
    * 좌측 메뉴가 선택될때 마다 배경/색깔을 설정 함 (css toggle)
    * @param {[Jindo Element]} selectedEle
@@ -134,19 +133,6 @@ Nigayo.List = (function() {
   MakeListUI._hideAllSection = function(el) {
       el.css('display', 'none'); 
   }
-
-  /*
-   *  지울예정임
-   */
-  // function _setFooter(weMatchedList, welefoot) {
-  //    var weMatchedListTop = weMatchedList.offset().top;
-  //    var weMatchedListHeight = weMatchedList.height();
-  //    var nMatchEleBottomOffsetTop = weMatchedListTop + weMatchedListHeight;
-  //    var nFooterTop = welefoot.offset().top;
-  //    var nGap = nMatchEleBottomOffsetTop - nFooterTop;
-  //    var nFootMarginTop = parseInt(welefoot.css("marginTop"));
-  //    if( nGap > 0) welefoot.css({'top' : nGap + nFootMarginTop + "px"}); 
-  // };
 
   return MakeListUI;
 

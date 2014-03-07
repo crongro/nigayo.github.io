@@ -73,6 +73,11 @@ blockquote > p img {
     max-width: 800px;
 }
 
+/* 이미지의 테두리 설정 */
+img[alt~="#1"] {
+    border : 1px solid rgb(228, 228, 228)
+}
+
 #fb-widget, #disqus_thread {
     width: 80%;
     margin: 0px auto;

@@ -69,8 +69,8 @@ blockquote > p {
 }
 
 blockquote > p img {
-    width : 80%;
-    max-width: 800px;
+    width : 70%;
+    max-width: 700px;
 }
 
 /* 이미지의 테두리 설정 */

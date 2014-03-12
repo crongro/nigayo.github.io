@@ -1,0 +1,376 @@
+/*! nigayo_Blog - v0.0.1 - 2014-03-12 */
+/* System Name, CSS Version_Creater_Date */
+/* Common */ 
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;font-size:1em}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal} a{text-decoration:none} a:hover,a:active,a:focus{text-decoration:underline}
+1@import url('http://fonts.googleapis.com/earlyaccess/nanumgothic.css');
+
+body, input, textarea, select, button, table{ 
+    line-height: 1.25em;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    outline : none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* reuse Start */
+.marginLeft {
+    margin-left : 10%;
+}
+
+.fontColor {
+    color : gray;
+}
+/* reuse End */
+
+
+
+body {
+    font-size : 0.9em;
+    font-family : '나눔고딕',NanumGothic,'맑은 고딕','Malgun Gothic','돋움',Dotum,'굴림',Gulim,Helvetica,sans-serif;
+    color : #000;
+    position : relative;
+}
+
+
+#wrap {
+    width : 80%;
+    min-width: 410px;
+    height:auto;
+    margin :0 auto;
+}
+
+#headerDecoration {
+    position: absolute;
+    height: 5px;
+    top : 0;
+    left: 0;
+    right:0;
+    background-color: lightcoral;
+}
+
+header {
+    height : auto;
+}
+
+#top {
+    position: relative;
+    height : 120px;
+}
+
+#top > ul {
+    position: absolute;
+    height: 20px;
+    width :80%;
+    top:42%;
+}
+
+#top > ul > li {
+    display : inline-block;
+    margin-left : 7%;
+}
+
+#top > ul > li:nth-child(1) {
+    margin-left : 0;
+}
+
+
+#top a {
+    color: rgb(163, 163, 163);
+    font-size : 1.5em;
+    letter-spacing: 0.11em;
+}
+
+#top a {
+    -webkit-transition: color 0.3s ease-out;
+    -moz-transition: color 0.3s ease-out;
+    -o-transition: color 0.3s ease-out;
+    -ms-transition: color 0.3s ease-out;
+    transition: color 0.3s ease-out;
+}
+
+#top a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+
+footer {
+    margin-top: 7%;
+    height : 250px;
+    position: relative;
+    border-top: 1px solid lightgray;
+}
+
+footer > section {
+    position: absolute;
+    top : 39%;
+    width: 90%;
+    margin-left: 10%;
+    color : #1a1a1a;
+    font-size : 0.8em;
+    letter-spacing: 0.07em;
+    font-weight: 100;
+    font-family: Helvetica, sans-serif;
+}
+
+footer > section > img {
+    width :50px;
+    border-radius: 50%;
+    float:left;
+    margin-right: 20px;
+    margin-top : 10px;
+}
+
+footer ul {
+    margin-top : 15px;
+}
+footer ul li{
+    margin-top : 0.5%;
+}
+
+
+@media screen and (max-width:401px) {
+
+    #wrap {
+        width:100%;
+        min-width : 200px;
+    }
+
+    #top {
+        height: 40px;
+    }
+
+    #top a {
+        font-size: 0.9em;
+    }
+
+    footer {
+        height: 100px;
+        font-size : 0.6em;
+    }
+    footer > section {
+    top : 10%;
+    }
+}
+
+
+@media screen and (min-width:402px) and (max-width:990px) {
+
+    #wrap {
+        width : 90%;
+        min-width : 402px;
+    }
+
+    #top a {
+        font-size : 1.2em;
+        letter-spacing: 0.02em;
+    }
+}
+#headerDecoration {
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    left: 0px;
+    background-color: lightcoral;
+}
+
+#topMenu {
+    height : auto;
+}
+
+article {
+    margin-top : 50px;
+    border-radius : 8px;
+}
+
+article > header {
+    width : 90%;
+    margin-left: 5%;
+    margin-right:5%;
+    margin-bottom: 7%;
+    position: relative;
+    color : #1a1a1a;
+}
+
+article > header {
+    line-height: normal;
+    margin-left :10%;
+}
+
+article > header > h1{
+    margin-top :7%;
+    margin-bottom:7%;
+    font-size : 4em;
+    letter-spacing: 0.05em;
+}
+
+article > header > section{
+    font-size : 1em;
+    letter-spacing: 0.05em;
+    color : rgb(163, 163, 163);
+}
+
+.gubunBar {
+    color :lightcoral;
+}
+
+/*   contents  */
+
+#articleBody {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-size : 1.1em;
+    line-height: 2.2em;
+}
+
+/*.pwithimg {
+    text-align : center;
+}
+
+.pwithimg img {
+    width : 80%;
+    max-width: 800px;
+}
+*/
+blockquote > p {
+    text-align : center;
+}
+
+blockquote > p img {
+    width : 70%;
+    max-width: 700px;
+}
+
+/* 이미지의 테두리 설정 */
+img[alt~="#1"] {
+    border : 1px solid rgb(228, 228, 228)
+}
+
+#fb-widget, #disqus_thread {
+    width: 80%;
+    margin: 0px auto;
+    margin-top: 10%;
+    text-align: center;
+}
+
+/* footer */
+
+
+pre {
+    margin-left: 2em;
+    background-color: #eff;
+    border: solid 1px #bdd;
+    padding: 4px;
+}
+
+.ruby .normal {}
+.ruby .comment { color: #005; font-style: italic; }
+.ruby .keyword { color: #A00; font-weight: bold; }
+.ruby .method { color: #077; }
+.ruby .class { color: #074; }
+.ruby .module { color: #050; }
+.ruby .punct { color: #447; font-weight: bold; }
+.ruby .symbol { color: #099; }
+.ruby .string { color: #944; background: #FFE; }
+.ruby .char { color: #F07; }
+.ruby .ident { color: #004; }
+.ruby .constant { color: #07F; }
+.ruby .regex { color: #B66; background: #FEF; }
+.ruby .number { color: #F99; }
+.ruby .attribute { color: #7BB; }
+.ruby .global { color: #7FB; }
+.ruby .expr { color: #227; }
+.ruby .escape { color: #277; }
+
+.xml .normal {}
+.xml .namespace { color: #B66; font-weight: bold; }
+.xml .tag { color: #F88; }
+.xml .comment { color: #005; font-style: italic; }
+.xml .punct { color: #447; font-weight: bold; }
+.xml .string { color: #944; }
+.xml .number { color: #F99; }
+.xml .attribute { color: #BB7; }
+
+.html .normal {}
+.html .namespace { color: #B66; font-weight: bold; }
+.html .tag { color: #F88; }
+.html .comment { color: #005; font-style: italic; }
+.html .punct { color: #447; font-weight: bold; }
+.html .string { color: #944; }
+.html .number { color: #F99; }
+.html .attribute { color: #BB7; }
+
+
+@media screen and (max-width:401px) {
+
+    article > header > h1{
+        font-size : 2em;
+    }
+
+    article > header {
+        margin-left: 3%;
+        margin-right:3%;
+    }
+
+    article > header > section{
+        font-size : 0.9em;
+    }
+
+    #articleBody {
+        margin-left: 3%;
+        margin-right: 3%;
+        font-size : 1.2em;
+        line-height: 1.5em;
+    }
+}
+
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+
+@media screen and (min-width:402px) and (max-width:990px) {
+
+    /* common 에 있는 속성이지만 post를 볼때는 좌/우 여백이 더 줄여야 보기좋다. */
+    #wrap {
+        width : 95%;
+    }
+
+    article > header > h1{
+        font-size : 2.6em;
+    }
+
+    article > header {
+        margin-left: 5%;
+        margin-right:5%;
+    }
+
+    article > header > section{
+        font-size : 1.1em;
+    }
+
+    #articleBody {
+        margin-left: 3%;
+        margin-right: 3%;
+        font-size : 1.2em;
+        line-height: 1.5em;
+    }
+}
+
+@media screen and (min-width: 990px) {
+    #wrap {
+        width : 90%;
+    }
+}

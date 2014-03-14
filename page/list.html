@@ -15,24 +15,11 @@ title : index
     <link href="/css/list.css" rel="stylesheet" media="screen" -->
 
     <script>
-    function isMobile() {
-      function isMobileAgent() {
-        return !! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+      if(!!(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+        alert("mbilellla");
+        }else{
+        alert("no");
       }
-      function isMobileWidth() {
-        return !! ($Document(document).clientSize().width < 401);
-      }
-      //return !! (isMobileAgent() && isMobileWidth());
-      return !! (isMobileAgent());
-    }
-
-    alert("ddddㅣd");
-
-    if(isMobile()) {
-      alert("mbilellla");
-    }else{
-      alert("no");
-    }
 
 /*
     if (screen.width <=699) {

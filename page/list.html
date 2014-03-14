@@ -18,7 +18,22 @@ title : index
     if (screen.width <=699) {
       document.location = "list_m.html";
     }
-    alert(screen.width);
+
+
+    function isMobile() {
+      function isMobileAgent() {
+        return !! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+      }
+      function isMobileWidth() {
+        return !! ($Document(document).clientSize().width < 401);
+      }
+      return !! (isMobileAgent() && isMobileWidth());
+    }
+
+
+    if(isMobile()) {
+      alert("mbilellla");
+    }
     </script>
   </head>
   <body>

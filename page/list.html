@@ -15,11 +15,6 @@ title : index
     <link href="/css/list.css" rel="stylesheet" media="screen" -->
 
     <script>
-    if (screen.width <=699) {
-      document.location = "list_m.html";
-    }
-
-
     function isMobile() {
       function isMobileAgent() {
         return !! (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
@@ -34,6 +29,12 @@ title : index
     if(isMobile()) {
       alert("mbilellla");
     }
+    
+    if (screen.width <=699) {
+      document.location = "list_m.html";
+    }
+
+
     </script>
   </head>
   <body>

@@ -144,6 +144,7 @@ footer ul li{
     #wrap {
         width:100%;
         min-width : 200px;
+        color :red;
     }
 
     #top {
@@ -329,7 +330,6 @@ pre {
 
     article > header > h1{
         font-size : 2em;
-        color :red;
     }
 
     article > header {
@@ -365,7 +365,6 @@ pre {
 
     article > header > h1{
         font-size : 2.6em;
-        color :blue
     }
 
     article > header {

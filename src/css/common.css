@@ -63,7 +63,7 @@ header {
     position: absolute;
     height: 20px;
     width :80%;
-    top:42%;
+    top:72%;
 }
 
 #top > ul > li {
@@ -143,7 +143,7 @@ footer ul li{
     }
 
     #top a {
-        font-size: 0.9em;
+        font-size: 1.06em;
     }
 
     footer {

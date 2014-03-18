@@ -139,31 +139,6 @@ footer ul li{
 }
 
 
-@media screen and (max-width:401px) {
-
-    #wrap {
-        width:100%;
-        min-width : 200px;
-    }
-
-    #top {
-        height: 40px;
-    }
-
-    #top a {
-        font-size: 0.9em;
-    }
-
-    footer {
-        height: 100px;
-        font-size : 0.6em;
-    }
-    footer > section {
-    top : 10%;
-    }
-}
-
-
 @media screen and (min-width:402px) and (max-width:990px) {
 
     #wrap {
@@ -326,6 +301,28 @@ pre {
 
 
 @media screen and (max-width:401px) {
+
+    #wrap {
+        width:100%;
+        min-width : 200px;
+    }
+
+    #top {
+        height: 40px;
+    }
+
+    #top a {
+        font-size: 0.9em;
+    }
+
+    footer {
+        height: 100px;
+        font-size : 0.6em;
+    }
+
+    footer > section {
+    top : 10%;
+    }
 
     article > header > h1{
         font-size : 2em;

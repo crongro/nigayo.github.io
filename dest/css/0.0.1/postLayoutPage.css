@@ -142,7 +142,7 @@ footer ul li{
 @media screen and (max-width:401px) {
 
     #wrap {
-        width:100%;
+        1width:100%;
         min-width : 200px;
         color :red;
     }

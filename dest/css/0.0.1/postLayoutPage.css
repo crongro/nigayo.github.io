@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-03-14 */
+/*! nigayo_Blog - v0.0.1 - 2014-03-18 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -251,10 +251,24 @@ blockquote > p img {
     max-width: 700px;
 }
 
-/* 이미지의 테두리 설정 */
+/* 이미지의 테두리 설정 
+ * 여기 설정한 것들은 특정 post에만 사용되는 것입니다. 주의하세요
+*/
 img[alt~="#1"] {
     border : 1px solid rgb(228, 228, 228)
 }
+
+img[alt~=localhost] {
+    width:100%;
+    max-width: 1000px;
+}
+
+img[alt~=halfview] {
+    width : 50%;
+    max-width: 300px;
+}
+/* 이미지 설정 끝  */
+
 
 #fb-widget, #disqus_thread {
     width: 80%;

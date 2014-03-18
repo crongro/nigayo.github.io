@@ -73,10 +73,24 @@ blockquote > p img {
     max-width: 700px;
 }
 
-/* 이미지의 테두리 설정 */
+/* 이미지의 테두리 설정 
+ * 여기 설정한 것들은 특정 post에만 사용되는 것입니다. 주의하세요
+*/
 img[alt~="#1"] {
     border : 1px solid rgb(228, 228, 228)
 }
+
+img[alt~=localhost] {
+    width:100%;
+    max-width: 1000px;
+}
+
+img[alt~=halfview] {
+    width : 50%;
+    max-width: 300px;
+}
+/* 이미지 설정 끝  */
+
 
 #fb-widget, #disqus_thread {
     width: 80%;

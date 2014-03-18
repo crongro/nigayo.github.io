@@ -63,4 +63,4 @@ coderay:
 redcloth:
  hard_breaks: true
 
-category-list : [html,css,javascript,next,web,dev_story]
+category-list : [css,javascript,next,web,dev_story]

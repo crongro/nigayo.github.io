@@ -54,7 +54,7 @@ title : index
 
           {% for catName in site.category-list %} 
           <section class={{catName | prepend :'CAT_'}}>
-            <h1> {{catName}} </h1>
+            <!-- h1> {{catName}} </h1 -->
           <ul>
             {% for page in site.posts %}         
               {% for pc in page.categories %}

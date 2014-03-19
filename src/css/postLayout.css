@@ -69,8 +69,8 @@ blockquote > p {
 }
 
 blockquote > p img {
-    width : 70%;
-    max-width: 700px;
+    width : 100%;
+    max-width: 1000px;
 }
 
 /* 이미지의 테두리 설정 
@@ -160,6 +160,11 @@ pre {
 
     article > header > section{
         font-size : 1.0em;
+    }
+
+    blockquote > p img {
+        width : 100%;
+        max-width: 700px;
     }
 
     #articleBody {

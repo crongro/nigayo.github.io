@@ -5,11 +5,11 @@ category : javascript
 ---
 
 <style>
-blockquote > p img[alt~=halfview] {
+/*blockquote > p img[alt~=#halfview] {
 	width : 50%;
 	max-width: 300px;
 }
-</style>
+*/</style>
 
 안드로이드 웹 개발시에 크롬으로 손쉽게 디버깅 하는 방법을 공유합니다.이 포스트는 아래 링크를 통해서 시도해본 결과를 공유한 것입니다.
 
@@ -38,13 +38,13 @@ blockquote > p img[alt~=halfview] {
 
 환경설정-디바이스정보-빌드번호항목을 찾습니다
 여기서 빌드번호를 7차례 클릭합니다 (꾹 여러번 눌러보세요) 이후 개발자옵션이 활성화 됩니다.(치트키 같죠?)
->![halfview](/images/0314/1.png "빌드번호를 7차례 누르기")
+>![#halfview](/images/0314/1.png "빌드번호를 7차례 누르기")
 
 아래는 빌드번호를 누룬 다음에 활성회돤 '개발자옵셥'메뉴항목입니다 
->![halfview](/images/0314/2.png "개발자옵션이 보입니다")
+>![#halfview](/images/0314/2.png "개발자옵션이 보입니다")
 
 그다음은 개발자옵션을 클릭하고 들어가면 'USB 디버깅' 이라는 것이 보입니다. 이걸 활성화하시면 됩니다
->![halfview](/images/0314/3.png "개발자옵션이 보입니다")
+>![#halfview](/images/0314/3.png "개발자옵션이 보입니다")
 
 이것으로 안드로이드 기기에서 할 일은 모두 끝났습니다.(안드로이드에 설치한 크롬에서 뭔가 할 게 없어요)<br/><br/>
 
@@ -53,7 +53,7 @@ blockquote > p img[alt~=halfview] {
 PC의 크롬을 실행한 후 주소창에 'chrome://inspect' 입력합니다.
 다음과 같은 화면을 볼 수 있습니다. 
 
->![연결된 기기가 보입니다 #1](/images/0314/4.png "SHV-E250S라는 기기가 연결됐네요")
+>![연결된 기기가 보입니다 #border](/images/0314/4.png "SHV-E250S라는 기기가 연결됐네요")
 
 기기 정보가 보이면 성공한 것입니다. 
 
@@ -61,14 +61,14 @@ PC의 크롬을 실행한 후 주소창에 'chrome://inspect' 입력합니다.
 
 inspect 를 클릭해보세요. 크롬개발자도구가 나오면서 모바일웹화면의 DOM을 분석 할 수 있습니다. 
 
->![디버깅을 할 수 있다고요! #1](/images/0314/5.png "DOM 탐색") <br/><br/>
+>![디버깅을 할 수 있다고요! #border](/images/0314/5.png "DOM 탐색") <br/><br/>
 
 
 **추가로 한가지 더 간단히 해볼만한 것이 있네요.**
 
 PC에서 개발중인 localhost 서버를 모바일웹에서 볼 수 있습니다. 먼저 PC의 크롬을 열고 주소창에 chrome://inspect 을 입력해서 접속 한 후 'Port forwarding' 이라고 나오는 버튼을 누르면 8080 이라는 부분이 설정되어 있습니다. 만약 8080 포트로 서비스중인 로컬 서비스가 있다면 바로 안드로이드 브라우저에서 PC의 로컬서비스에 접속해서 테스트 할 수 있습니다.
 
->![halfview #1](/images/0314/6.png "port forwarding")     ![halfview #1](/images/0314/7.png "안드로이드에서 연결하기")
+>![#halfview #border](/images/0314/6.png "port forwarding")     ![#halfview #border](/images/0314/7.png "안드로이드에서 연결하기")
 
 이후에 안드로이드기기의 크롬에서 'http://localhost:8080'를 입력 후에 접속해보세요. PC개발 중인 localhost서버를 바로 모바일웹에서도 볼 수 있습니다. 
 제가 다른 IP로 설정후에 동작시켜보니 빨간불이 나오고...동작이 잘 안되네요. (아직 답을 찾지 못했어요)

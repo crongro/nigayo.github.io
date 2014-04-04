@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-04-02 */
+/*! nigayo_Blog - v0.0.1 - 2014-04-04 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -262,6 +262,7 @@ blockquote > p {
 
 blockquote > p img {
     width : 100%;
+    height: auto;
     max-width: 1000px;
 }
 
@@ -269,11 +270,12 @@ blockquote > p img {
  * 여기 설정한 것들은 특정 post에만 사용되는 것입니다. 주의하세요
 */
 img[alt~="#border"] {
-    border : 1px solid rgb(228, 228, 228)
+    border : 1px solid rgb(228, 228, 228);
 }
 
 img[alt~="#default"] {
     width:100%;
+    height: auto;
     max-width: 1000px;
 }
 

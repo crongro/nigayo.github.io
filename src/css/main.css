@@ -1,3 +1,11 @@
+a {
+    outline : none;
+    color:black;
+}
+
+a:hover {
+    text-decoration: none;
+}
 
 
 header > #title{

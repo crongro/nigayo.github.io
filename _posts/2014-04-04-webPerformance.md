@@ -61,7 +61,7 @@ JavaScript MVC관련 프레임워크도 몇 개 인기를 끌고 있고요. 간�
 음. 이렇게 생겼군요. 아래는 성능진단을 한 후(run버튼 누른 후) 결과화면입니다. <br/><br/>
 
 
->![#border](/images/0401/auditmain.png "크롬 Audits탭") <br/><br/>
+>![#border](/images/0404/auditmain.png "크롬 Audits탭") <br/><br/>
 
 크롬개발자도구를 아직 모르시면 우선 그것부터 찾아서 공부하시는 것이 좋습니다.(여기서는 생략 ^^)
 
@@ -87,17 +87,17 @@ JavaScript MVC관련 프레임워크도 몇 개 인기를 끌고 있고요. 간�
 성능진단을 위해서는 크롬개발자도구를 실행한 후 Audits탭을 눌러 아래 그림의 붉은 색 버튼을 누르면 됩니다
 (참고로 pageSpeed라는 크롬확장도구도 비슷하면서 훌륭하다고 합니다) 
 
->![#border](/images/0401/auditstart.png "Audits 으로 성능진단 시작하기") <br/><br/> 
+>![#border](/images/0404/auditstart.png "Audits 으로 성능진단 시작하기") <br/><br/> 
 
 그러면 아래와 같은 결과가 나옵니다. 
 
->![#border](/images/0401/compress/gzip_audit_before.png "성능진단결과") <br/><br/>
+>![#border](/images/0404/compress/gzip_audit_before.png "성능진단결과") <br/><br/>
 
 아래는 위 사이트보단 복잡한 다른 웹사이트 결과입니다.
 
 결과 항목이 좀더 복잡해 보입니다. 웬만한 웹사이트의 결과는 비슷한 것 같습니다.
 
->![#border](/images/0401/auditResultG.png "성능진단결과") <br/><br/>
+>![#border](/images/0404/auditResultG.png "성능진단결과") <br/><br/>
 
 **3.문제점을 이해**<br><br>
 
@@ -166,11 +166,11 @@ express 모듈이 지원하는 함수라는 것만 추측할 수 있습니다. �
 
 compress() 적용전,
 
->![#border](/images/0401/compress/gzip_audit_before.png) <br><br>
+>![#border](/images/0404/compress/gzip_audit_before.png) <br><br>
 
 compress() 적용후,
 
->![#border](/images/0401/compress/gzip_audit_after.png) <br><br>
+>![#border](/images/0404/compress/gzip_audit_after.png) <br><br>
 
 'Enable gzip compression' 항목의 개수가 3개에서 1개로 변했네요. reset.css와 main.css가 이제 gzip으로 내려받았나 봅니다.
 
@@ -180,11 +180,11 @@ urisunsu라는 파일은 node에서 생성한 html파일인데 이건 압축대�
 
 compress() 적용전,
 
->![#border](/images/0401/compress/gzip_main_css_before_.png) <br><br>
+>![#border](/images/0404/compress/gzip_main_css_before_.png) <br><br>
 
 compress() 적용후,
 
->![#border](/images/0401/compress/gzip_main_css.png) <br><br>
+>![#border](/images/0404/compress/gzip_main_css.png) <br><br>
 
 응답헤더(Response Headers) > 'Content-Encoding' 항목을 보면 gzip 이라고 나온 걸 확인할 수 있습니다. 
 
@@ -205,7 +205,7 @@ compress() 적용후,
 먼저 문제 리포팅 된 부분을 보겠습니다.
 
 
->![#border](/images/0401/cache/cache_audits_before.png)  <br><br>
+>![#border](/images/0404/cache/cache_audits_before.png)  <br><br>
 
 Leavage borwser caching 으로 지적된 건수가 11건이나 되는군요.
 
@@ -237,21 +237,21 @@ Audits탭에서 다시 성능진단을 해본 결과를 보겠습니다.
 
 자주변경되지 않는 소스파일이라면 로컬서버에 올려두고 로컬캐쉬정책을 따르도록 하는 것도 좋을 것 같습니다.
 
->![#border](/images/0401/cache/cache_audits_after.png) <br><br>
+>![#border](/images/0404/cache/cache_audits_after.png) <br><br>
 
 파일단위로 그 결과를 보려면 아래처럼 networks탭에서 확인할 수도 있겠죠.
 
 cache설정 전 PNG이미지 파일의 응답헤더,
 
->![#border](/images/0401/cache/no_maxage_premierPng.png) <br><br>
+>![#border](/images/0404/cache/no_maxage_premierPng.png) <br><br>
 
 cache설정 후 PNG이미지 파일의 응답헤더에서 max-age값으로 캐쉬만료기간이 설정된 걸 확인 할 수 있습니다.
 
->![#border](/images/0401/cache/set_maxage_premierPng.png) <br><br>	
+>![#border](/images/0404/cache/set_maxage_premierPng.png) <br><br>	
 
 cache설정 후, reset.css파일에서도 max-age값으로 캐쉬 만료 기간이 설정된 걸 확인 할 수 있습니다.
 
->![#border](/images/0401/cache/set_maxage_reset.css_.png) <br><br>	
+>![#border](/images/0404/cache/set_maxage_reset.css_.png) <br><br>	
 
 캐쉬설정 방법은 웹서버환경마다 조금씩 다를 수 있지만 구글검색을 통해서 쉽게 방법을 찾을 수 있을 거 같네요. <br><br>
 
@@ -259,7 +259,7 @@ cache설정 후, reset.css파일에서도 max-age값으로 캐쉬 만료 기간�
 
 아래 그림을 보면 image파일 두 개가 뭔가 문제가 있다고 지적하고 있습니다.
 
->![#border](/images/0401/image_dimension/imagesetW_H_before_.png) <br><br>	
+>![#border](/images/0404/image_dimension/imagesetW_H_before_.png) <br><br>	
 
 요거는 넓이값과 높이값이 지정되지 않은 것이 문제라고 했는데요. 
 
@@ -283,7 +283,7 @@ img.logo {
 <br><br>
 이후에 Audits에서 다시 검사해보니 종전 경고메시지가 없어졌군요.
 
->![#border](/images/0401/image_dimension/imagesetW_H_after_.png) <br><br>	
+>![#border](/images/0404/image_dimension/imagesetW_H_after_.png) <br><br>	
 
 
 **4.4 Optimize the order of styles and scripts** <br>
@@ -297,11 +297,11 @@ HTML 페이지안에 CSS,JavaScript소스파일의 위치는 큰 제한이 없�
 
 urisunsu 사이트에서도 이런 문제가 리포팅 됐네요.
 
->![#border](/images/0401/externalJSposition/auditsbefore.png) <br><br>	
+>![#border](/images/0404/externalJSposition/auditsbefore.png) <br><br>	
 
 소스코드는 이렇습니다.
 
->![#border](/images/0401/externalJSposition/inlineJSPosbefore.png) <br><br>	
+>![#border](/images/0404/externalJSposition/inlineJSPosbefore.png) <br><br>	
 
 javascript코드 뒤에 css코드도 보이고요(javascript코드를 받느라 css가 화면에 스타일을 반영하지 못하고 기다리고 있었겠네요)
 
@@ -309,7 +309,7 @@ javascript코드 뒤에 css코드도 보이고요(javascript코드를 받느라 
 
 소스코드를 이렇게 수정해봤습니다.
 
->![#border](/images/0401/externalJSposition/inlineJSPosafter.png) <br><br>	
+>![#border](/images/0404/externalJSposition/inlineJSPosafter.png) <br><br>	
 
 변경부분이 보이시나요? 
 
@@ -319,7 +319,7 @@ javascript소스부분을 모두 HTML BODY태그 닫히기 직전(HTML구조최�
 
 'Optimize the order ..' 어쩌구 하는 내용이 이제 보이지 않습니다.
 
->![#border](/images/0401/externalJSposition/auditsafter.png) <br><br>	
+>![#border](/images/0404/externalJSposition/auditsafter.png) <br><br>	
 
 
 

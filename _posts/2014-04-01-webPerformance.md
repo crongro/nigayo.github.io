@@ -1,6 +1,6 @@
 ---
 layout: postLayout
-title : 내 웹사이트 로딩속도! <br>크롬개발자도구로 간단히 개선해보기
+title : 내 웹사이트 로딩속도! 크롬개발자도구로 간단히 개선해보기
 tags : javascript,performance
 category : javascript
 ---

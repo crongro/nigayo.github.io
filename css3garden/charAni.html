@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+
+<title> CSS Garden </title>
+
+<link rel="stylesheet" type="text/css" href="css/common.css" media="screen">
+
+<style>
+
+
+
+@-webkit-keyframes typing{
+	from {width : 0; }
+	to {width : 17ch; }
+}
+
+@-webkit-keyframes caret {
+	0% 	 {border-color : black; }
+	50%  {border-color : transparent; }
+	100% {border-color : black; }
+}
+
+#stage {
+	font : bold 500% Consolas,Monaco,monospace; /* commont 에 정의된 font는 안된다 */
+	position: absolute;
+	top :4em;
+	left : 1em;
+	overflow: hidden;
+	width : 17ch;
+	height : auto;
+	white-space: nowrap; /* width가 작아도 글자가 줄바꿈되지 않게 하기 */
+	text-align: center;
+	border-right : 2px solid black;
+	-webkit-animation : typing 10s steps(17,end), caret 1.2s step-end infinite ; /* step-end 나왔다 바로 사라짐 */
+}
+
+</style>
+<script type="text/javascript">
+</script>
+
+<html>
+<body>
+	<div id="outside">
+
+		<div id="stage">
+		MY NAME IS NIGAYO
+		</div>
+		
+	</div>
+</body>
+	
+</html>

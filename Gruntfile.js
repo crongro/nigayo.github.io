@@ -35,7 +35,7 @@ module.exports = function(grunt) {
                 nonull : true,
             },
             cssPost: {
-                src : ["<%= dirs.src %>/lib/css/reset.css","<%= dirs.src %>/css/common.css", "<%= dirs.src %>/css/postLayout.css"] ,
+                src : ["<%= dirs.src %>/lib/css/reset.css","<%= dirs.src %>/css/common.css", "<%= dirs.src %>/css/postLayout.css", "<%= dirs.src %>/css/syntax.css"] ,
                 dest : '<%= dirs.destCss %>/postLayoutPage.css',
                 nonull : true,
             },

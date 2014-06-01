@@ -274,6 +274,10 @@ footer ul li{
     font-weight: bold;
 }
 
+#list > section > ul > a {
+    color: palevioletred;
+}
+
 
 @media screen and (max-width:401px) {
 

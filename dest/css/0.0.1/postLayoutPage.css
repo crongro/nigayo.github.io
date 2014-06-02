@@ -245,6 +245,8 @@ article > header > section{
     margin-right: 10%;
     font-size : 1.1em;
     line-height: 2.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
 }
 
 /*.pwithimg {
@@ -298,6 +300,11 @@ pre.prettyprint {
     margin-left: 2em;
     padding: 15px;
     margin-bottom: 4em;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: "Source Code Pro",monospace;
+    font-size: 15px;
+    line-height: 1.3;
 }
 
 @media screen and (max-width:401px) {
@@ -343,7 +350,7 @@ pre.prettyprint {
 
     /* common 에 있는 속성이지만 post를 볼때는 좌/우 여백이 더 줄여야 보기좋다. */
     #wrap {
-        width : 60%;
+        width : 95%;
     }
 
     article > header > h1{
@@ -369,7 +376,12 @@ pre.prettyprint {
 
 @media screen and (min-width: 990px) {
     #wrap {
-        width : 60%;
+        width : 90%;
+        max-width: 990px;
+    }
+
+    pre.prettyprint {
+        font-size: 15px;
     }
 }
 

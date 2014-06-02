@@ -151,7 +151,7 @@ pre.prettyprint {
 
     /* common 에 있는 속성이지만 post를 볼때는 좌/우 여백이 더 줄여야 보기좋다. */
     #wrap {
-        width : 95%;
+        width : 60%;
     }
 
     article > header > h1{
@@ -177,6 +177,6 @@ pre.prettyprint {
 
 @media screen and (min-width: 990px) {
     #wrap {
-        width : 90%;
+        width : 60%;
     }
 }

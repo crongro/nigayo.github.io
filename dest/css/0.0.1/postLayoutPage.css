@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-06-01 */
+/*! nigayo_Blog - v0.0.1 - 2014-06-02 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -343,7 +343,7 @@ pre.prettyprint {
 
     /* common 에 있는 속성이지만 post를 볼때는 좌/우 여백이 더 줄여야 보기좋다. */
     #wrap {
-        width : 95%;
+        width : 60%;
     }
 
     article > header > h1{
@@ -369,7 +369,7 @@ pre.prettyprint {
 
 @media screen and (min-width: 990px) {
     #wrap {
-        width : 90%;
+        width : 60%;
     }
 }
 

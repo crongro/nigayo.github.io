@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-06-01 */
+/*! nigayo_Blog - v0.0.1 - 2014-06-02 */
 /**
 * Jindo Framework
 * @type desktop

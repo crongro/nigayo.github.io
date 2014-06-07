@@ -105,9 +105,8 @@ img[alt~="#halfview"] {
 
 
 pre.prettyprint {
-    margin-left: 2em;
     padding: 15px;
-    margin-bottom: 4em;
+    margin-bottom: 1em;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: "Source Code Pro",monospace;

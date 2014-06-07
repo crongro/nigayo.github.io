@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-06-02 */
+/*! nigayo_Blog - v0.0.1 - 2014-06-07 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -297,9 +297,8 @@ img[alt~="#halfview"] {
 
 
 pre.prettyprint {
-    margin-left: 2em;
     padding: 15px;
-    margin-bottom: 4em;
+    margin-bottom: 1em;
     white-space: pre-wrap;
     word-wrap: break-word;
     font-family: "Source Code Pro",monospace;

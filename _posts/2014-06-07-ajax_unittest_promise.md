@@ -1,12 +1,15 @@
 ---
 layout: postLayout
-title : promise패턴이 적용된 Ajax코드의 unitTest
+title : AJAX 단위테스트가 Promise를 맞이하실 때.
 tags : javascript
 category : javascript
 ---
 
-이글은 JavaScript와 Ajax 그리고 Promise에 대한 간단한 이해가 필요합니다. <br>
+이글은 JavaScript와 Ajax 그리고 Promise에 대한 이해가 필요합니다. <br>
 Promise패턴은 ['HTML5rocks의 번역글'](http://www.html5rocks.com/ko/tutorials/es6/promises/, "Promise HTML5Rocks번역글") 이 도움이 됩니다.
+
+<br>
+JavaScript테스트코드의 구현방법은 ['자바스크립트 테스트와 디버깅'](http://book.naver.com/bookdb/book_detail.nhn?bid=7383401) 책이나 qunit 웹사이트에서 비동기테스트 방법에 대한 설명이 잘 되어 있습니다.
 
 <br>
 Ajax 와 같은 비동기함수의 테스트코드는 어려운 편이지만 다행히 몇가지 방법이 있습니다.<br/><br/>
@@ -16,16 +19,11 @@ Ajax 와 같은 비동기함수의 테스트코드는 어려운 편이지만 다
 3. 3.callback 함수만 따로 테스트하기
 
 <br>
-참고로 JavaScript테스트코드의 구현방법은 ['자바스크립트 테스트와 디버깅'](http://book.naver.com/bookdb/book_detail.nhn?bid=7383401) 책을 참고하세요
-
-또는 qunit웹사이트에 비동기테스트 관련API에 대한 설명과 예제가 잘 되어 있습니다.
-
-<br>
 위 3가지 방법은 모두 쓸만한 방법이며 각각 장단점이 있습니다.
 
-XHR객체를 통해 실제 통신과정을 테스트 할 수 있는 1번에 대행하는 예제코드를 한번 보겠습니다.
+이 중에서 1번 방법은 XHR객체를 통해 실제 통신과정 테스트가 가능하여 개인적으로 좋은 방법이라 생각합니다.
 
-아래는 XHR통신 소스입니다.
+1번 예제를 한번 보겠습니다.
 
 <pre class="prettyprint">
 var oMyAjax = {
@@ -48,7 +46,7 @@ var oMyAjax = {
 </pre>
 
 <br>
-다음은 qunit기반 테스트코드 입니다.
+요놈은 qunit으로 작성한 테스트코드 입니다.
 
 <pre class="prettyprint">
 asyncTest("XHR [asyncTest_setTimeout사용] ", function() {
@@ -65,7 +63,6 @@ asyncTest("XHR [asyncTest_setTimeout사용] ", function() {
   
 });
 </pre>
-
 [(CodePen DEMO)](http://codepen.io/nigayo/pen/BoezC?editors=001, "codepen demo page")
 
 여기서는 1초 지연을 통해서 처리가 됩니다. 이 방법의 경우는 실제 XHR통신을 테스트 할 수 있다는 장점이 있지만 임의의 시간을 지연시간으로 지정해야 합니다.
@@ -148,17 +145,19 @@ asyncTest("XHR [Promise 에러 URL] ", function() {
         });
 });
 </pre>
-
 [(CodePen DEMO)](http://codepen.io/nigayo/pen/CvBHf/?editors=001, "codepen demo page")
 
 
 then 함수의 두 번째 인자로 error를 처리 할 수 있는 콜백함수를 지정할 수 있습니다.
-여기에 error 상황에 대한 처리를 할 수 있습니다.
+콜백함수에서 필요한 error 처리를 할 수 있습니다.
 
 <br>
-Promise패턴은 꼭 비동기상황에서의 테스트코드 작성을 위해서라기보다는 비동기적인 상황이 중첩되어 있다면 유용한 것 같습니다.(nodeJS말고 브라우저에서는 좀 덜 필요하죠)
 
-비동기 상황에 대한 Promise패턴의 적용은 테스트코드를 구현하는데 있어 보너스 하나를 안겨주는 것 같습니다. ;-)
+테스트코드를 위해서 Promise패턴을 적용하는 것은 사실 좀 고민해야 할 것 같고요.
+
+(완전하지 않지만 처음에 설명한 것처럼 괜찮은 방법들이 있음으로)
+
+다만 Promise패턴이 적용된 AJAX코드의 단위테스트 구현은 좀더 깔끔하고 명확한 맛이 있는 것 같네요.
 
 
 

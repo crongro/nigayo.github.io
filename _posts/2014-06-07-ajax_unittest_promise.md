@@ -6,7 +6,7 @@ category : javascript
 ---
 
 이글은 JavaScript와 Ajax 그리고 Promise에 대한 이해가 필요합니다. <br>
-Promise패턴은 ['HTML5rocks의 번역글'](http://www.html5rocks.com/ko/tutorials/es6/promises/, "Promise HTML5Rocks번역글") 이 도움이 됩니다.
+Promise패턴은 ['HTML5rocks의 번역글'](http://www.html5rocks.com/ko/tutorials/es6/promises/ "Promise HTML5Rocks번역글") 이 도움이 됩니다.
 
 <br>
 JavaScript테스트코드의 구현방법은 ['자바스크립트 테스트와 디버깅'](http://book.naver.com/bookdb/book_detail.nhn?bid=7383401) 책이나 qunit 웹사이트에서 비동기테스트 방법에 대한 설명이 잘 되어 있습니다.
@@ -147,11 +147,19 @@ asyncTest("XHR [Promise 에러 URL] ", function() {
 </pre>
 [(CodePen DEMO)](http://codepen.io/nigayo/pen/CvBHf/?editors=001, "codepen demo page")
 
+<i>*Promise는 IE와 모바일웹환경(크롬 for Android 제외)은 지원하지 않아 위 테스트코드는 먹통이여요</i>
 
+<br> 
 then 함수의 두 번째 인자로 error를 처리 할 수 있는 콜백함수를 지정할 수 있습니다.
-콜백함수에서 필요한 error 처리를 할 수 있습니다.
+
+이 콜백함수에서 필요한 error 처리를 할 수 있어 에러상황에 대한 테스트코드도 자연스럽게 구현 할 수 있습니다.
+
+Promise를 적용하고보니 비동기테스트도 좀 할만한 것 같네요. 간단한 테스트라 다른 예외적인 상황이 또 있을지는 아직 모르겠습니다.
 
 <br>
+<br>
+
+<<em>정리하면,</em>
 
 테스트코드를 위해서 Promise패턴을 적용하는 것은 사실 좀 고민해야 할 것 같고요.
 

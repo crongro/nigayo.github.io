@@ -63,7 +63,7 @@ asyncTest("XHR [asyncTest_setTimeout사용] ", function() {
   
 });
 </pre>
-[(CodePen DEMO)](http://codepen.io/nigayo/pen/BoezC?editors=001, "codepen demo page")
+[(CodePen DEMO)](http://codepen.io/nigayo/pen/BoezC?editors=001 "codepen demo page")
 
 여기서는 1초 지연을 통해서 처리가 됩니다. 이 방법의 경우는 실제 XHR통신을 테스트 할 수 있다는 장점이 있지만 임의의 시간을 지연시간으로 지정해야 합니다.
 만약 네트웍 상황이 좋지 않아 응답을 받기까지 1초 이상이 걸린다면 테스트코드는 실패할 것입니다. 그래서 넉넉한 시간(?)을 지정해야 하는 것이고요.
@@ -145,7 +145,7 @@ asyncTest("XHR [Promise 에러 URL] ", function() {
         });
 });
 </pre>
-[(CodePen DEMO)](http://codepen.io/nigayo/pen/CvBHf/?editors=001, "codepen demo page")
+[(CodePen DEMO)](http://codepen.io/nigayo/pen/CvBHf/?editors=001 "codepen demo page")
 
 <i>*Promise는 IE와 모바일웹환경(크롬 for Android 제외)은 지원하지 않아 위 테스트코드는 먹통이여요</i>
 

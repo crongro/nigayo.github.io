@@ -44,6 +44,11 @@ module.exports = function(grunt) {
                 dest : '<%= dirs.destCss %>/listPage.css',
                 nonull : true,
             },
+            cssLecture : {
+                src : ["<%= dirs.src %>/lib/css/reset.css","<%= dirs.src %>/css/common.css", "<%= dirs.src %>/css/lecture.css"] ,
+                dest : '<%= dirs.destCss %>/lectureMain.css',
+                nonull : true,
+            },
             cssListMobile : {
                 src : ["<%= dirs.src %>/lib/css/reset.css","<%= dirs.src %>/css/common.css", "<%= dirs.src %>/css/list_m.css"] ,
                 dest : '<%= dirs.destCss %>/listPage_m.css',

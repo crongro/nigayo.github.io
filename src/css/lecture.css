@@ -1,0 +1,144 @@
+
+/*   contents  */
+
+#mainBody {
+    position: relative;
+    min-height: 600px;
+}
+
+#categoryList{
+    width : 20%;
+    font-size : 2.5em;
+    line-height: normal; /* because of change of font-size */
+    position: absolute;
+    left : -3%;
+}
+
+#categoryList li  {
+    padding :2% 0%;
+    text-align: right;
+    font-family: 'Source Sans Pro', Verdana, sans-serif-webkit-body;
+}
+
+#categoryList a {
+    color : lightcoral;
+}
+
+#categoryList li:hover {
+    cursor: pointer;
+}
+
+#categoryList li div:nth-child(2) {
+    margin-top: 0.5%;
+    font-size : 0.5em;
+}
+
+
+/* section list */
+#list {
+    position: absolute;
+    width : 65%;
+    margin-left: 4%;
+    left :15%;
+    height : 500px;
+    border-radius: 20px;
+}
+
+/* 마름모 UI */
+#list > div {
+    width : 30px;
+    height: 30px;
+    position: absolute;
+    left : -10px;
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -webkit-transform:rotate(45deg);
+    z-index: 999;
+    background-color: rgb(253, 215, 215);
+}
+
+#list section {
+    display : none;
+    position: absolute;
+    width : 100%;
+    height: auto;
+    z-index: 1000;
+    border-radius: 20px;
+    background-color: rgb(253, 215, 215);
+    padding : 30px;
+    font-size : 1.6em;
+    line-height: 1.8em;
+    -moz-box-shadow: 1px 1px 1px #888;
+    -webkit-box-shadow: 1px 1px 1px #888;
+    box-shadow: 1px 1px 1px #888;
+}
+
+#list section:nth-of-type(1){
+    display : block;
+} 
+
+
+#list > section > ul > a:hover {
+    font-weight: bold;
+}
+
+#list > section > ul > a {
+    color: palevioletred;
+}
+
+
+@media screen and (max-width:401px) {
+
+    #categoryList{
+        font-size : 0.6em;
+    }
+
+    /* section list */
+    #list {
+        position: absolute;
+        width : 55%;
+    }
+
+    #list section {
+        padding : 15px;
+        font-size : 0.8em;
+    }
+
+    /* 마름모 UI */
+    #list > div {
+        width : 20px;
+        height: 20px;
+        left : -7px;
+        1transform:rotate(45deg);
+        1-ms-transform:rotate(45deg);
+        1-webkit-transform:rotate(45deg);
+        1z-index: 999;
+        1background-color: rgb(253, 215, 215);
+    }
+}
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+
+@media screen and (min-width:402px) and (max-width:990px) {
+
+    #categoryList {
+        font-size: 1.5em;
+    }
+
+    #list {
+        position: absolute;
+        width : 75%;
+    }
+
+    #list section {
+        padding : 20px;
+        font-size : 1.1em;
+    }
+
+      
+
+}

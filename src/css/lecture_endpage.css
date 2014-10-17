@@ -1,0 +1,57 @@
+
+/*   contents  */
+
+/* 여기는 고정폭으로 간다 */
+
+#wrap {
+    min-width: 1200px;
+}
+
+#mainBody {
+    position: relative;
+    margin: 100px auto 0px;
+    width: 1100px;
+    overflow: auto;
+}
+
+nav.left_nav {
+    float : left;
+    width : 200px;
+    height : 500px;
+    background-color: gray;
+    margin-right : 50px;
+}
+
+div.main_area {
+    float : right;
+    width : 800px;
+    height : 500px;
+    background-color: yellow;
+}
+
+footer {
+    clear: both;
+}
+
+
+
+
+@media screen and (max-width:401px) {
+    #wrap {
+        width: 80%;
+        min-width: 1200px;
+    }
+}
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+
+@media screen and (min-width:402px) and (max-width:990px) {
+    #wrap {
+        width: 80%;
+        min-width: 1200px;
+    }
+}

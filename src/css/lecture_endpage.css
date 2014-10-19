@@ -9,24 +9,48 @@
 
 #mainBody {
     position: relative;
-    margin: 100px auto 0px;
-    width: 1100px;
+    margin: 100px 100px 0px 50px;
+    width: 1150px;
     overflow: auto;
 }
 
+/* NAVIGATION */
 nav.left_nav {
     float : left;
-    width : 200px;
+    width : 270px;
     height : 500px;
-    background-color: gray;
-    margin-right : 50px;
+    margin-right : 10px;
+    border-right: 1px solid #eee;
 }
 
+nav.left_nav  ul {
+    margin: 0px 0px 10px 20px;
+    font-size: 1.2em;
+}
+
+nav.left_nav  li {
+    padding: 10px 0px 10px 10px;
+}
+
+.left_nav li:hover {
+    background-color: #eee;
+}
+
+nav.left_nav li > a {
+    color : #000;
+}
+
+
+/* LECTURE AREA*/
 div.main_area {
     float : right;
     width : 800px;
-    height : 500px;
-    background-color: yellow;
+    1height : 500px;
+    background-color: #eee;
+}
+
+section.lecture_show {
+    height: 500px;
 }
 
 footer {

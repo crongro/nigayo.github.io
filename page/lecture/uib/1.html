@@ -37,7 +37,20 @@ title : lecture
       </header>
 
       <section id="mainBody">
-      <nav class="left_nav"></nav>
+      <nav class="left_nav">
+        <ul>
+          <li><a href="">WEBUI Overview</a></li>
+          <li><a href="">HTML</a></li>
+          <li><a href="">CSS</a></li>
+          <li><a href="">CSS Layout</a></li>
+          <li><a href="">Mobile Web과 반응형웹</a></li>
+          <li><a href="">JavaScript Part1</a></li>
+          <li><a href="">JavaScript Part2</a></li>
+          <li><a href="">DOM &amp; Event Part1</a></li>
+          <li><a href="">DOM &amp; Event Part2</a></li>
+          <li><a href="">Ajax</a></li>
+        </ul>
+      </nav>
       <div class="main_area">
         <section class="lecture_show"></section>
         <section class="comments_area">
@@ -73,11 +86,16 @@ title : lecture
           </section>
       </footer>
     </div>
-    <!-- script src="/dest/js/0.0.1/lecture_endpage.0.1.js"></script-->
-    <script>
-        // $Element(document).attach('domready', function() {
+    <!--
+     <script src="/src/lib/js/jindo_2.8.1.js"></script>
+     <script src="/src/js/lecture_endpage.js"></script>
+    -->
+    <script data-main="./js/service/intro/sc.intro.main" src="./js/lib/require.js"></script>
 
-        // });
+    <script>
+        $Element(document).attach('domready', function() {
+
+        });
     </script>
 
     <!-- DISQUS : count comments -->

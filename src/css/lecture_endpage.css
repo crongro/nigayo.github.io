@@ -10,7 +10,7 @@
 #mainBody {
     position: relative;
     margin: 100px 100px 0px 50px;
-    width: 1150px;
+    width: 1230px;
     overflow: auto;
 }
 
@@ -30,6 +30,7 @@ nav.left_nav  ul {
 
 nav.left_nav  li {
     padding: 10px 0px 10px 10px;
+    cursor: pointer;
 }
 
 .left_nav li:hover {
@@ -44,13 +45,27 @@ nav.left_nav li > a {
 /* LECTURE AREA*/
 div.main_area {
     float : right;
-    width : 800px;
+    width : 880px;
     1height : 500px;
-    background-color: #eee;
+    1background-color: #eee;
 }
 
 section.lecture_show {
-    height: 500px;
+    1height: 1300px;
+}
+
+.page_desc {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+}
+
+.submessage {
+    font-size : 0.4em;
+}
+
+.lecture_content {
+    margin-bottom: 60px;
 }
 
 footer {

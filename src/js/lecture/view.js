@@ -1,6 +1,10 @@
 define(["common", "data"] , function(oCommon, oData) {
 	var _innerVar;
 	var _welNav;
+	var _nST;
+	var _welWindow;
+	var _nNavTopPos;
+	var nScrollStart;
 
 
 	function _init() {
@@ -9,17 +13,19 @@ define(["common", "data"] , function(oCommon, oData) {
 	}
 
 	function _initElements() {
-		_welMainBody = jindo.$Element("mainBody");
-		_welNav = _welMainBody.query(".left_nav");
+		_welWindow 		= jindo.$Element(window);
+		_welMainBody 	= jindo.$Element("mainBody");
+		_welNav 		= _welMainBody.query(".left_nav");
+		_nNavTopPos 	= _welMainBody.offset().top;
 	}
 
 	function _onEvents () {
-		var _welWindow = jindo.$Element(window);
-		var _nNavTopPos = _welMainBody.offset().top; //220
-		var _nST;
-		var nScrollStart = 0;
-
 		_welWindow.attach("scroll", function(we) {
+			_scrollMonitorHandler(we);
+		});
+	}
+
+	function _scrollMonitorHandler(we) {
 			_nScrollY = we.currentElement.scrollY;
 
 			if(_nScrollY < _nNavTopPos)  return;
@@ -36,11 +42,17 @@ define(["common", "data"] , function(oCommon, oData) {
 			_nST = setTimeout(function(){
 				var _afterTime = new jindo.$Date(Date.now());
 					if((nScrollStart.compare(_afterTime)) > oData.nav_lazy_time) {
-						console.log("1초 동안 scroll 변화없었음",nScrollStart.time(), _afterTime.time(), nScrollStart.compare(_afterTime));
+						//console.log("1초 동안 scroll 변화없었음",nScrollStart.time(), _afterTime.time(), nScrollStart.compare(_afterTime));
 						//TODO apply animation
+						_execAnimationNav(_nScrollY);
 					}
 			}, oData.nav_lazy_time);
-		});
+	}
+
+	function _execAnimationNav(_nScrollY) {
+		var _nowTop = parseInt(_welNav.css('top'));
+		console.log("현재 스크롤 위치 -> " , _nowTop);
+		console.log("가야할 위치 -> " , (_nScrollY-220));
 	}
 
 	return {

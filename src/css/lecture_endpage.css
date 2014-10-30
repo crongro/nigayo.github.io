@@ -21,6 +21,8 @@ nav.left_nav {
     height : 500px;
     margin-right : 10px;
     border-right: 1px solid #eee;
+    position: relative;
+    top:0px;
 }
 
 nav.left_nav  ul {

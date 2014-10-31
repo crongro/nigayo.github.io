@@ -1,0 +1,117 @@
+
+/*   contents  */
+
+/* 여기는 고정폭으로 간다 */
+
+#wrap {
+    min-width: 1200px;
+}
+
+#mainBody {
+    position: relative;
+    margin: 100px 100px 0px 50px;
+    width: 1230px;
+    overflow: auto;
+}
+
+/* NAVIGATION */
+nav.left_nav {
+    float : left;
+    width : 270px;
+    height : 500px;
+    margin-right : 10px;
+    border-right: 1px solid #eee;
+    position: relative;
+    top:0px;
+    -webkit-transition: top 1000ms ease 0s;
+    -moz-transition: top 1000ms ease 0s;
+    -o-transition: top 1000ms ease 0s;
+    transition: top 1000ms ease 0s;
+}
+
+nav.left_nav  ul {
+    margin: 0px 0px 10px 20px;
+    font-size: 1.2em;
+}
+
+nav.left_nav  li {
+    padding: 10px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.left_nav li:hover {
+    background-color: #eee;
+}
+
+nav.left_nav li > a {
+    color : #000;
+}
+
+
+/* LECTURE AREA*/
+div.main_area {
+    float : right;
+    width : 880px;
+    1height : 500px;
+    1background-color: #eee;
+}
+
+section.lecture_show {
+    1height: 1300px;
+}
+
+.page_desc {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+}
+
+.submessage {
+    font-size : 0.4em;
+}
+
+.lecture_content {
+    margin-bottom: 60px;
+}
+
+.lecture_content > h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.lecture_content:nth-of-type(3) > div {
+    text-align: center;
+    font-size : 1.2em;
+}
+
+.lecture_content:nth-of-type(3) img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer {
+    clear: both;
+}
+
+
+
+@media screen and (max-width:401px) {
+    #wrap {
+        width: 80%;
+        min-width: 1200px;
+    }
+}
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+
+@media screen and (min-width:402px) and (max-width:990px) {
+    #wrap {
+        width: 80%;
+        min-width: 1200px;
+    }
+}

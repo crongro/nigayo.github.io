@@ -1,3 +1,3 @@
 define({
-	"nav_lazy_time" : 500
+	"nav_lazy_time" : 300
 });

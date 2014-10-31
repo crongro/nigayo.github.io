@@ -39,20 +39,22 @@ define(["common", "data"] , function(oCommon, oData) {
 			var _nNowScrollTime = new jindo.$Date(Date.now());
 			nScrollStart = _nNowScrollTime;
 
-			_nST = setTimeout(function(){
-				var _afterTime = new jindo.$Date(Date.now());
-					if((nScrollStart.compare(_afterTime)) > oData.nav_lazy_time) {
-						//console.log("1초 동안 scroll 변화없었음",nScrollStart.time(), _afterTime.time(), nScrollStart.compare(_afterTime));
-						//TODO apply animation
-						_execAnimationNav(_nScrollY);
-					}
-			}, oData.nav_lazy_time);
+			_nST =  setTimeout(function(){
+						var _afterTime = new jindo.$Date(Date.now());
+						if((nScrollStart.compare(_afterTime)) >= oData.nav_lazy_time) {
+							_execAnimationNav(_nScrollY);
+						}
+					}, oData.nav_lazy_time);
 	}
 
+	// 효과는 transition에 위임했음
 	function _execAnimationNav(_nScrollY) {
-		var _nowTop = parseInt(_welNav.css('top'));
-		console.log("현재 스크롤 위치 -> " , _nowTop);
-		console.log("가야할 위치 -> " , (_nScrollY-220));
+		var _nowTopPos = parseInt(_welNav.css('top'));
+		var _resultTopPos = _nScrollY - _nNavTopPos;
+		var _nBuffer = 50;
+
+		if (_resultTopPos < 0) _resultTopPos = 0;
+		_welNav.css("top", _resultTopPos + _nBuffer +"px");
 	}
 
 	return {

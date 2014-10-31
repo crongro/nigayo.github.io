@@ -23,6 +23,10 @@ nav.left_nav {
     border-right: 1px solid #eee;
     position: relative;
     top:0px;
+    -webkit-transition: top 1000ms ease 0s;
+    -moz-transition: top 1000ms ease 0s;
+    -o-transition: top 1000ms ease 0s;
+    transition: top 1000ms ease 0s;
 }
 
 nav.left_nav  ul {
@@ -70,10 +74,25 @@ section.lecture_show {
     margin-bottom: 60px;
 }
 
+.lecture_content > h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.lecture_content:nth-of-type(3) > div {
+    text-align: center;
+    font-size : 1.2em;
+}
+
+.lecture_content:nth-of-type(3) img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 footer {
     clear: both;
 }
-
 
 
 

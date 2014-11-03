@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! nigayo_Blog - v0.0.1 - 2014-10-17 */
+=======
+/*! nigayo_Blog - v0.0.1 - 2014-11-03 */
+>>>>>>> lecture
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -196,6 +200,7 @@ footer ul li{
 #mainBody {
     position: relative;
     min-height: 600px;
+<<<<<<< HEAD
 }
 
 #categoryList{
@@ -307,6 +312,68 @@ footer ul li{
         1z-index: 999;
         1background-color: rgb(253, 215, 215);
     }
+=======
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+}
+
+.page_desc {
+    font-size: 2em;
+    margin-bottom: 100px;
+    line-height: 1.5em;
+}
+
+.submessage {
+    font-size : 0.7em;
+}
+
+#mainBody > ul > li {
+    width: 45%;
+    height: 200px;
+    float: left;
+    border : 10px solid rgba(240, 128, 128, 0.41);
+    margin-right: 10px;
+    min-width: 340px;
+    cursor: pointer;
+
+}
+
+.lecture_title {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.lecture_description {
+    margin-left: 5%;
+    line-height: 1.7em;
+    margin-top: 18px;
+}
+
+#mainBody > ul > li.ready_lecture {
+    opacity: 0.4;
+    position: relative;
+    cursor: auto;
+}
+
+.ready_lecture:hover::after{
+    content: "준비중이여요 ;-) ";
+    font-size: 2.5em;
+    color: red;
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 150px;
+}
+
+@media screen and (max-width:401px) {
+
+>>>>>>> lecture
 }
 
 /**
@@ -317,6 +384,7 @@ footer ul li{
 
 @media screen and (min-width:402px) and (max-width:990px) {
 
+<<<<<<< HEAD
     #categoryList {
         font-size: 1.5em;
     }
@@ -333,4 +401,6 @@ footer ul li{
 
       
 
+=======
+>>>>>>> lecture
 }

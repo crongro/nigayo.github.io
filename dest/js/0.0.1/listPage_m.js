@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 /*! nigayo_Blog - v0.0.1 - 2014-10-17 */
+=======
+/*! nigayo_Blog - v0.0.1 - 2014-11-03 */
+>>>>>>> lecture
 /**
 * Jindo Framework
 * @type desktop

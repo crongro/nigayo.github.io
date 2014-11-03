@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-/*! nigayo_Blog - v0.0.1 - 2014-10-17 */
-=======
 /*! nigayo_Blog - v0.0.1 - 2014-11-03 */
->>>>>>> lecture
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -197,119 +193,105 @@ footer ul li{
 
 /*   contents  */
 
+/* 여기는 고정폭으로 간다 */
+
+#wrap {
+    min-width: 1200px;
+}
+
 #mainBody {
     position: relative;
-    min-height: 600px;
+    margin: 100px 100px 0px 50px;
+    width: 1230px;
+    overflow: auto;
 }
 
-#categoryList{
-    width : 20%;
-    font-size : 2.5em;
-    line-height: normal; /* because of change of font-size */
-    position: absolute;
-    left : -3%;
+/* NAVIGATION */
+nav.left_nav {
+    float : left;
+    width : 270px;
+    height : 500px;
+    margin-right : 10px;
+    border-right: 1px solid #eee;
+    position: relative;
+    top:0px;
+    -webkit-transition: top 1000ms ease 0s;
+    -moz-transition: top 1000ms ease 0s;
+    -o-transition: top 1000ms ease 0s;
+    transition: top 1000ms ease 0s;
 }
 
-#categoryList li  {
-    padding :2% 0%;
-    text-align: right;
-    font-family: 'Source Sans Pro', Verdana, sans-serif-webkit-body;
+nav.left_nav  ul {
+    margin: 0px 0px 10px 20px;
+    font-size: 1.2em;
 }
 
-#categoryList a {
-    color : lightcoral;
-}
-
-#categoryList li:hover {
+nav.left_nav  li {
+    padding: 10px 0px 10px 10px;
     cursor: pointer;
 }
 
-#categoryList li div:nth-child(2) {
-    margin-top: 0.5%;
-    font-size : 0.5em;
+.left_nav li:hover {
+    background-color: #eee;
+}
+
+nav.left_nav li > a {
+    color : #000;
 }
 
 
-/* section list */
-#list {
-    position: absolute;
-    width : 65%;
-    margin-left: 4%;
-    left :15%;
-    height : 500px;
-    border-radius: 20px;
+/* LECTURE AREA*/
+div.main_area {
+    float : right;
+    width : 880px;
+    1height : 500px;
+    1background-color: #eee;
 }
 
-/* 마름모 UI */
-#list > div {
-    width : 30px;
-    height: 30px;
-    position: absolute;
-    left : -10px;
-    transform:rotate(45deg);
-    -ms-transform:rotate(45deg);
-    -webkit-transform:rotate(45deg);
-    z-index: 999;
-    background-color: rgb(253, 215, 215);
+section.lecture_show {
+    1height: 1300px;
 }
 
-#list section {
-    display : none;
-    position: absolute;
-    width : 100%;
-    height: auto;
-    z-index: 1000;
-    border-radius: 20px;
-    background-color: rgb(253, 215, 215);
-    padding : 30px;
-    font-size : 1.6em;
-    line-height: 1.8em;
-    -moz-box-shadow: 1px 1px 1px #888;
-    -webkit-box-shadow: 1px 1px 1px #888;
-    box-shadow: 1px 1px 1px #888;
+.page_desc {
+    font-size: 3.5em;
+    margin-bottom: 30px;
+    line-height: 1.2em;
 }
 
-#list section:nth-of-type(1){
-    display : block;
-} 
-
-
-#list > section > ul > a:hover {
-    font-weight: bold;
+.submessage {
+    font-size : 0.4em;
 }
 
-#list > section > ul > a {
-    color: palevioletred;
+.lecture_content {
+    margin-bottom: 60px;
 }
+
+.lecture_content > h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.lecture_content:nth-of-type(3) > div {
+    text-align: center;
+    font-size : 1.1em;
+}
+
+.lecture_content:nth-of-type(3) img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer {
+    clear: both;
+}
+
 
 
 @media screen and (max-width:401px) {
-
-    #categoryList{
-        font-size : 0.6em;
-    }
-
-    /* section list */
-    #list {
-        position: absolute;
-        width : 55%;
-    }
-
-    #list section {
-        padding : 15px;
-        font-size : 0.8em;
-    }
-
-    /* 마름모 UI */
-    #list > div {
-        width : 20px;
-        height: 20px;
-        left : -7px;
-        1transform:rotate(45deg);
-        1-ms-transform:rotate(45deg);
-        1-webkit-transform:rotate(45deg);
-        1z-index: 999;
-        1background-color: rgb(253, 215, 215);
+    #wrap {
+        width: 80%;
+        min-width: 1200px;
     }
 }
 
@@ -320,21 +302,8 @@ footer ul li{
  */
 
 @media screen and (min-width:402px) and (max-width:990px) {
-
-    #categoryList {
-        font-size: 1.5em;
+    #wrap {
+        width: 80%;
+        min-width: 1200px;
     }
-
-    #list {
-        position: absolute;
-        width : 75%;
-    }
-
-    #list section {
-        padding : 20px;
-        font-size : 1.1em;
-    }
-
-      
-
 }

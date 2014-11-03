@@ -49,6 +49,11 @@ module.exports = function(grunt) {
                 dest : '<%= dirs.destCss %>/lectureMain.css',
                 nonull : true,
             },
+            cssLectureEndPage : {
+                src : ["<%= dirs.src %>/lib/css/reset.css","<%= dirs.src %>/css/common.css", "<%= dirs.src %>/css/lecture_endpage.css"] ,
+                dest : '<%= dirs.destCss %>/lectureEndPage.css',
+                nonull : true,
+            },
             cssListMobile : {
                 src : ["<%= dirs.src %>/lib/css/reset.css","<%= dirs.src %>/css/common.css", "<%= dirs.src %>/css/list_m.css"] ,
                 dest : '<%= dirs.destCss %>/listPage_m.css',
@@ -66,6 +71,7 @@ module.exports = function(grunt) {
                 files : {
                     '<%= dirs.dest %>/listPage_min_<%= pkg.version %>.js' : ['<%= dirs.dest%>/listPage.js'],
                     '<%= dirs.dest %>/listPage_m_min_<%= pkg.version %>.js' : ['<%= dirs.dest%>/listPage_m.js'],
+                    // '<%= dirs.dest %>/lecture/view_min_<%= pkg.version %>.js' : ['<%= dirs.src%>/js/lecture/view.js'],
                 }
             }
         }

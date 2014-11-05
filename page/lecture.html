@@ -74,9 +74,30 @@ title : lecture
       </footer>
   	</div>
     <script>
-      document.querySelector("#mainBody ul:nth-of-type(1) li").addEventListener("click", function() {
-          window.location.href = "/page/lecture/uib/1.html"
-      });
+      function isMobile() {
+        if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+            return true;
+        } 
+        return false;
+      }
+
+
+      if(isMobile) {
+
+        var _elReadyLecture = document.querySelector("#mainBody ul:nth-of-type(2) li");
+        _elReadyLecture.style.display = "none";
+
+        document.querySelector("#mainBody ul:nth-of-type(1) li").addEventListener("touchend", function() {
+            window.location.href = "/page/lecture/uib/1.html"
+        });
+
+      } else {
+        document.querySelector("#mainBody ul:nth-of-type(1) li").addEventListener("click", function() {
+            window.location.href = "/page/lecture/uib/1.html"
+        });
+      }
+
+
     </script>
   </body>
 </html>

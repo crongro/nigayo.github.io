@@ -267,6 +267,7 @@ footer ul li{
         margin-left: auto;
         margin-right: auto;
         width: 100%;
+        min-height: 0px;
     }
 
     .page_desc {

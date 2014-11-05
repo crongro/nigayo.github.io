@@ -64,8 +64,46 @@
     line-height: 150px;
 }
 
-@media screen and (max-width:401px) {
+@media screen and (max-width:415px) {
 
+    #wrap {
+        width:95%;
+    }
+
+    #mainBody {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .page_desc {
+        line-height: 1.2em;
+        font-size : 1.5em;
+    }
+
+    #mainBody > ul > li {
+        width: 90%;
+        min-width: 200px;
+    }
+
+    .lecture_title {
+        font-size: 2.0em;
+    }
+
+    .lecture_description {
+        margin-left: 5%;
+        line-height: 1.2em;
+        margin-top: 18px;
+    }
+
+    .page_desc {
+        margin-bottom: 50px;
+    }
+
+    #top a {
+        font-size: 1.00em;
+    }
 }
 
 /**
@@ -74,6 +112,6 @@
  * 아이패드 Retina: 1536 * 2048
  */
 
-@media screen and (min-width:402px) and (max-width:990px) {
+@media screen and (min-width:415px) and (max-width:990px) {
 
 }

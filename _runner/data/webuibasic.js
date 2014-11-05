@@ -120,7 +120,7 @@ var WEB_UI_BASIC = [
 		slide_url1 		: '',
 		slide_url2 		: '',
 		slide_url3 		: '',
-		answer_url 		: '',
+		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
 	},
 
 	//7주
@@ -140,7 +140,7 @@ var WEB_UI_BASIC = [
 		slide_url1 		: '',
 		slide_url2 		: '',
 		slide_url3 		: '',
-		answer_url 		: '',
+		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
 	},
 
 	//8주
@@ -160,7 +160,7 @@ var WEB_UI_BASIC = [
 		slide_url1 		: '',
 		slide_url2 		: '',
 		slide_url3 		: '',
-		answer_url 		: '',
+		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
 	},
 
 	//9주
@@ -180,7 +180,7 @@ var WEB_UI_BASIC = [
 		slide_url1 		: '',
 		slide_url2 		: '',
 		slide_url3 		: '',
-		answer_url 		: '',
+		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
 	},
 
 	//10주
@@ -200,7 +200,7 @@ var WEB_UI_BASIC = [
 		slide_url1 		: '',
 		slide_url2 		: '',
 		slide_url3 		: '',
-		answer_url 		: '',
+		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
 	}
 
 ];

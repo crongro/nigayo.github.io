@@ -274,16 +274,12 @@ section.lecture_show {
 }
 
 
-.lecture_content:nth-of-type(3) > div {
+.lecture_content:nth-of-type(7) > div {
     text-align: center;
-<<<<<<< HEAD
-    font-size : 1.2em;
-=======
     font-size : 1.1em;
->>>>>>> lecture
 }
 
-.lecture_content:nth-of-type(3) img {
+.lecture_content:nth-of-type(7) img {
     vertical-align: middle;
     margin-right: 10px;
 }

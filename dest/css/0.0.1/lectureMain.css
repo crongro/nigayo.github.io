@@ -199,6 +199,7 @@ footer ul li{
     width: 80%;
     margin-left: 10%;
     margin-top: 100px;
+    overflow: auto;
 }
 
 .page_desc {
@@ -217,6 +218,7 @@ footer ul li{
     float: left;
     border : 10px solid rgba(240, 128, 128, 0.41);
     margin-right: 10px;
+    margin-bottom: 10px;
     min-width: 340px;
     cursor: pointer;
 

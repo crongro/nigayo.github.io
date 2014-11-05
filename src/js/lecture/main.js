@@ -11,6 +11,5 @@ require.config({
 require([
     "js/lecture/view"
 ], function (oIntro) {
-	console.log("called main callback function");
 	oIntro.init();
 });

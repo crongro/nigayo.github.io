@@ -1,6 +1,7 @@
 define(["common", "data"] , function(oCommon, oData) {
 	var _innerVar;
 	var _welNav;
+	var _welGithubAnswerUrl;
 	var _nST;
 	var _welWindow;
 	var _nNavTopPos;
@@ -9,6 +10,7 @@ define(["common", "data"] , function(oCommon, oData) {
 
 	function _init() {
 		_initElements();
+		_showGithubArea();
 		_onEvents();
 	}
 
@@ -17,6 +19,12 @@ define(["common", "data"] , function(oCommon, oData) {
 		_welMainBody 	= jindo.$Element("mainBody");
 		_welNav 		= _welMainBody.query(".left_nav");
 		_nNavTopPos 	= _welMainBody.offset().top;
+		_welGithubAnswerUrl = _welMainBody.query(".lecture_content:last-child a");
+	}
+
+	function _showGithubArea() {
+		var _sURL = _welGithubAnswerUrl.attr("href");
+		if(_sURL === "") _welGithubAnswerUrl.parent().parent().css("display", "none");
 	}
 
 	function _onEvents () {

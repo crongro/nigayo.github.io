@@ -45,6 +45,8 @@ nav.left_nav  li {
 
 nav.left_nav li > a {
     color : #000;
+    display: block;
+    width:100%;
 }
 
 

@@ -136,7 +136,7 @@ footer ul li{
 }
 
 
-@media screen and (max-width:401px) {
+@media screen and (max-width:415px) {
 
     #wrap {
         width:100%;
@@ -170,7 +170,7 @@ footer ul li{
 }
 
 
-@media screen and (min-width:402px) and (max-width:990px) {
+@media screen and (min-width:416px) and (max-width:990px) {
 
     #wrap {
         width : 90%;

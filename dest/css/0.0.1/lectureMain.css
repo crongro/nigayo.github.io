@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-11-05 */
+/*! nigayo_Blog - v0.0.1 - 2014-11-06 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -144,7 +144,7 @@ footer ul li{
 }
 
 
-@media screen and (max-width:401px) {
+@media screen and (max-width:415px) {
 
     #wrap {
         width:100%;
@@ -178,7 +178,7 @@ footer ul li{
 }
 
 
-@media screen and (min-width:402px) and (max-width:990px) {
+@media screen and (min-width:416px) and (max-width:990px) {
 
     #wrap {
         width : 90%;
@@ -272,12 +272,16 @@ footer ul li{
 
     .page_desc {
         line-height: 1.2em;
-        font-size : 1.5em;
+        font-size : 1.2em;
+        font-weight: bold;
+        margin-left: 4%;
     }
 
     #mainBody > ul > li {
         width: 90%;
         min-width: 200px;
+        float:none;
+        margin : 0px auto 10px;
     }
 
     .lecture_title {
@@ -286,7 +290,8 @@ footer ul li{
 
     .lecture_description {
         margin-left: 5%;
-        line-height: 1.2em;
+        font-size: 0.9em;
+        line-height: 1.5em;
         margin-top: 18px;
     }
 
@@ -296,6 +301,10 @@ footer ul li{
 
     #top a {
         font-size: 1.00em;
+    }
+
+    footer > section {
+        margin-top : 20px;
     }
 }
 

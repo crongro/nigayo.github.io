@@ -80,12 +80,16 @@
 
     .page_desc {
         line-height: 1.2em;
-        font-size : 1.5em;
+        font-size : 1.2em;
+        font-weight: bold;
+        margin-left: 4%;
     }
 
     #mainBody > ul > li {
         width: 90%;
         min-width: 200px;
+        float:none;
+        margin : 0px auto 10px;
     }
 
     .lecture_title {
@@ -94,7 +98,8 @@
 
     .lecture_description {
         margin-left: 5%;
-        line-height: 1.2em;
+        font-size: 0.9em;
+        line-height: 1.5em;
         margin-top: 18px;
     }
 
@@ -104,6 +109,10 @@
 
     #top a {
         font-size: 1.00em;
+    }
+
+    footer > section {
+        margin-top : 20px;
     }
 }
 

@@ -99,6 +99,18 @@ footer {
 
 @media screen and (max-width:415px) {
 
+    html {
+        font-size : 14px;
+    }
+
+    .page_desc {
+        font-size : 2.5rem;
+    }
+
+    .submessage {
+        font-size : 1.2rem;
+    }
+
     #wrap {
         width: 100%;
         min-width: 200px;

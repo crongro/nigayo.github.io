@@ -224,8 +224,14 @@ footer ul li{
 
 }
 
+#mainBody > ul > li > a {
+    display: block;
+    height: 180px;
+    padding-top: 20px;
+}
+
 .lecture_title {
-    margin-top: 20px;
+    1margin-top: 20px;
     text-align: center;
     font-size: 2.5em;
 }

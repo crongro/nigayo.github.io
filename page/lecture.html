@@ -42,6 +42,7 @@ title : lecture
         </p>
         <ul>
           <li>
+            <a href="/page/lecture/uib/1.html">
             <h2 class="lecture_title">WEB UI BASIC</h2>
             <div class="lecture_description">
               &#183;&nbsp;2014년 2학기 강의 <br>
@@ -49,6 +50,7 @@ title : lecture
               &#183;&nbsp;수업전 동영상예습, 실습참여<br>
               &#183;&nbsp;최종과제는 'google play' 만들기<br>
             </div>
+            </a>
           </li>
         </ul>
         <ul>
@@ -74,28 +76,20 @@ title : lecture
       </footer>
   	</div>
     <script>
-      function isMobile() {
-        if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
-            return true;
-        } 
-        return false;
-      }
+      (function(){
+        function isMobile() {
+          if((/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))) {
+              return true;
+          } 
+          return false;
+        }
 
 
-      if(isMobile) {
-
-        var _elReadyLecture = document.querySelector("#mainBody ul:nth-of-type(2) li");
-        _elReadyLecture.style.display = "none";
-
-        document.querySelector("#mainBody ul:nth-of-type(1) li").addEventListener("touchend", function() {
-            window.location.href = "/page/lecture/uib/1.html"
-        });
-
-      } else {
-        document.querySelector("#mainBody ul:nth-of-type(1) li").addEventListener("click", function() {
-            window.location.href = "/page/lecture/uib/1.html"
-        });
-      }
+        if(isMobile) {
+          var _elReadyLecture = document.querySelector("#mainBody ul:nth-of-type(2) li");
+          _elReadyLecture.style.display = "none";
+        }
+      })();
 
 
     </script>

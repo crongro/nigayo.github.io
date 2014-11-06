@@ -195,6 +195,11 @@ footer ul li{
 
 /* 여기는 고정폭으로 간다 */
 
+html {
+    font-size : 14px;
+}
+
+
 #wrap {
     min-width: 1200px;
 }
@@ -246,22 +251,21 @@ nav.left_nav li > a {
 div.main_area {
     float : right;
     width : 880px;
-    1height : 500px;
-    1background-color: #eee;
-}
-
-section.lecture_show {
-    1height: 1300px;
 }
 
 .page_desc {
-    font-size: 3.5em;
     margin-bottom: 30px;
-    line-height: 1.2em;
+}
+
+.page_desc > h3 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    line-height: 1.0em;
 }
 
 .submessage {
-    font-size : 0.4em;
+    font-size : 1.3rem;
+    line-height: 1.1em;
 }
 
 .lecture_content {
@@ -291,11 +295,8 @@ footer {
 
 @media screen and (max-width:415px) {
 
-    html {
-        font-size : 14px;
-    }
 
-    .page_desc {
+    .page_desc > h3 {
         font-size : 2.5rem;
     }
 

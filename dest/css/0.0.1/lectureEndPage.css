@@ -290,9 +290,18 @@ footer {
 
 
 @media screen and (max-width:415px) {
+
     #wrap {
-        width: 80%;
-        min-width: 414px;
+        width: 100%;
+        min-width: 200px;
+    }
+
+    #mainBody {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        min-height: 0px;
     }
 
     nav.left_nav {
@@ -302,11 +311,17 @@ footer {
     div.main_area {
         float : none;
         width : 90%;
+        margin: 0px auto;
     }
 
-    #mainBody {
-        width : 100%;
+    #top a {
+        font-size: 1.00em;
     }
+
+    footer > section {
+        margin-top : 20px;
+    }
+
 }
 
 /**

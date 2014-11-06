@@ -6,15 +6,19 @@ define(["common", "data"] , function(oCommon, oData) {
 	var _welWindow;
 	var _nNavTopPos;
 	var nScrollStart;
-
+	var jindo;
+	var oUtil;
 
 	function _init() {
 		_initElements();
 		_showGithubArea();
+		_setViewerSize();
 		_onEvents();
 	}
 
 	function _initElements() {
+		jindo 			= oCommon.jindo;
+		oUtil 			= oCommon.util;
 		_welWindow 		= jindo.$Element(window);
 		_welMainBody 	= jindo.$Element("mainBody");
 		_welNav 		= _welMainBody.query(".left_nav");
@@ -25,6 +29,14 @@ define(["common", "data"] , function(oCommon, oData) {
 	function _showGithubArea() {
 		var _sURL = _welGithubAnswerUrl.attr("href");
 		if(_sURL === "") _welGithubAnswerUrl.parent().parent().css("display", "none");
+	}
+
+	function _setViewerSize() {
+		if( !oUtil.isMobile() ) return;
+
+		var _wElListLectureContent = jindo.$ElementList(".lecture_content iframe");
+		_wElListLectureContent.attr("width", "100%");
+		_wElListLectureContent.attr("height", "300px");
 	}
 
 	function _onEvents () {

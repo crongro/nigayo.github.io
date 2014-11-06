@@ -289,11 +289,23 @@ footer {
 }
 
 
-
-@media screen and (max-width:401px) {
+@media screen and (max-width:415px) {
     #wrap {
         width: 80%;
-        min-width: 1200px;
+        min-width: 414px;
+    }
+
+    nav.left_nav {
+        display : none;
+    }
+
+    div.main_area {
+        float : none;
+        width : 90%;
+    }
+
+    #mainBody {
+        width : 100%;
     }
 }
 
@@ -302,8 +314,7 @@ footer {
  * 아이패드 : 768 * 1024
  * 아이패드 Retina: 1536 * 2048
  */
-
-@media screen and (min-width:402px) and (max-width:990px) {
+@media screen and (min-width:416px) and (max-width:990px) {
     #wrap {
         width: 80%;
         min-width: 1200px;

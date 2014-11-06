@@ -1,7 +1,6 @@
-define([
-        "jindo"
-    ], function (jindo) {
+define(["jindo", "util"], function (jindo, util) {
     return {
-        jindo : jindo 
+        jindo : jindo,
+        util : util
     };
 });

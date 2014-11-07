@@ -64,7 +64,7 @@
     height: auto;
     z-index: 1000;
     border-radius: 20px;
-    background-color: rgb(253, 215, 215);
+    background-color: rgb(211, 110, 110);
     padding : 30px;
     font-size : 1.6em;
     line-height: 1.8em;
@@ -83,7 +83,8 @@
 }
 
 #list > section > ul > a {
-    color: palevioletred;
+    1color: palevioletred;
+    color : #fff;
 }
 
 

@@ -7,11 +7,16 @@ body, input, textarea, select, button, table{
 
 a {
     outline : none;
-    1color:black;
+    color : #4D3900;
+}
+
+a:visited {
+    color : #806F40;
 }
 
 a:hover {
     text-decoration: none;
+    color : #807940;
 }
 
 blockquote {

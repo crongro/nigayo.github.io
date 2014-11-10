@@ -164,7 +164,7 @@ footer {
         font-size: 1.5em;
     }
 
-    nav.left_nav_mobile + ul {
+    div.closeNav + ul {
         clear:right;
     }
 

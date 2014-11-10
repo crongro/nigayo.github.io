@@ -57,7 +57,6 @@ define(["common", "data"] , function(oCommon, oData) {
 			if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
 			console.log("evnet 111");
 			we.stop(jindo.$Event.CANCEL_ALL);
-);
 		});
 
 

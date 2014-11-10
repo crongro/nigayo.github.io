@@ -56,7 +56,7 @@ define(["common", "data"] , function(oCommon, oData) {
 		_welAllMenu.attach("touchEnd" , function() {
 			if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
 			console.log("evnet 111");
-			//else _welNavMobile.css("display", "none");
+			we.stop();
 		});
 
 

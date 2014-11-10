@@ -63,7 +63,7 @@ define(["common", "data"] , function(oCommon, oData) {
 		_welCloseNav.attach("touchEnd" , function(we){
 			_welNavMobile.css("display", "none");
 			console.log("evnet 2222");
-			we.stop();
+			we.stop(jindo.$Event.CANCEL_ALL);
 		});
 
 	}

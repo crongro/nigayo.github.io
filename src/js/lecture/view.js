@@ -5,6 +5,8 @@ define(["common", "data"] , function(oCommon, oData) {
 	var _nST;
 	var _welWindow;
 	var _nNavTopPos;
+	var _welNavMobile;
+	var _welAllMenu;
 	var nScrollStart;
 	var jindo;
 	var oUtil;
@@ -21,7 +23,9 @@ define(["common", "data"] , function(oCommon, oData) {
 		oUtil 			= oCommon.util;
 		_welWindow 		= jindo.$Element(window);
 		_welMainBody 	= jindo.$Element("mainBody");
+		_welAllMenu 	= jindo.$Element("all_menu");
 		_welNav 		= _welMainBody.query(".left_nav");
+		_welNavMobile	= _welAllMenu.query(".left_nav_mobile");
 		_nNavTopPos 	= _welMainBody.offset().top;
 		_welGithubAnswerUrl = _welMainBody.query(".lecture_content:last-child a");
 	}
@@ -40,13 +44,24 @@ define(["common", "data"] , function(oCommon, oData) {
 	}
 
 	function _onEvents () {
+
+		if( !oUtil.isMobile() ) return;
+
 		_welWindow.attach("scroll", function(we) {
 			_scrollMonitorHandler(we);
 		});
+
+		_welAllMenu.attach("touchEnd" , function() {
+			if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
+			else _welNavMobile.css("display", "none");
+		});
+
+
 	}
 
 	function _scrollMonitorHandler(we) {
-			_nScrollY = we.currentElement.scrollY;
+			//_nScrollY = we.currentElement.scrollY;
+			_nScrollY = we.currentElement.pageYOffset;
 
 			if(_nScrollY < _nNavTopPos)  return;
 

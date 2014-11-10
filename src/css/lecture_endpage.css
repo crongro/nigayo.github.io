@@ -19,6 +19,16 @@ html {
     overflow: auto;
 }
 
+#all_menu {
+    height: 30px;
+    width: 30px;
+    float: right;
+    font-size: 30px;
+    margin: 20px 20px 20px;
+    color: darkorange;
+    display: none;
+}
+
 /* NAVIGATION */
 nav.left_nav {
     float : left;
@@ -125,8 +135,25 @@ footer {
         min-height: 0px;
     }
 
+    #all_menu {
+        display: block;
+        position: relative;
+    }
+
     nav.left_nav {
         display : none;
+    }
+
+    nav.left_nav_mobile {
+        display: none;
+        top: 36px;
+        font-weight: bold;
+        float: right;
+        position: absolute;
+        left: -241px;
+        background-color: rgb(240, 128, 128);
+        font-size: 15px;
+        z-index: 2;
     }
 
     div.main_area {

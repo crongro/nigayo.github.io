@@ -221,7 +221,6 @@ html {
     width: 30px;
     float: right;
     font-size: 30px;
-    margin: 20px 20px 20px;
     color: darkorange;
     display: none;
 }
@@ -310,6 +309,9 @@ footer {
 
 @media screen and (max-width:415px) {
 
+    header {
+        margin-bottom: 20px;
+    }
 
     .page_desc > h3 {
         font-size : 2.5rem;
@@ -325,7 +327,7 @@ footer {
     }
 
     #mainBody {
-        margin-top: 50px;
+        margin-top: 60px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -358,7 +360,12 @@ footer {
         float: right;
         margin-top: 5px;
         margin-right: 5px;
+        width: 35px;
         font-size: 1.5em;
+        border: 1px solid black;
+        height: 35px;
+        text-align: center;
+        line-height: 1.5em;
     }
 
     div.closeNav + ul {

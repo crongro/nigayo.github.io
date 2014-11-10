@@ -146,7 +146,7 @@ footer {
 
     nav.left_nav_mobile {
         display: none;
-        top: 36px;
+        top: 0px;
         font-weight: bold;
         float: right;
         position: absolute;
@@ -154,6 +154,18 @@ footer {
         background-color: rgb(240, 128, 128);
         font-size: 15px;
         z-index: 2;
+    }
+
+    nav.left_nav_mobile > div.closeNav {
+        color: #fff;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+        font-size: 1.5em;
+    }
+
+    nav.left_nav_mobile + ul {
+        clear:right;
     }
 
     div.main_area {

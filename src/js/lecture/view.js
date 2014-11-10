@@ -7,6 +7,7 @@ define(["common", "data"] , function(oCommon, oData) {
 	var _nNavTopPos;
 	var _welNavMobile;
 	var _welAllMenu;
+	var _welCloseNav;
 	var nScrollStart;
 	var jindo;
 	var oUtil;
@@ -26,6 +27,7 @@ define(["common", "data"] , function(oCommon, oData) {
 		_welAllMenu 	= jindo.$Element("all_menu");
 		_welNav 		= _welMainBody.query(".left_nav");
 		_welNavMobile	= _welAllMenu.query(".left_nav_mobile");
+		_welCloseNav 	= _welAllMenu.query(".left_nav_mobile .closeNav");
 		_nNavTopPos 	= _welMainBody.offset().top;
 		_welGithubAnswerUrl = _welMainBody.query(".lecture_content:last-child a");
 	}
@@ -53,9 +55,16 @@ define(["common", "data"] , function(oCommon, oData) {
 
 		_welAllMenu.attach("touchEnd" , function() {
 			if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
-			else _welNavMobile.css("display", "none");
+			console.log("evnet 111");
+			//else _welNavMobile.css("display", "none");
 		});
 
+
+		_welCloseNav.attach("touchEnd" , function(we){
+			_welNavMobile.css("display", "none");
+			console.log("evnet 2222");
+			we.stop();
+		});
 
 	}
 

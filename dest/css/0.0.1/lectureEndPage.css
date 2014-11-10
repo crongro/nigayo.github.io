@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-11-07 */
+/*! nigayo_Blog - v0.0.1 - 2014-11-10 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -216,6 +216,16 @@ html {
     overflow: auto;
 }
 
+#all_menu {
+    height: 30px;
+    width: 30px;
+    float: right;
+    font-size: 30px;
+    margin: 20px 20px 20px;
+    color: darkorange;
+    display: none;
+}
+
 /* NAVIGATION */
 nav.left_nav {
     float : left;
@@ -322,8 +332,37 @@ footer {
         min-height: 0px;
     }
 
+    #all_menu {
+        display: block;
+        position: relative;
+    }
+
     nav.left_nav {
         display : none;
+    }
+
+    nav.left_nav_mobile {
+        display: none;
+        top: 0px;
+        font-weight: bold;
+        float: right;
+        position: absolute;
+        left: -241px;
+        background-color: rgb(240, 128, 128);
+        font-size: 15px;
+        z-index: 2;
+    }
+
+    nav.left_nav_mobile > div.closeNav {
+        color: #fff;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+        font-size: 1.5em;
+    }
+
+    nav.left_nav_mobile + ul {
+        clear:right;
     }
 
     div.main_area {

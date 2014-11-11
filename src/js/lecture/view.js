@@ -47,24 +47,24 @@ define(["common", "data"] , function(oCommon, oData) {
 
 	function _onEvents () {
 
-		if( !oUtil.isMobile() ) return;
 
-		_welWindow.attach("scroll", function(we) {
-			_scrollMonitorHandler(we);
-		});
-
-		_welAllMenu.attach("touchEnd" , function() {
-			if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
-			console.log("evnet 111");
-			we.stop(jindo.$Event.CANCEL_ALL);
-		});
+		if( oUtil.isMobile() )  { 
+			_welAllMenu.attach("touchEnd" , function() {
+				if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
+				we.stop(jindo.$Event.CANCEL_ALL);
+			});
 
 
-		_welCloseNav.attach("touchEnd" , function(we){
-			_welNavMobile.css("display", "none");
-			console.log("evnet 2222");
-			we.stop(jindo.$Event.CANCEL_ALL);
-		});
+			_welCloseNav.attach("touchEnd" , function(we){
+				_welNavMobile.css("display", "none");
+				we.stop(jindo.$Event.CANCEL_ALL);
+			});
+
+		} else {
+			_welWindow.attach("scroll", function(we) {
+				_scrollMonitorHandler(we);
+			});
+		}
 
 	}
 

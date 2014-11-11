@@ -320,7 +320,8 @@ footer {
 }
 
 
-@media screen and (max-width:415px) {
+/* @media screen and (max-width:415px) { */
+@media screen and (max-width:990px) {
 
     header {
         margin-bottom: 20px;
@@ -404,6 +405,7 @@ footer {
 
     footer > section {
         margin-top : 20px;
+        font-size: 1.5rem;
     }
 
 }
@@ -414,8 +416,8 @@ footer {
  * 아이패드 Retina: 1536 * 2048
  */
 @media screen and (min-width:416px) and (max-width:990px) {
-    #wrap {
-        width: 80%;
-        min-width: 1200px;
+
+    #top a {
+        font-size: 1.8rem;
     }
 }

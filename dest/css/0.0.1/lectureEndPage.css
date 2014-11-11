@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-11-10 */
+/*! nigayo_Blog - v0.0.1 - 2014-11-11 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -219,10 +219,10 @@ html {
 #all_menu {
     height: 30px;
     width: 30px;
-    float: right;
     font-size: 30px;
     color: darkorange;
     display: none;
+    left : 85%;
 }
 
 /* NAVIGATION */
@@ -327,7 +327,7 @@ footer {
     }
 
     #mainBody {
-        margin-top: 60px;
+        margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -353,6 +353,12 @@ footer {
         background-color: rgb(240, 128, 128);
         font-size: 15px;
         z-index: 2;
+        box-shadow: -5px -5px 20px #888888;
+        border-radius: 5px;
+    }
+
+    .left_nav li:hover {
+        background-color: rgb(240, 128, 128);
     }
 
     nav.left_nav_mobile > div.closeNav {

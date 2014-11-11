@@ -48,10 +48,10 @@ define(["common", "data"] , function(oCommon, oData) {
 	function _onEvents () {
 
 
-		//if( oUtil.isMobile() )  { 
-			_welAllMenu.attach("touchEnd" , function() {
+		if( oUtil.isMobile() )  { 
+			_welAllMenu.attach("touchEnd" , function(we) {
 				if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
-				we.stop(jindo.$Event.CANCEL_ALL);
+				//we.stop(jindo.$Event.CANCEL_ALL);
 			});
 
 
@@ -60,11 +60,22 @@ define(["common", "data"] , function(oCommon, oData) {
 				we.stop(jindo.$Event.CANCEL_ALL);
 			});
 
-		//} else {
+		} else {
+			_welAllMenu.attach("click" , function(we) {
+				if(_welNavMobile.css("display") === "none") _welNavMobile.css("display", "block");
+				//we.stop(jindo.$Event.CANCEL_ALL);
+			});
+
+
+			_welCloseNav.attach("click" , function(we){
+				_welNavMobile.css("display", "none");
+				we.stop(jindo.$Event.CANCEL_ALL);
+			});
+
 			_welWindow.attach("scroll", function(we) {
 				_scrollMonitorHandler(we);
 			});
-		//}
+		}
 
 	}
 

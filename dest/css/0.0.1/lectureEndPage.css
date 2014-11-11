@@ -230,12 +230,12 @@ html {
     position: absolute;
     left: 0;
     display: block;
-    width: 22px;
+    width: 30px;
     top: 0;
     height: 0;
-    -webkit-box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 18px 0.1px 1.5px darkorange,1px 26px 0.1px 1.5px darkorange;
-    -moz-box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 18px 0.1px 1.5px darkorange,1px 26px 0.1px 1.5px darkorange;
-    box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 18px 0.1px 1.5px darkorange,1px 26px 0.1px 1.5px darkorange;
+    -webkit-box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 20px 0.1px 1.5px darkorange,1px 30px 0.1px 1.5px darkorange;
+    -moz-box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 20px 0.1px 1.5px darkorange,1px 30px 0.1px 1.5px darkorange;
+    box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 20px 0.1px 1.5px darkorange,1px 30px 0.1px 1.5px darkorange;
 }
 
 /* NAVIGATION */

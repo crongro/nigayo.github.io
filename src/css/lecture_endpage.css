@@ -156,7 +156,9 @@ footer {
         background-color: rgb(240, 128, 128);
         font-size: 15px;
         z-index: 2;
-        box-shadow: -5px -5px 20px #888888;
+        -moz-box-shadow: 0 0 5px 5px #888;
+        -webkit-box-shadow: 0 0 5px 5px #888;
+        box-shadow: 0 0 5px 5px #888;
         border-radius: 5px;
     }
 
@@ -171,7 +173,6 @@ footer {
         margin-right: 5px;
         width: 35px;
         font-size: 1.5em;
-        border: 1px solid black;
         height: 35px;
         text-align: center;
         line-height: 1.5em;

@@ -201,6 +201,28 @@ var WEB_UI_BASIC = [
 		slide_url2 		: '<iframe src="//www.slideshare.net/slideshow/embed_code/41037784" width="854" height="510" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/jisuyoun/10-ajax-41037784" title="10주 ajax 실습" target="_blank">10주 ajax 실습</a> </strong> from <strong><a href="//www.slideshare.net/jisuyoun" target="_blank">지수 윤</a></strong> </div>',
 		slide_url3 		: '',
 		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
+	},
+
+	/***  WEB UI ADVANCED ***/
+
+	//11번. 1주
+	{
+		title 			: 'WEB UI Advanced',
+		Lecture_title 	: 'AJAX',
+		Lecture_desc 	: 'XHR과 AJAX 기술을 통해 사용성이 더 좋은 웹UI 개발방법을 배웁니다',
+		youtube_title1 	: '수업전 예습해야 할 동영상 1편',
+		youtube_title2 	: '수업전 예습해야 할 동영상 2편',
+		youtube_title3 	: '',
+		youtube_url1	: '<iframe width="854" height="510" src="//www.youtube.com/embed/rZQXQ0lK8-o" frameborder="0" allowfullscreen></iframe>', 
+		youtube_url2	: '<iframe width="854" height="510" src="//www.youtube.com/embed/oziQtenbJDY" frameborder="0" allowfullscreen></iframe>',
+		youtube_url3	: '',
+		slide_title1 	: '동영상/수업 강의자료',
+		slide_title2 	: '실습자료',
+		slide_title3 	: '',
+		slide_url1 		: '<iframe src="//www.slideshare.net/slideshow/embed_code/41037787" width="854" height="510" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/jisuyoun/10-ajax" title="10주 ajax" target="_blank">10주 ajax</a> </strong> from <strong><a href="//www.slideshare.net/jisuyoun" target="_blank">지수 윤</a></strong> </div>',
+		slide_url2 		: '<iframe src="//www.slideshare.net/slideshow/embed_code/41037784" width="854" height="510" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/jisuyoun/10-ajax-41037784" title="10주 ajax 실습" target="_blank">10주 ajax 실습</a> </strong> from <strong><a href="//www.slideshare.net/jisuyoun" target="_blank">지수 윤</a></strong> </div>',
+		slide_url3 		: '',
+		answer_url 		: 'https://github.com/nigayo/WebUIBasic-SourceCode',
 	}
 
 ];

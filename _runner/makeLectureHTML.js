@@ -1,29 +1,51 @@
 var fs = require('fs');
+var readline = require('readline');
+
+var rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
 
 var inFile = "../page/lecture/uib/template.html";
 
 (function() {
 
+	var _fileType = "basic";
+
+	rl.question("select basic or advanced : ", function(answer) {
+	  _fileType = answer;
+	  execMainProcess(_fileType);
+	  rl.close();
+	});
+
 	//설정파일 읽기
-    var htData = require('./data/webuibasic.js').data;
-    var htData_len = htData.length;
 
-    fs.readFile(inFile, 'utf8', function(err,data){
-    	if(err) return console.log("file error");
+	function execMainProcess(_fileType) {
+		console.log("type check -> ", _fileType);
+	    var htData = require('./data/webuibasic.js').data;
+	    var htData_len = htData.length;
 
-    	for(var i=0; i<htData_len; i++) {
+	    fs.readFile(inFile, 'utf8', function(err,data){
+	    	if(err) return console.log("file error");
 
-    		var result = data;
+	    	for(var i=0; i<htData_len; i++) {
 
-	    	for(var value in htData[i]) {
-	    		var _sReg = '<!--%'+value +'-->';
-		    	result = result.replace(_sReg, htData[i][value]);
+	    		var result = data;
+
+		    	for(var value in htData[i]) {
+		    		var _sReg = '<!--%'+value +'-->';
+			    	result = result.replace(_sReg, htData[i][value]);
+		    	}
+
+		    	//var _p = htData[i].title === "WEB UI BASIC" ? i+1 : "adv_"+(i-9);
+		    	var _f = htData[i].title === "WEB UI BASIC" ? "uib" : "adv_"+(i-9);
+
+		    	fs.writeFile("./"+ _f + ".html", result, 'utf8', function(err) {
+		    		if(err) return console.log('error write', err);
+		    	});
 	    	}
-
-	    	fs.writeFile("./"+(i+1)+".html", result, 'utf8', function(err) {
-	    		if(err) return console.log('error write', err);
-	    	});
-    	}
-    });
+	    });
+	}
 
 })();

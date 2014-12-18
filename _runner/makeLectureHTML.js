@@ -11,19 +11,19 @@ var inFile = "../page/lecture/uib/template.html";
 
 (function() {
 
-	var _fileType = "basic";
+	var _sFileType;
 
 	rl.question("select basic or advanced : ", function(answer) {
-	  _fileType = answer;
-	  execMainProcess(_fileType);
+	  _fileType = answer || "basic";
+	  execMainProcess(_sFileType);
 	  rl.close();
 	});
 
 	//설정파일 읽기
 
-	function execMainProcess(_fileType) {
-		console.log("type check -> ", _fileType);
-	    var htData = require('./data/webuibasic.js').data;
+	function execMainProcess(_sFileType) {
+
+	    var htData = require('./data/'+_sFileType+'.js').data;
 	    var htData_len = htData.length;
 
 	    fs.readFile(inFile, 'utf8', function(err,data){

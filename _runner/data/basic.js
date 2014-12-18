@@ -229,7 +229,7 @@ var WEB_UI_BASIC = [
 
 
 (function() { 
-	'use strict'
+	'use strict';
 	exports.data = WEB_UI_BASIC;
 	//start exports
 	// exports.funtest = function() {

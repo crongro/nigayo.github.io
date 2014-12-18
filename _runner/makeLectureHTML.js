@@ -7,26 +7,26 @@ var rl = readline.createInterface({
 });
 
 
-var inFile = "../page/lecture/uib/template.html";
+var TEMPLATE_PATH = "../page/lecture/uib/template.html";
 
 (function() {
 
 	var _sFileType;
 
 	rl.question("select basic or advanced : ", function(answer) {
-	  _fileType = answer || "basic";
-	  execMainProcess(_sFileType);
-	  rl.close();
+		_fileType = answer || "basic";
+		_execProcess(_sFileType);
+		rl.close();
 	});
 
 	//설정파일 읽기
 
-	function execMainProcess(_sFileType) {
+	function _execProcess(_sFileType) {
 
 	    var htData = require('./data/'+_sFileType+'.js').data;
 	    var htData_len = htData.length;
 
-	    fs.readFile(inFile, 'utf8', function(err,data){
+	    fs.readFile(TEMPLATE_PATH, 'utf8', function(err,data){
 	    	if(err) return console.log("file error");
 
 	    	for(var i=0; i<htData_len; i++) {

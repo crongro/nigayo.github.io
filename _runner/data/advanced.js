@@ -20,7 +20,7 @@ var DATA = [
 		slide_url1 		: '<iframe src="//www.slideshare.net/slideshow/embed_code/42852475" width="854" height="510" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>',
 		slide_url2 		: '',
 		slide_url3 		: '',
-		answer_url 		: '',
+		answer_url 		: 'http://codepen.io/nigayo/pen/cClBa',
 	},
 
 	//2주

@@ -27,8 +27,6 @@ var DATA = {
 
 	function _execProcess(_sFileType) {
 
-		console.log("_sFileType");
-
 	    var htData = require('./data/'+_sFileType+'.js').data;
 	    var htData_len = htData.length;
 
@@ -59,10 +57,11 @@ var DATA = {
 		var _sReg;
 
 		for(var i=0; i<htData_len; i++) {
-			_sReg = '<!--%lecture'+(i+1)+'-->';
-			console.log(_sReg);
-			console.log(htData[i].Lecture_title);
-			data = data.replace(_sReg , htData[i].Lecture_title);
+			_sReg = new RegExp('<!--%lecture'+(i+1)+'-->' , 'g');
+			//_sReg = '<!--%lecture'+(i+1)+'-->';
+			// console.log(_sReg);
+			// console.log(htData[i].Lecture_title);
+			data = data.replace(_sReg, htData[i].Lecture_title);
 		}
 
 		return data;

@@ -1,7 +1,7 @@
 
 /* WEB UI BASIC */
 /* WIDTH : 854, HEIGHT : 510 으로 수정해야 함 */
-var WEB_UI_BASIC = [
+var DATA = [
 
 	//1주
 	{ 
@@ -230,7 +230,7 @@ var WEB_UI_BASIC = [
 
 (function() { 
 	'use strict';
-	exports.data = WEB_UI_BASIC;
+	exports.data = DATA;
 	//start exports
 	// exports.funtest = function() {
 	// 	console.log("call funtest complete !!! ");

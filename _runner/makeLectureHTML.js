@@ -7,14 +7,18 @@ var rl = readline.createInterface({
 });
 
 
-var TEMPLATE_PATH = "../page/lecture/uib/template.html";
+var DATA = {
+	TEMPLATE_PATH 	: "../page/lecture/uib/template.html",
+	//BASIC_NAME 		: "WEB UI BASIC",
+};
 
 (function() {
 
-	var _sFileType;
+	var _sFileType, lectureType, _lectureNumber;
+
 
 	rl.question("select basic or advanced : ", function(answer) {
-		_fileType = answer || "basic";
+		_sFileType = answer || "basic";
 		_execProcess(_sFileType);
 		rl.close();
 	});
@@ -23,11 +27,16 @@ var TEMPLATE_PATH = "../page/lecture/uib/template.html";
 
 	function _execProcess(_sFileType) {
 
+		console.log("_sFileType");
+
 	    var htData = require('./data/'+_sFileType+'.js').data;
 	    var htData_len = htData.length;
 
-	    fs.readFile(TEMPLATE_PATH, 'utf8', function(err,data){
+	    fs.readFile(DATA.TEMPLATE_PATH, 'utf8', function(err,data){
 	    	if(err) return console.log("file error");
+
+	    	//전체항목의 LIST를 만든다.
+	    	data = _getLeftMenuData(data, htData, htData_len);
 
 	    	for(var i=0; i<htData_len; i++) {
 
@@ -38,14 +47,25 @@ var TEMPLATE_PATH = "../page/lecture/uib/template.html";
 			    	result = result.replace(_sReg, htData[i][value]);
 		    	}
 
-		    	//var _p = htData[i].title === "WEB UI BASIC" ? i+1 : "adv_"+(i-9);
-		    	var _f = htData[i].title === "WEB UI BASIC" ? "uib" : "adv_"+(i-9);
-
-		    	fs.writeFile("./"+ _f + ".html", result, 'utf8', function(err) {
+		    	fs.writeFile("./"+_sFileType+"/"+(i+1)+".html", result, 'utf8', function(err) {
 		    		if(err) return console.log('error write', err);
 		    	});
 	    	}
 	    });
+	}
+
+	function _getLeftMenuData(data, htData, htData_len) {
+
+		var _sReg;
+
+		for(var i=0; i<htData_len; i++) {
+			_sReg = '<!--%lecture'+(i+1)+'-->';
+			console.log(_sReg);
+			console.log(htData[i].Lecture_title);
+			data = data.replace(_sReg , htData[i].Lecture_title);
+		}
+
+		return data;
 	}
 
 })();

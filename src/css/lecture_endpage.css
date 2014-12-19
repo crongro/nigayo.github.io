@@ -108,12 +108,12 @@ div.main_area {
 }
 
 
-.lecture_content:nth-of-type(7) > div {
+.lecture_content:last-child > div {
     text-align: center;
     font-size : 1.1em;
 }
 
-.lecture_content:nth-of-type(7) img {
+.lecture_content:last-child img {
     vertical-align: middle;
     margin-right: 10px;
 }

@@ -27,7 +27,7 @@ var DATA = [
 	{ 
 		title 			: 'WEB UI BASIC',
 		Lecture_title 	: 'HTML',
-		Lecture_desc 	: 'WEB UI 구조를 결정짓는 HTML개발을 배웁니다.',
+		Lecture_desc 	: 'WEB UI 구조를 결정짓는 HTML 개발을 배웁니다.',
 		youtube_title1	: '수업전 예습해야 할 HTML 1편', 
 		youtube_title2	: '수업전 예습해야 할 HTML 2편',
 		youtube_title3	: '수업전 예습해야 할 HTML 3편',
@@ -86,8 +86,8 @@ var DATA = [
 	//5주
 	{ 
 		title 			: 'WEB UI BASIC',
-		Lecture_title 	: 'Mobile Web과 반응형웹',
-		Lecture_desc 	: 'Mobile Web개발에서 필수로 알고 있어야 할 지식과, 반응형웹을 간단히 배웁니다',
+		Lecture_title 	: 'Mobile Web과 Responsive Web',
+		Lecture_desc 	: 'Mobile Web개발에서 필수로 알고 있어야 할 지식과, 반응형웹(Responsive Web)을 간단히 배웁니다',
 		youtube_title1 	: '수업전 예습해야 할 동영상 1편',
 		youtube_title2 	: '수업전 예습해야 할 동영상 2편',
 		youtube_title3 	: '',
@@ -187,7 +187,7 @@ var DATA = [
 	{ 
 		title 			: 'WEB UI BASIC',
 		Lecture_title 	: 'AJAX',
-		Lecture_desc 	: 'XHR과 AJAX 기술을 통해 사용성이 더 좋은 웹UI 개발방법을 배웁니다',
+		Lecture_desc 	: 'XHR(XMLHTTPREQUEST)과 AJAX 기술을 통해 사용성이 더 좋은 웹UI 개발방법을 배웁니다',
 		youtube_title1 	: '수업전 예습해야 할 동영상 1편',
 		youtube_title2 	: '수업전 예습해야 할 동영상 2편',
 		youtube_title3 	: '',
@@ -209,7 +209,7 @@ var DATA = [
 	{
 		title 			: 'WEB UI Advanced',
 		Lecture_title 	: 'AJAX',
-		Lecture_desc 	: 'XHR과 AJAX 기술을 통해 사용성이 더 좋은 웹UI 개발방법을 배웁니다',
+		Lecture_desc 	: 'XHR(XMLHTTPRequest)과 AJAX 기술을 통해 사용성이 더 좋은 웹UI 개발방법을 배웁니다',
 		youtube_title1 	: '수업전 예습해야 할 동영상 1편',
 		youtube_title2 	: '수업전 예습해야 할 동영상 2편',
 		youtube_title3 	: '',

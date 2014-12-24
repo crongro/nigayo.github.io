@@ -8,7 +8,7 @@ var rl = readline.createInterface({
 
 
 var DATA = {
-	TEMPLATE_PATH 	: "../page/lecture/uib/template.html",
+	TEMPLATE_PATH 	: "./data/template.html",
 	//BASIC_NAME 		: "WEB UI BASIC",
 };
 
@@ -41,7 +41,8 @@ var DATA = {
 	    		var result = data;
 
 		    	for(var value in htData[i]) {
-		    		var _sReg = '<!--%'+value +'-->';
+		    		//var _sReg = '<!--%'+value +'-->';
+		    		var _sReg = new RegExp('<!--%'+value +'-->','g');
 			    	result = result.replace(_sReg, htData[i][value]);
 		    	}
 

@@ -41,7 +41,6 @@ var DATA = {
 	    		var result = data;
 
 		    	for(var value in htData[i]) {
-		    		//var _sReg = '<!--%'+value +'-->';
 		    		var _sReg = new RegExp('<!--%'+value +'-->','g');
 			    	result = result.replace(_sReg, htData[i][value]);
 		    	}

@@ -26,10 +26,10 @@ var DATA = [
 	//2주
 	{ 
 		title 			: 'WEB UI Advanced',
-		Lecture_title 	: 'UI Debugging',
+		Lecture_title 	: 'UI debugging',
 		Lecture_desc 	: 'WEB UI 개발에 삽질을 줄여주는 디버깅 방법을 배웁니다',
-		youtube_title1	: '수업전 예습해야 할 Debugging 1편', 
-		youtube_title2	: '수업전 예습해야 할 Debugging 2편',
+		youtube_title1	: '수업전 예습해야 할 debugging 1편', 
+		youtube_title2	: '수업전 예습해야 할 debugging 2편',
 		youtube_title3	: '',
 		youtube_url1	: '<iframe width="854" height="510" src="//www.youtube.com/embed/ekGfEgyvMPo" frameborder="0" allowfullscreen></iframe>',
 		youtube_url2	: '<iframe width="854" height="510" src="//www.youtube.com/embed/MxiUzFx077U" frameborder="0" allowfullscreen></iframe>',
@@ -46,7 +46,7 @@ var DATA = [
 	//3주
 	{ 
 		title 			: 'WEB UI Advanced',
-		Lecture_title 	: 'JavaScript 특징(scope,this,closure)',
+		Lecture_title 	: 'JavaScript 특징 (scope,this,closure)',
 		Lecture_desc 	: 'JavaScript의 대표적인 몇가지 특징을 이해합니다',
 		youtube_title1	: 'JavaScript Scope', 
 		youtube_title2	: 'JavaScript this',
@@ -86,7 +86,7 @@ var DATA = [
 	//5주
 	{ 
 		title 			: 'WEB UI Advanced',
-		Lecture_title 	: 'namespace',
+		Lecture_title 	: 'namespace pattern',
 		Lecture_desc 	: 'JavaScript 코드를 namespace로 패키징하는 방법을 알아봅니다',
 		youtube_title1 	: 'namespace 1편',
 		youtube_title2 	: 'namespace 2편',
@@ -107,7 +107,7 @@ var DATA = [
 	{ 
 		title 			: 'WEB UI Advanced',
 		Lecture_title 	: 'JavaScript Event Queue',
-		Lecture_desc 	: '비동기 로직을 이해합니다',
+		Lecture_desc 	: 'Browser Javascript 비동기 로직을 이해합니다',
 		youtube_title1 	: '아래 동영상은 외부자료입니다 <JavaScript Event loop를 이해하기 꽤 적당합니다>',
 		youtube_title2 	: '',
 		youtube_title3 	: '',
@@ -146,7 +146,7 @@ var DATA = [
 	//8주
 	{ 
 		title 			: 'WEB UI Advanced',
-		Lecture_title 	: 'Component 기반 UI 개발',
+		Lecture_title 	: 'Component based UI 개발',
 		Lecture_desc 	: '재사용 가능한 Component기반의 UI개발방법을 알아봅니다',
 		youtube_title1 	: 'Intro',
 		youtube_title2 	: 'Component기반개발 1편',

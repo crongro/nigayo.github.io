@@ -1,0 +1,226 @@
+
+/*   contents  */
+
+/* 여기는 고정폭으로 간다 */
+
+html {
+    font-size : 14px;
+}
+
+
+#wrap {
+    min-width: 1200px;
+}
+
+#mainBody {
+    position: relative;
+    margin: 100px 100px 0px 50px;
+    width: 1230px;
+    overflow: auto;
+}
+
+#all_menu {
+    height: 30px;
+    width: 30px;
+    font-size: 30px;
+    color: darkorange;
+    display: none;
+    left : 85%;
+}
+
+.allMenuShape {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 30px;
+    top: 0;
+    height: 0;
+    -webkit-box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 20px 0.1px 1.5px darkorange,1px 30px 0.1px 1.5px darkorange;
+    -moz-box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 20px 0.1px 1.5px darkorange,1px 30px 0.1px 1.5px darkorange;
+    box-shadow: 1px 10px 0.1px 1.5px darkorange, 1px 20px 0.1px 1.5px darkorange,1px 30px 0.1px 1.5px darkorange;
+}
+
+/* NAVIGATION */
+nav.left_nav {
+    float : left;
+    width : 270px;
+    height : 500px;
+    margin-right : 10px;
+    border-right: 1px solid #eee;
+    position: relative;
+    top:0px;
+    -webkit-transition: top 1000ms ease 0s;
+    -moz-transition: top 1000ms ease 0s;
+    -o-transition: top 1000ms ease 0s;
+    transition: top 1000ms ease 0s;
+}
+
+nav.left_nav  ul {
+    margin: 0px 0px 10px 20px;
+    font-size: 1.2em;
+}
+
+nav.left_nav  li {
+    padding: 10px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.left_nav li:hover {
+    background-color: #eee;
+}
+
+nav.left_nav li > a {
+    color : #000;
+    display: block;
+    width:100%;
+}
+
+
+/* LECTURE AREA*/
+div.main_area {
+    float : right;
+    width : 880px;
+}
+
+.page_desc {
+    margin-bottom: 30px;
+}
+
+.page_desc > h3 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    line-height: 1.0em;
+}
+
+.submessage {
+    font-size : 1.3rem;
+    line-height: 1.4em;
+}
+
+.lecture_content {
+    margin-bottom: 60px;
+}
+
+.lecture_content > h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+.lecture_content:last-child > div {
+    text-align: center;
+    font-size : 1.1em;
+}
+
+.lecture_content:last-child img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer {
+    clear: both;
+}
+
+
+/* @media screen and (max-width:415px) { */
+@media screen and (max-width:990px) {
+
+    header {
+        margin-bottom: 20px;
+    }
+
+    .page_desc > h3 {
+        font-size : 2.5rem;
+    }
+
+    .submessage {
+        font-size : 1.2rem;
+    }
+
+    #wrap {
+        width: 100%;
+        min-width: 200px;
+    }
+
+    #mainBody {
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        min-height: 0px;
+    }
+
+    #all_menu {
+        display: block;
+        position: relative;
+    }
+
+    nav.left_nav {
+        display : none;
+    }
+
+    nav.left_nav_mobile {
+        display: none;
+        top: 0px;
+        font-weight: bold;
+        float: right;
+        position: absolute;
+        left: -241px;
+        background-color: rgb(240, 128, 128);
+        font-size: 15px;
+        z-index: 2;
+        -moz-box-shadow: 0 0 5px 5px #888;
+        -webkit-box-shadow: 0 0 5px 5px #888;
+        box-shadow: 0 0 5px 5px #888;
+        border-radius: 5px;
+    }
+
+    .left_nav li:hover {
+        background-color: rgb(240, 128, 128);
+    }
+
+    nav.left_nav_mobile > div.closeNav {
+        color: #fff;
+        float: right;
+        margin-top: 5px;
+        margin-right: 5px;
+        width: 35px;
+        font-size: 1.5em;
+        height: 35px;
+        text-align: center;
+        line-height: 1.5em;
+    }
+
+    div.closeNav + ul {
+        clear:right;
+    }
+
+    div.main_area {
+        float : none;
+        width : 90%;
+        margin: 0px auto;
+    }
+
+    #top a {
+        font-size: 1.1rem;
+    }
+
+    footer > section {
+        margin-top : 20px;
+        font-size: 0.9rem;
+    }
+
+}
+
+/**
+ * 갤럭시탭(10.1) : 752 * 1280
+ * 아이패드 : 768 * 1024
+ * 아이패드 Retina: 1536 * 2048
+ */
+@media screen and (min-width:416px) and (max-width:990px) {
+
+    #top a {
+        font-size: 1.8rem;
+    }
+}

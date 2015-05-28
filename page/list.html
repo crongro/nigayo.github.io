@@ -4,9 +4,14 @@ title : index
 <!DOCTYPE html>
 <html>
   <head>
-    <title>test page</title>
+    <title>blog article list : nigayo</title>
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width" initial-scale=1>
+
+    <meta property="og:site_name" content="nigayo blog list">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Blog article list : nigayo">
+    <meta property="og:description" content="작성된 blog article list입니다">
 
     <link href="/dest/css/0.0.1/listPage.css" rel="stylesheet" media="screen">
 
@@ -35,13 +40,13 @@ title : index
           <ul class="marginLeft">
             <li><a href="/">home</a></li>
             <li><a href="list.html">posts</a></li>
+             <li><a href="/page/lecture.html">lecture</a></li>
             <li><a href="http://github.com/nigayo">github</a></li>
-            <li><a href="http://www.facebook.com/niganiga">facebook</a></li>
           </ul>
     		</nav>
   		</header>
 
-  		<section id="mainBody">
+  		<section id="mainBody" style="visibility:hidden;">
         <ul id="categoryList">
           {% for catName in site.category-list %}
          <li>
@@ -116,6 +121,15 @@ title : index
           //본문 영역을 첫번째 선택한 것으로 fire!!
           o.fireLayer(); 
         });
+    </script>
+
+     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-45694371-2', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

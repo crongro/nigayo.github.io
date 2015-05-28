@@ -18,8 +18,20 @@ Nigayo.List = (function() {
      var _nMainBodyHeight = $Element('mainBody').height();
      var _nTopPos = (_nMainBodyHeight - _nCategoryHeight)/2;
      this.elCategory.css('top',_nTopPos+'px');
+
+     this._resetCategoryMenu();
   }
 
+  MakeListUI.prototype._resetCategoryMenu = function() {
+    var ellist = $$("#list section");
+    var listmenu = $$("#categoryList > li");
+
+    for(var i=0; i< ellist.length;i++){
+      var _wEl = $Element(ellist[i]);
+      var _ulCount = _wEl.query("ul").child().length;
+      if(_ulCount < 1) $Element(listmenu[i]).leave();
+    }
+ };
 
   MakeListUI.prototype.attachEvents = function() {
     this.elCategory.delegate('click', 
@@ -57,6 +69,9 @@ Nigayo.List = (function() {
 
       /* LIST */
       MakeListUI._listController(weMatchedList, weSelectedMenu);
+
+      //본문을 이제 보여줘야 할때임
+      $("mainBody").style.visibility = "visible";
 
       /* FOOTER */
        //_setFooter(weMatchedList,welefoot);

@@ -4,116 +4,121 @@
 #mainBody {
     position: relative;
     min-height: 600px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 100px;
+    overflow: auto;
 }
 
-#categoryList{
-    width : 20%;
-    font-size : 2.5em;
-    line-height: normal; /* because of change of font-size */
-    position: absolute;
-    left : -3%;
+.page_desc {
+    font-size: 2em;
+    margin-bottom: 100px;
+    line-height: 1.5em;
 }
 
-#categoryList li  {
-    padding :2% 0%;
-    text-align: right;
-    font-family: 'Source Sans Pro', Verdana, sans-serif-webkit-body;
+.submessage {
+    font-size : 0.7em;
 }
 
-#categoryList a {
-    color : lightcoral;
-}
-
-#categoryList li:hover {
+#mainBody > ul > li {
+    width: 45%;
+    height: 200px;
+    float: left;
+    border : 10px solid rgba(240, 128, 128, 0.41);
+    margin-right: 10px;
+    margin-bottom: 10px;
+    min-width: 340px;
     cursor: pointer;
+
 }
 
-#categoryList li div:nth-child(2) {
-    margin-top: 0.5%;
-    font-size : 0.5em;
+#mainBody > ul > li > a {
+    display: block;
+    height: 180px;
+    padding-top: 20px;
 }
 
+.lecture_title {
+    1margin-top: 20px;
+    text-align: center;
+    font-size: 2.5em;
+}
 
-/* section list */
-#list {
+.lecture_description {
+    margin-left: 5%;
+    line-height: 1.7em;
+    margin-top: 18px;
+}
+
+#mainBody > ul > li.ready_lecture {
+    opacity: 0.4;
+    position: relative;
+    cursor: auto;
+}
+
+.ready_lecture:hover::after{
+    content: "준비중이여요 ;-) ";
+    font-size: 2.5em;
+    color: red;
+    background-color: #fff;
+    width: 100%;
+    height: 200px;
     position: absolute;
-    width : 65%;
-    margin-left: 4%;
-    left :15%;
-    height : 500px;
-    border-radius: 20px;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    line-height: 150px;
 }
 
-/* 마름모 UI */
-#list > div {
-    width : 30px;
-    height: 30px;
-    position: absolute;
-    left : -10px;
-    transform:rotate(45deg);
-    -ms-transform:rotate(45deg);
-    -webkit-transform:rotate(45deg);
-    z-index: 999;
-    background-color: rgb(253, 215, 215);
-}
+@media screen and (max-width:415px) {
 
-#list section {
-    display : none;
-    position: absolute;
-    width : 100%;
-    height: auto;
-    z-index: 1000;
-    border-radius: 20px;
-    background-color: rgb(253, 215, 215);
-    padding : 30px;
-    font-size : 1.6em;
-    line-height: 1.8em;
-    -moz-box-shadow: 1px 1px 1px #888;
-    -webkit-box-shadow: 1px 1px 1px #888;
-    box-shadow: 1px 1px 1px #888;
-}
-
-#list section:nth-of-type(1){
-    display : block;
-} 
-
-
-#list > section > ul > a:hover {
-    font-weight: bold;
-}
-
-#list > section > ul > a {
-    color: palevioletred;
-}
-
-
-@media screen and (max-width:401px) {
-
-    #categoryList{
-        font-size : 0.6em;
+    #wrap {
+        width:95%;
     }
 
-    /* section list */
-    #list {
-        position: absolute;
-        width : 55%;
+    #mainBody {
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        min-height: 0px;
     }
 
-    #list section {
-        padding : 15px;
-        font-size : 0.8em;
+    .page_desc {
+        line-height: 1.2em;
+        font-size : 1.2em;
+        font-weight: bold;
+        margin-left: 4%;
     }
 
-    /* 마름모 UI */
-    #list > div {
-        width : 20px;
-        height: 20px;
-        left : -7px;
-        1transform:rotate(45deg);
-        1-ms-transform:rotate(45deg);
-        1-webkit-transform:rotate(45deg);
-        1z-index: 999;
-        1background-color: rgb(253, 215, 215);
+    #mainBody > ul > li {
+        width: 90%;
+        min-width: 200px;
+        float:none;
+        margin : 0px auto 10px;
+    }
+
+    .lecture_title {
+        font-size: 2.0em;
+    }
+
+    .lecture_description {
+        margin-left: 5%;
+        font-size: 0.9em;
+        line-height: 1.5em;
+        margin-top: 18px;
+    }
+
+    .page_desc {
+        margin-bottom: 50px;
+    }
+
+    #top a {
+        font-size: 1.00em;
+    }
+
+    footer > section {
+        margin-top : 20px;
     }
 }
 
@@ -123,22 +128,6 @@
  * 아이패드 Retina: 1536 * 2048
  */
 
-@media screen and (min-width:402px) and (max-width:990px) {
-
-    #categoryList {
-        font-size: 1.5em;
-    }
-
-    #list {
-        position: absolute;
-        width : 75%;
-    }
-
-    #list section {
-        padding : 20px;
-        font-size : 1.1em;
-    }
-
-      
+@media screen and (min-width:416px) and (max-width:990px) {
 
 }

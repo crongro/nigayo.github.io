@@ -1,4 +1,4 @@
-/*! nigayo_Blog - v0.0.1 - 2014-06-07 */
+/*! nigayo_Blog - v0.0.1 - 2014-12-19 */
 /* System Name, CSS Version_Creater_Date */
 /* Common */ 
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
@@ -15,11 +15,16 @@ body, input, textarea, select, button, table{
 
 a {
     outline : none;
-    1color:black;
+    color : #4D3900;
+}
+
+a:visited {
+    color : #806F40;
 }
 
 a:hover {
     text-decoration: none;
+    color : #807940;
 }
 
 blockquote {
@@ -144,7 +149,7 @@ footer ul li{
 }
 
 
-@media screen and (max-width:401px) {
+@media screen and (max-width:415px) {
 
     #wrap {
         width:100%;
@@ -178,7 +183,7 @@ footer ul li{
 }
 
 
-@media screen and (min-width:402px) and (max-width:990px) {
+@media screen and (min-width:416px) and (max-width:990px) {
 
     #wrap {
         width : 90%;
@@ -192,6 +197,10 @@ footer ul li{
 }
 
 /*   contents  */
+
+#wrap {
+    min-width: 1024px;
+}
 
 #mainBody {
     position: relative;
@@ -230,7 +239,7 @@ footer ul li{
 #list {
     position: absolute;
     width : 65%;
-    margin-left: 4%;
+    margin-left: 70px;
     left :15%;
     height : 500px;
     border-radius: 20px;
@@ -246,7 +255,7 @@ footer ul li{
     -ms-transform:rotate(45deg);
     -webkit-transform:rotate(45deg);
     z-index: 999;
-    background-color: rgb(253, 215, 215);
+    background-color: rgb(249, 166, 166);
 }
 
 #list section {
@@ -256,7 +265,7 @@ footer ul li{
     height: auto;
     z-index: 1000;
     border-radius: 20px;
-    background-color: rgb(253, 215, 215);
+    background-color: rgb(249, 166, 166);
     padding : 30px;
     font-size : 1.6em;
     line-height: 1.8em;
@@ -275,18 +284,19 @@ footer ul li{
 }
 
 #list > section > ul > a {
-    color: palevioletred;
+    1color: palevioletred;
+    color : #fff;
 }
 
 
-@media screen and (max-width:401px) {
+/*/*@media screen and (max-width:401px) {
 
     #categoryList{
         font-size : 0.6em;
     }
 
-    /* section list */
-    #list {
+/*    /* section list */
+/*    #list {
         position: absolute;
         width : 55%;
     }
@@ -297,7 +307,7 @@ footer ul li{
     }
 
     /* 마름모 UI */
-    #list > div {
+/*    #list > div {
         width : 20px;
         height: 20px;
         left : -7px;
@@ -315,9 +325,9 @@ footer ul li{
  * 아이패드 Retina: 1536 * 2048
  */
 
-@media screen and (min-width:402px) and (max-width:990px) {
+/*@media screen and (min-width:402px) and (max-width:990px) {
 
-    #categoryList {
+    #categorylist {
         font-size: 1.5em;
     }
 
@@ -333,4 +343,4 @@ footer ul li{
 
       
 
-}
+}*/

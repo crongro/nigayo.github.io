@@ -1,0 +1,47 @@
+ul {
+	padding: 0px;
+	margin: 0px;
+	width:18000px;
+	overflow: auto;
+	-webkit-transform : translate3d(0, 0, 0);
+	transform : translate3d(0, 0, 0);
+	-ms-transform : translate3d(0, 0, 0);
+	transition 			: transform ease-in-out 0.5s;
+	-webkit-transition 	: -webkit-transform ease-in-out 0.5s;
+}
+li {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	float: left;
+}
+.viewArea {
+	height: 380px;
+	float :left;
+	overflow: hidden;
+	width: 100%;
+	max-width: 680px;
+}
+
+.btn_right {
+	width :100px;
+	height :50px;
+	border-radius: 50%;
+	border : 1px solid red;
+}
+
+#controller {
+	height: 380px;
+	line-height: 508px;
+}
+
+@media screen and (max-width: 850px) {
+    #controller {
+    	line-height: 300px;
+    }
+
+    .viewArea {
+    	height : 300px;
+    }
+}
+

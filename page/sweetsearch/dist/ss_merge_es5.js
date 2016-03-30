@@ -223,14 +223,58 @@ var _cu = {
 */
 
 var CommonComponent = (function () {
-  function CommonComponent(htOption) {
+  function CommonComponent(elTarget, htOption) {
     _classCallCheck(this, CommonComponent);
 
     this.htOption = htOption;
     this.htCacheData = {};
+    this.elTarget = elTarget;
+    this.init(htOption);
   }
 
   _createClass(CommonComponent, [{
+    key: "init",
+    value: function init(htOption) {
+      this.setInitValue();
+      this.setOption(htOption, this._htDefaultOption, this.option);
+      this.initValue();
+      this.registerEvents();
+    }
+  }, {
+    key: "setInitValue",
+    value: function setInitValue() {
+      var _d = this.COMPONENT_CONFIG();
+      this.bMainComponent = !!_d.PLUGINS;
+      this._htDefaultOption = _d.DEFAULT_OPTION;
+      this.aMyPluginName = _d.PLUGINS;
+      this.htDefaultFn = this.getDefaultCallbackList(_d.DEFAULT_EVENT);
+
+      if (this.bMainComponent) {
+        this.htDefaultPluginFn = this.getDefaultCallbackList(_d.DEFAULT_PLUGIN_EVENT);
+      }
+      this.htUserFn = {};
+      this.htPluginFn = {};
+      this.option = {};
+    }
+
+    //TODO. move to super Class.
+
+  }, {
+    key: "registerUserMethod",
+    value: function registerUserMethod(htFn) {
+      this.setOption(htFn, this.htDefaultFn, this.htUserFn);
+    }
+  }, {
+    key: "registerPluginMethod",
+    value: function registerPluginMethod(htFn) {
+      this.appendPluginMethod(htFn, this.htDefaultPluginFn, this.htPluginFn);
+    }
+  }, {
+    key: "onPlugins",
+    value: function onPlugins(aPluginList) {
+      this.initPlugins(this.aMyPluginName, aPluginList, this.elTarget);
+    }
+  }, {
     key: "setOption",
     value: function setOption(htValue, htDefaultValue, htStorage) {
       var _this = this;
@@ -253,7 +297,6 @@ var CommonComponent = (function () {
     value: function appendPluginMethod(htValue, htDefaultValue, htStorage) {
       Object.keys(htDefaultValue).forEach(function (v) {
         if (!Array.isArray(htStorage[v])) htStorage[v] = [];
-
         if (typeof htValue[v] === "undefined") {
           htStorage[v].push(htDefaultValue[v]);
         } else {
@@ -276,8 +319,6 @@ var CommonComponent = (function () {
     value: function initPlugins(aMyPluginName, aPluginList, elTarget) {
       var _this2 = this;
 
-      //TODO. remove instance relation.
-      this.htPluginInstance = {};
       var oParent = this;
       aPluginList.forEach(function (v) {
         var sName = v.name;
@@ -285,8 +326,6 @@ var CommonComponent = (function () {
         var oPlugin = new window[v.name](elTarget, v.option);
         oPlugin.registerUserMethod(v.userMethod);
         _this2._injectParentObject(oParent, oPlugin);
-        //TODO. remove instance relation.
-        _this2.htPluginInstance[v.name] = oPlugin;
       });
     }
   }, {
@@ -297,20 +336,25 @@ var CommonComponent = (function () {
 
       switch (type) {
         case "USER":
-          if (_typeof(this.htUserFn) === "object" && typeof this.htUserFn[eventname] === "function") {
-            var _htUserFn;
+          {
+            if (_typeof(this.htUserFn) === "object" && typeof this.htUserFn[eventname] === "function") {
+              var _htUserFn;
 
-            returnValue = (_htUserFn = this.htUserFn)[eventname].apply(_htUserFn, _toConsumableArray(args));
+              returnValue = (_htUserFn = this.htUserFn)[eventname].apply(_htUserFn, _toConsumableArray(args));
+            }
+            break;
           }
-          break;
         case "PLUGIN":
-          if (_typeof(this.htPluginFn) === "object" && _typeof(this.htPluginFn[eventname]) === "object") {
-            this.htPluginFn[eventname].forEach(function (fn) {
-              fn.apply(undefined, _toConsumableArray(args));
-            });
+          {
+            if (_typeof(this.htPluginFn) === "object" && _typeof(this.htPluginFn[eventname]) === "object") {
+              this.htPluginFn[eventname].forEach(function (fn) {
+                fn.apply(undefined, _toConsumableArray(args));
+              });
+            }
+            break;
           }
-          break;
         default:
+          {}
       }
       return returnValue;
     }
@@ -366,7 +410,7 @@ var RecentWordPlugin = (function (_CommonComponent) {
           recentULWrap: ".ul-wrap"
         },
         DEFAULT_EVENT: ['FN_AFTER_INSERT_RECENT_WORD', 'FN_AFTER_SELECT_RECENT_WORD'],
-        OPTIONS: {
+        DEFAULT_OPTION: {
           'usage': true,
           'maxList': 5
         }
@@ -377,40 +421,19 @@ var RecentWordPlugin = (function (_CommonComponent) {
   function RecentWordPlugin(elTarget, htOption) {
     _classCallCheck(this, RecentWordPlugin);
 
-    var _this3 = _possibleConstructorReturn(this, Object.getPrototypeOf(RecentWordPlugin).call(this, htOption));
-
-    _this3.elTarget = elTarget;
-    _this3.init(htOption);
-    return _this3;
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(RecentWordPlugin).call(this, elTarget, htOption));
   }
 
   _createClass(RecentWordPlugin, [{
-    key: "init",
-    value: function init(htOption) {
-      this.setInitValue();
-      _get(Object.getPrototypeOf(RecentWordPlugin.prototype), "setOption", this).call(this, htOption, this.htDefaultOption, this.option);
-      this.registerEvents();
+    key: "initValue",
+    value: function initValue(htOption) {
       this.oStorage = new RecentWordPluginLocalStorageAddOn("searchQuery", this.option.maxList);
-    }
-  }, {
-    key: "setInitValue",
-    value: function setInitValue() {
-      var _d = this.COMPONENT_CONFIG();
-      var s = _d.ELEMENT_SELECTOR;
+      var s = this.COMPONENT_CONFIG().ELEMENT_SELECTOR;
       var _el = this.elTarget;
-      this.htDefaultFn = _get(Object.getPrototypeOf(RecentWordPlugin.prototype), "getDefaultCallbackList", this).call(this, _d.DEFAULT_EVENT);
-      this.htDefaultOption = _d.OPTIONS;
       this.elRecentWordLayer = _el.querySelector(s.recentWordWrap);
       this.elClearRecentWordBtn = _el.querySelector(s.deleteWordBtn);
       this.elCloseButtonRWL = this.elRecentWordLayer.querySelector(s.closeLayerBtn);
       this.elRecentULWrap = this.elRecentWordLayer.querySelector(s.recentULWrap);
-      this.htUserFn = {};
-      this.option = {};
-    }
-  }, {
-    key: "registerUserMethod",
-    value: function registerUserMethod(htFn) {
-      _get(Object.getPrototypeOf(RecentWordPlugin.prototype), "setOption", this).call(this, htFn, this.htDefaultFn, this.htUserFn);
     }
   }, {
     key: "registerEvents",
@@ -614,7 +637,7 @@ var TTViewPlugin = (function (_CommonComponent2) {
           TTWrapCloseBtn: ".tt-wrap .close-layer"
         },
         DEFAULT_EVENT: ['FN_AFTER_RECEIVE_DATA'],
-        OPTIONS: {
+        DEFAULT_OPTION: {
           'usage': true
         }
       };
@@ -624,46 +647,25 @@ var TTViewPlugin = (function (_CommonComponent2) {
   function TTViewPlugin(elTarget, htOption) {
     _classCallCheck(this, TTViewPlugin);
 
-    var _this5 = _possibleConstructorReturn(this, Object.getPrototypeOf(TTViewPlugin).call(this, htOption));
-
-    _this5.elTarget = elTarget;
-    _this5.init(htOption);
-    return _this5;
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(TTViewPlugin).call(this, elTarget, htOption));
   }
 
   _createClass(TTViewPlugin, [{
-    key: "init",
-    value: function init(htOption) {
-      this.setInitValue();
-      _get(Object.getPrototypeOf(TTViewPlugin.prototype), "setOption", this).call(this, htOption, this.htDefaultOption, this.option);
-      this.registerEvents();
-    }
-  }, {
-    key: "setInitValue",
-    value: function setInitValue() {
-      var _d = this.COMPONENT_CONFIG();
-      var s = _d.SELECTOR;
-      this.htDefaultOption = _d.OPTIONS;
-      this.htDefaultFn = _get(Object.getPrototypeOf(TTViewPlugin.prototype), "getDefaultCallbackList", this).call(this, _d.DEFAULT_EVENT);
+    key: "initValue",
+    value: function initValue() {
+      var s = this.COMPONENT_CONFIG().SELECTOR;
       this.elTTWrap = this.elTarget.querySelector(s.TTWrap);
       this.elTTWrapCloseBtn = this.elTarget.querySelector(s.TTWrapCloseBtn);
-      this.htUserFn = {};
-      this.option = {};
-    }
-  }, {
-    key: "registerUserMethod",
-    value: function registerUserMethod(htFn) {
-      _get(Object.getPrototypeOf(TTViewPlugin.prototype), "setOption", this).call(this, htFn, this.htDefaultFn, this.htUserFn);
-    }
-  }, {
-    key: "closeLayer",
-    value: function closeLayer() {
-      this.closeTTView();
     }
   }, {
     key: "registerEvents",
     value: function registerEvents() {
       this.elTTWrapCloseBtn.addEventListener("click", this.closeLayer.bind(this), false);
+    }
+  }, {
+    key: "closeLayer",
+    value: function closeLayer() {
+      this.closeTTView();
     }
   }, {
     key: "showTTView",
@@ -746,33 +748,15 @@ var SweetSearch = (function (_CommonComponent3) {
   function SweetSearch(elTarget, htOption) {
     _classCallCheck(this, SweetSearch);
 
-    var _this6 = _possibleConstructorReturn(this, Object.getPrototypeOf(SweetSearch).call(this, htOption));
-
-    _this6.elTarget = elTarget;
-    _this6.init(htOption);
-    return _this6;
+    return _possibleConstructorReturn(this, Object.getPrototypeOf(SweetSearch).call(this, elTarget, htOption));
   }
 
   _createClass(SweetSearch, [{
-    key: "init",
-    value: function init(htOption) {
-      this.setInitValue();
-      _get(Object.getPrototypeOf(SweetSearch.prototype), "setOption", this).call(this, htOption, this._htDefaultOption, this.option);
-      this.registerEvents();
-    }
-  }, {
-    key: "setInitValue",
-    value: function setInitValue() {
+    key: "initValue",
+    value: function initValue(htOption) {
       var _el = this.elTarget;
-      var _d = this.COMPONENT_CONFIG();
-      var s = _d.SELECTOR;
+      var s = this.COMPONENT_CONFIG().SELECTOR;
 
-      this._htDefaultOption = _d.DEFAULT_OPTION;
-      this.aMyPluginName = _d.PLUGINS;
-      this.htDefaultFn = _get(Object.getPrototypeOf(SweetSearch.prototype), "getDefaultCallbackList", this).call(this, _d.DEFAULT_EVENT);
-      this.htDefaultPluginFn = _get(Object.getPrototypeOf(SweetSearch.prototype), "getDefaultCallbackList", this).call(this, _d.DEFAULT_PLUGIN_EVENT);
-
-      this.option = {};
       this.elInputFieldWrap = _el.querySelector(s.inputFieldWrap);
       this.elInputField = _el.querySelector(s.inputField);
       this.elAutoCompleteLayer = _el.querySelector(s.autoCompleteWrap);
@@ -781,8 +765,6 @@ var SweetSearch = (function (_CommonComponent3) {
       this.elCloseButton = this.elAutoCompleteLayer.querySelector(s.closeLayer);
       this.elAutoULWrap = this.elAutoCompleteLayer.querySelector(s.autoULWrap);
       this.htCachedData = {};
-      this.htUserFn = {};
-      this.htPluginFn = {};
     }
   }, {
     key: "registerEvents",
@@ -813,21 +795,6 @@ var SweetSearch = (function (_CommonComponent3) {
       this.elAutoULWrap.addEventListener('touchend', function (evt) {
         return _this7.handlerSelectAutoCompletedWordTouchEnd(evt);
       });
-    }
-  }, {
-    key: "registerUserMethod",
-    value: function registerUserMethod(htFn) {
-      _get(Object.getPrototypeOf(SweetSearch.prototype), "setOption", this).call(this, htFn, this.htDefaultFn, this.htUserFn);
-    }
-  }, {
-    key: "registerPluginMethod",
-    value: function registerPluginMethod(htFn) {
-      _get(Object.getPrototypeOf(SweetSearch.prototype), "appendPluginMethod", this).call(this, htFn, this.htDefaultPluginFn, this.htPluginFn);
-    }
-  }, {
-    key: "onPlugins",
-    value: function onPlugins(aPluginList) {
-      _get(Object.getPrototypeOf(SweetSearch.prototype), "initPlugins", this).call(this, this.aMyPluginName, aPluginList, this.elTarget);
     }
 
     /***** START EventHandler *****/
